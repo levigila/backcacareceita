@@ -8,14 +8,14 @@ document.getElementById("cadastroForm").addEventListener("submit", function (eve
 
     const statusLogin = document.getElementById("status-cadastro")
 
-        document.querySelector('.pop-up').style.display = 'block'
-        document.querySelector('.test').style.display = 'block'
+    document.querySelector('.pop-up').style.display = 'block'
+    document.querySelector('.test').style.display = 'block'
 
-        statusLogin.innerText = 'E-mail ou senha invalidos '
-        setTimeout(() => {
-            document.querySelector('.pop-up').style.display = 'none'
-            document.querySelector('.test').style.display = 'none'
-        }, 2000);
+    statusLogin.innerText = 'E-mail ou senha invalidos '
+    setTimeout(() => {
+        document.querySelector('.pop-up').style.display = 'none'
+        document.querySelector('.test').style.display = 'none'
+    }, 2000);
 
     if(password !== passwordConfirm) {
         document.querySelector('.pop-up').style.display = 'block'
