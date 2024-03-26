@@ -65,7 +65,7 @@ def cadastro(request):
             return HttpResponse('Já existe um usuário com esse nome. Tente outro.')
 
         # Create the user with hashed password
-        user = User.objects.create_user(username=username, password=senha)
+        user = User.objects.create_user(username=username, email=email, password=senha)
         user.save()
 
         return HttpResponse('Parabéns! Seu cadastro foi realizado com sucesso!')

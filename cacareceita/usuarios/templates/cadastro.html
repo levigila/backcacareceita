@@ -1,17 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        {% load static %}
+    <link rel="stylesheet" href="{% static 'css/cadastro.css' %}">
+    <script src="{% static 'js/cadastro.js' %}"></script>
+    <title>Caça Receita</title>
+</head>
+
 <body>
-    <form action="{% url 'cadastro' %}" method="POST">
-        {%csrf_token %}
+    <div class="container">
+        <div class="area-cadastro">
+            <div class="area-laranja">
+                <img src="{% static 'img/logo.svg' %}" alt="">
+                <h1>Bem vindo</h1>
+                <h3>Já possui login?</h3>
+                <a href="{% url 'login' %}">Logar</a>
+            </div>
+            <div class="area-transparente">
+                <h1>Cadastro</h1>
+                <h3>Entre com: </h3>
+                <div class="outras-formas-cadastro">
+                    <a href="#" target="_blank">
+                        <img src="{% static 'img/icon-google.svg' %}" alt="">
+                    </a>
+                    <a href="#" target="_blank">
+                        <img src="{% static 'img/icon-apple.svg' %}" alt="">
+                    </a>
+                    <a href="#" target="_blank">
+                        <img src="{% static 'img/icon-facebook.svg' %}" alt="">
+                    </a>
+                </div>
+                <form id="cadastroForm" action="{% url 'cadastro' %}" method="POST">
+                    {%csrf_token %}
+                    <label>
+                        <p>E-mail</p>
+                        <input id="email" type="email" name="email"  required
+                            onchange="validateFields()">
+                    </label>
 
-        <input type="text" placeholder="Username..." name="username">
-        <br>
-        <br>
-        <input type="email" placeholder="Email..." name="email">
-        <br>
-        <br>
-        <input type="password" placeholder="Senha..." name="senha">
-        <br>
-        <br>
-        <input type="submit" value="cadastrar">
-        <br>
+                    <label>
+                        <p>Nome de Usuário</p>
+                        <input id="user" type="text" name="username"  required
+                            onchange="validateFields()">
+                    </label>
 
-    </form>
+                    <label>
+                        <p>Senha</p>
+                        <input id="password" type="password" name="senha" required
+                            onchange="validateFields()">
+                    </label>
+
+                    <label>
+                        <p>Confirmar senha</p>
+                        <input id="password-confirm" type="password" name="confirma-senha" required
+                            onchange="validateFields()">
+                    </label>
+
+                    <button id="entrar" type="submit" disabled onclick="teste()">Entrar</button>
+                </form>
+
+            </div>
+        </div>
+        <div class="test"></div>
+        <span class="pop-up">
+            <div class="pop-up-header">
+                <h4>Atenção!</h4>
+                <img src="{% static 'img/icon-X.svg' %}" alt="">
+            </div>
+            <div class="bar"></div>
+            <div class="error-msg">
+                <img src="{% static 'img/icon-atencao.svg' %}" alt="">
+                <p id="status-cadastro">
+                </p>
+            </div>
+        </span>
+    </div>
+
+</body>
+
+</html>

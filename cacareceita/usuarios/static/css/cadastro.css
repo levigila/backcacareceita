@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    background-image: url('../img/fundo.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    width: 100%;
+    height: 100%;
+}
+
+.area-cadastro {
+    width: 1209px;
+    height: 879px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+
+.area-laranja {
+    width: 605px;
+    height: 873px;
+    background-image: url('../img/fundo-laranja.svg');
+
+    padding: 80px 0 0 80px;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.area-laranja img {
+    width: 346px;
+    height: 305px;
+
+}
+
+.area-laranja h1 {
+    font-weight: lighter;
+    font-size: 80px;
+    color: white;
+}
+
+.area-laranja h3 {
+    font-weight: lighter;
+    font-size: 40px;
+    color: white;
+    margin: 0 0 0 80px;
+}
+
+.area-laranja a {
+    border: 1px solid;
+    width: 305px;
+    height: 62px;
+    border-radius: 20px;
+    color: #994E0D;
+    background-color: #D8AE7D;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    font-size: 36px;
+    margin-top: 80px;
+    box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.25);
+}
+
+.area-transparente {
+    width: 707px;
+    height: 873px;
+    position: fixed;
+    left: 500px;
+    border-radius: 80px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(13.5px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.area-transparente h1 {
+    font-weight: 500;
+    font-size: 96px;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    margin-top: 60px;
+}
+
+.area-transparente form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.area-transparente label {
+    width: 475px;
+    height: 56px;
+    margin-top: 50px;
+    position: relative;
+}
+
+.area-transparente label i {
+    position: absolute;
+    top: 8px;
+    left: 20px;
+}
+
+.area-transparente label i img {
+    width: 40px;
+}
+
+.area-transparente label input {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #FFF9F0;
+    color: rgb(153, 78, 13, .7);
+
+    padding: 0 0 0 20px;
+    font-size: 36px;
+
+    outline: none;
+}
+
+.area-transparente label input::placeholder {
+    color: rgb(153, 78, 13, .7);
+}
+
+.area-transparente form a {
+    color: black;
+    text-decoration: none;
+    font-size: 29px;
+    font-weight: 300;
+    margin-top: 40px;
+}
+
+.area-transparente form button {
+    width: 217px;
+    height: 67px;
+    background-color: #B13D0C;
+    color: #FDF7AA;
+    font-size: 32px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 40px;
+    margin-left: 260px;
+}
+
+.area-transparente form p {
+    font-size: 30px;
+    color: #994E0D;
+}
+
+.area-transparente h3 {
+    color: #994E0D;
+    font-size: 32px;
+    font-weight: 300;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    margin-bottom: 20px;
+}
+
+.outras-formas-cadastro {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.outras-formas-cadastro img {
+    width: 50px;
+}
+
+.area-transparente form button:disabled {
+    background-color: #ddd;
+    color: rgb(117, 117, 117);
+}
+
+.test {
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    display: none;
+}
+
+.pop-up {
+    width: 350px;
+    height: 220px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #FFFFFF;
+    border-radius: 15px;
+    color: #B13D0C;
+    font-size: 20px;
+    display: none;
+}
+
+.pop-up-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 15px 0;
+    text-transform: uppercase;
+}
+
+.bar {
+    width: 100%;
+    background-color: #994E0D;
+    height: 10px;
+    animation: loginIncorreto 2s infinite;
+}
+
+
+@keyframes loginIncorreto {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0%;
+    }
+}
+
+.error-msg {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#status-login {
+    margin-top: 20px;
+    font-weight: bold;
+}
