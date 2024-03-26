@@ -1,14 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <script src="{% static 'js/login.js' %}"></script>
+
+    <title>Caça Receita</title>
+</head>
+
 <body>
-    <form action="{% url 'login' %}" method="POST">
-        {%csrf_token %}
+    <div class="container">
+        <div class="area-login">
+            <div class="area-laranja">
+                <img src="{% static 'img/logo.svg' %}" alt="logo">
+                <h1>Bem vindo</h1>
+                <h3>Novo login?</h3>
+                <a href="{% url 'cadastro' %}">Crie sua conta</a>
+            </div>
+            <div class="area-transparente">
+                <h1>Login</h1>
+                <form id="loginForm" action="{% url 'login' %}" method="POST">
+                    {%csrf_token %}
+                    <label>
+                        <i><img src="{% static 'img/icon-user.svg' %}" alt="icon user"></i>
+                        <input id="user" type="text" name="username" placeholder="Digite seu usuário" required
+                            onchange="validateFields()">
+                    </label>
 
-        <input type="text" placeholder="Username..." name="username">
-        <br>
-        <br>
-        <input type="password" placeholder="Senha..." name="senha">
-        <br>
-        <br>
-        <input type="submit" value="Logar">
-        <br>
+                    <label>
+                        <i><img src="{% static 'img/icon-password.svg' %}" alt="icon password"></i>
+                        <input id="password" type="password" name="senha" placeholder="Digite sua senha" required
+                            onchange="validateFields()">
+                    </label>
 
-    </form>
+                    <a href="#">Esqueci a senha</a>
+
+                    <button id="entrar" type="submit" disabled>Entrar</button>
+                </form>
+
+                <h3>Entre com:</h3>
+
+                <div class="outras-formas-login">
+                    <a href="#" target="_blank">
+                        <img src="{% static 'img/icon-google.svg' %}" alt="">
+                    </a>
+                    <a href="#" target="_blank">
+                        <img src="{% static 'img/icon-apple.svg' %}" alt="">
+                    </a>
+                    <a href="#" target="_blank">
+                        <img src="{% static 'img/icon-facebook.svg' %}" alt="">
+                    </a>
+                </div>
+
+            </div>
+        </div>
+<!--        <div class="blur"></div>-->
+<!--        <span class="pop-up">-->
+<!--            <div class="pop-up-header">-->
+<!--                <h4>Atenção!</h4>-->
+<!--                <img src="{% static 'img/icon-X.svg' %}" alt="">-->
+<!--            </div>-->
+<!--            <div class="bar"></div>-->
+<!--            <div class="error-msg">-->
+<!--                <img src="{% static 'img/icon-atencao.svg' %}" alt="">-->
+<!--                <p id="status-login">-->
+<!--                </p>-->
+<!--            </div>-->
+<!--            -->
+<!--        </span>-->
+<!--        -->
+        {% if error_msg %}
+            <div class="test"></div>
+            <span class="pop-up">
+                <div class="pop-up-header">
+                    <h4>Atenção!</h4>
+                    <img src="../img/icon-X.svg" alt="">
+                </div>
+                <div class="bar"></div>
+                <div class="error-msg">
+                    <img src="../img/icon-atencao.svg" alt="">
+                    <p id="status-login">{{ error_msg }}</p>
+                </div>
+            </span>
+        {% endif %}
+    </div>
+</body>
+
+</html>

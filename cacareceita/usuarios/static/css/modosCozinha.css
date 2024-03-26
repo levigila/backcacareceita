@@ -1,0 +1,121 @@
+.caixa-footer {
+    background-color: #B13D0C;
+    height: 50px;
+}
+
+.titulo-home {
+    font-family: "Josefin Sans", sans-serif;
+    color: #B13D0C;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    margin-top: 30px;
+}
+
+.caixa-modos {
+    margin-top: 50px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+}
+.caixas {
+    width: 200px;
+    height: 440px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+
+.caixas div {
+    display: flex;
+    width: 200px;
+    height: 440px;
+   justify-content: center;
+    
+
+}
+
+.fundo{
+    width: 200px;
+    height: 440px;
+    position: absolute;
+}
+
+.titulo-mirim {
+    margin-top: 40px;
+    font-family: "Josefin Sans", sans-serif;
+    color: #994E0D;
+    font-size: 35px;
+    position: absolute;
+    width: 66px;
+    font-weight: 600;
+}
+
+.boneco-mirim {
+    margin-top: 125px;
+    width: 180px;
+    position: absolute;
+
+}
+
+.titulo-modo {
+    font-family: "Josefin Sans", sans-serif;
+    color: #FFF9F0;
+    position: absolute;
+    font-weight: 400px;
+    font-size: 35px;
+    margin-top: 55px;
+    text-shadow: 1px 1px 0.2em black;
+
+
+}
+.boneco-aprendiz {
+    width: 180px;
+    position: absolute;
+    margin-top: 124px;
+}
+
+.boneco-subchef {
+    width: 185px;
+    height: 300px;
+    position: absolute;
+    margin-top: 124px;
+}
+
+.boneco-chef, .boneco-confeitaria{
+    width: 185px;
+    height: 302px;
+    position: absolute;
+    margin-top: 125px;
+}
+
+.rodape{
+    margin-top: 50px;
+}
+
+.fundo-rodape{
+    position: absolute;
+    width: 1500px;
+    height: 222px;
+    bottom: 0;
+}
+
+.itens {
+    position: absolute;
+    display: flex;
+    margin-left: 70px;
+    align-items: center;
+    height: 222px;
+    align-content: center;
+    bottom: 0;
+}
+
+.itens img {
+    width: 130px;
+    margin-right: 40px;
+}
+
+.itens p {
+    font-family: "Inter", sans-serif;
+    margin-bottom: 7px;
+}
