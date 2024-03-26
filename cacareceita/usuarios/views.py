@@ -81,7 +81,7 @@ def login(request):
 
         if user:
             login_django(request, user)
-            return render(request, template_name='home.html')
+            return render(request, template_name='homeAprendiz.html')
         else:
             error_msg = 'E-mail ou Senha Inválidos'
             return render(request, 'login.html', {'error_msg': True})
