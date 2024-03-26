@@ -86,6 +86,5 @@ def login(request):
             error_msg = 'E-mail ou Senha Inválidos'
             return render(request, 'login.html', {'error_msg': True})
 
-
 def plataforma():
     pass
