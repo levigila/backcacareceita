@@ -83,7 +83,10 @@ def login(request):
             login_django(request, user)
             return render(request, template_name='homeAprendiz.html')
         else:
-            return render(request, 'login.html', {'login_failed': True})
+            return render(request, 'loginerror.html')
 
 def plataforma():
     pass
+
+def login_error(request):
+         return render(request, 'loginerror.html')
