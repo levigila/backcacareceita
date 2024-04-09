@@ -83,8 +83,7 @@ def login(request):
             login_django(request, user)
             return render(request, template_name='homeAprendiz.html')
         else:
-            error_msg = 'E-mail ou Senha Inválidos'
-            return render(request, 'login.html', {'error_msg': True})
+            return render(request, 'login.html', {'login_failed': True})
 
 def plataforma():
     pass

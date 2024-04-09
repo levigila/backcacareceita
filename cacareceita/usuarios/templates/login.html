@@ -5,12 +5,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/login.css' %}">
     <script src="{% static 'js/login.js' %}"></script>
 
     <title>Caça Receita</title>
+
+    <style>
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            padding: 20px;
+            z-index: 1000;
+        }
+
+        .popup-content {
+            text-align: center;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .bar {
+            width: 100%;
+            background-color: #ccc;
+            height: 1px;
+            margin: 10px 0;
+        }
+
+        .error-msg {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .error-msg img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+    </style>
 </head>
 
 <body>
@@ -24,24 +69,85 @@
             </div>
             <div class="area-transparente">
                 <h1>Login</h1>
+
+                <div id="error-popup" class="popup">
+                    <div class="popup-content">
+                        <span class="close-btn" onclick="closePopup()">&times;</span>
+                        <h2>Atenção!</h2>
+                        <div class="bar"></div>
+                        <div class="error-msg">
+                            <img src="{% static 'img/icon-atencao.svg' %}" alt="">
+                            <p>{{ error_msg }}</p> <!-- Aqui exibimos a mensagem de erro -->
+                        </div>
+                    </div>
+                </div>
+
                 <form id="loginForm" action="{% url 'login' %}" method="POST">
-                    {%csrf_token %}
+                    {% csrf_token %}
                     <label>
                         <i><img src="{% static 'img/icon-user.svg' %}" alt="icon user"></i>
-                        <input id="user" type="text" name="username" placeholder="Digite seu usuário" required
-                            onchange="validateFields()">
+                        <input id="user" type="text" name="username" placeholder="Digite seu usuário" required>
                     </label>
 
                     <label>
                         <i><img src="{% static 'img/icon-password.svg' %}" alt="icon password"></i>
-                        <input id="password" type="password" name="senha" placeholder="Digite sua senha" required
-                            onchange="validateFields()">
+                        <input id="password" type="password" name="senha" placeholder="Digite sua senha" required>
                     </label>
 
                     <a href="#">Esqueci a senha</a>
 
                     <button id="entrar" type="submit" disabled>Entrar</button>
                 </form>
+
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+    var loginForm = document.getElementById('loginForm');
+    var errorPopup = document.getElementById('error-popup');
+    var closeButton = document.querySelector('.close-btn');
+
+    loginForm.addEventListener('submit', function(event) {
+        event.preventDefault(); // Impede o envio padrão do formulário
+
+        var username = document.getElementById('user').value.trim();
+        var password = document.getElementById('password').value.trim();
+
+        // Verifica se os campos do formulário estão vazios
+        if (username === '' || password === '') {
+            // Exibe o pop-up de erro
+            errorPopup.style.display = 'block';
+        } else {
+            // Verifica se o usuário e a senha são válidos
+            var userIsValid = checkUserAndPassword(username, password);
+
+            if (userIsValid) {
+                // Se o usuário e a senha forem válidos, envia o formulário
+                this.submit(); // Submete o formulário
+            } else {
+                // Se o usuário e a senha forem inválidos, exibe mensagem de erro
+                errorPopup.style.display = 'block';
+            }
+        }
+    });
+
+    // Função para verificar se o usuário e a senha são válidos
+    function checkUserAndPassword(username, password) {
+        // Você deve realizar a verificação no backend (no seu Django view)
+        // Aqui, estamos apenas simulando que o usuário e a senha são válidos
+        // Você precisa substituir esta lógica pela verificação no backend
+        // Por exemplo:
+        // return username === 'usuário válido' && password === 'senha válida';
+        return true; // Simulando que o usuário e a senha são válidos
+    }
+
+    // Adiciona um evento de clique ao botão 'x' para fechar o pop-up
+    closeButton.addEventListener('click', function() {
+        errorPopup.style.display = 'none';
+    });
+});
+
+
+                </script>
+                
 
                 <h3>Entre com:</h3>
 
@@ -56,39 +162,29 @@
                         <img src="{% static 'img/icon-facebook.svg' %}" alt="">
                     </a>
                 </div>
-
             </div>
         </div>
-<!--        <div class="blur"></div>-->
-<!--        <span class="pop-up">-->
-<!--            <div class="pop-up-header">-->
-<!--                <h4>Atenção!</h4>-->
-<!--                <img src="{% static 'img/icon-X.svg' %}" alt="">-->
-<!--            </div>-->
-<!--            <div class="bar"></div>-->
-<!--            <div class="error-msg">-->
-<!--                <img src="{% static 'img/icon-atencao.svg' %}" alt="">-->
-<!--                <p id="status-login">-->
-<!--                </p>-->
-<!--            </div>-->
-<!--            -->
-<!--        </span>-->
-<!--        -->
-        {% if error_msg %}
-            <div class="test"></div>
-            <span class="pop-up">
-                <div class="pop-up-header">
-                    <h4>Atenção!</h4>
-                    <img src="../img/icon-X.svg" alt="">
-                </div>
-                <div class="bar"></div>
-                <div class="error-msg">
-                    <img src="../img/icon-atencao.svg" alt="">
-                    <p id="status-login">{{ error_msg }}</p>
-                </div>
-            </span>
-        {% endif %}
     </div>
+
+   
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('loginForm').addEventListener('input', function() {
+            var username = document.getElementById('user').value;
+            var password = document.getElementById('password').value;
+            var entrarButton = document.getElementById('entrar');
+
+            if (username.trim() !== '' && password.trim() !== '') {
+                entrarButton.removeAttribute('disabled');
+            } else {
+                entrarButton.setAttribute('disabled', 'disabled');
+            }
+        });
+    });
+</script>
+
 </body>
 
 </html>
