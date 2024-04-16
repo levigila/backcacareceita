@@ -70,3 +70,4 @@ class Alergeno(models.Model):
 
     def _str_(self):
         return f"Alergenos de {self.ingrediente.nome}"
+    #enviando novamente
