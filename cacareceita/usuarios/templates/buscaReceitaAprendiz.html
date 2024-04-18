@@ -7,11 +7,11 @@
     <title>Receitas</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../static/css/buscaReceitaAprendiz.css">
-    <link rel="stylesheet" href="../static/css/reset.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/buscaReceitaAprendiz.css' %}">
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
 </head>
 
 <body>
@@ -19,10 +19,10 @@
         <div class="fundo-barraPesquisa">
             <div>
                 <input class="barra-pesquisa" type="text">
-                <button class="botao-pesquisar"><img src="../static/img/icon-pesquisa.png"></button>
+                <button class="botao-pesquisar"><img src="{% static 'img/icon-pesquisa.png' %}"></button>
             </div>
             <a class="perfil" href="{% url 'cadastro' %}">
-                <img class="icon-perfil" src="../static/img/icon-perfil.png">
+                <img class="icon-perfil" src="{% static 'img/icon-perfil.png' %}">
             </a>
         </div>
         <nav class="navegacao">
@@ -37,7 +37,7 @@
         </nav>
     </header>
     <main>
-        <img class="banner-aprendiz" src="../static/img/banner-aprendiz.png">
+        <img class="banner-aprendiz" src="{% static 'img/banner-aprendiz.png' %}">
         <section class="area-receitas">
             <div class="caixa-filtroReceita">
                 <div class="caixa-pesquisaFiltro">
@@ -62,10 +62,7 @@
                                 <button>Açúcar</button>
                                 <button>Manteiga</button>
                                 <button>Fermento em pó</button>
-                                <button>Molho de tomate</button>
-                                <button>Batata</button>
-                                <button>Cebola</button>
-                                <button>Azeite de oliva</button>
+                                <button>Molho de tomate</button>    
                                 <button>+10 ingredientes</button>
                             </div>
                         </div>
@@ -102,141 +99,141 @@
                 <div class="conteudo-receitas">
                     <div class="linha-cardReceita">
                         <div class="cardReceita">
-                            <img class="foto-receita" src="../static/img/fotoReceita2.png"> 
+                            <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}"> 
                             <p>Salpicão de frango simples</p>
                             <div class="avaliacao-receita">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
                             </div> 
                         </div>
                         <div class="cardReceita">
-                            <img class="foto-receita" src="../static/img/fotoReceita2.png"> 
+                            <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}"> 
                             <p>Salpicão de frango simples</p>
                             <div class="avaliacao-receita">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
                             </div> 
                         </div>
                         <div class="cardReceita">
-                            <img class="foto-receita" src="../static/img/fotoReceita2.png"> 
+                            <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}"> 
                             <p>Salpicão de frango simples</p>
                             <div class="avaliacao-receita">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                            </div> 
-                        </div>
-                     </div>
-                     <div class="linha-cardReceita">
-                        <div class="cardReceita">
-                            <img class="foto-receita" src="../static/img/fotoReceita2.png"> 
-                            <p>Salpicão de frango simples</p>
-                            <div class="avaliacao-receita">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                            </div> 
-                        </div>
-                        <div class="cardReceita">
-                            <img class="foto-receita" src="../static/img/fotoReceita2.png"> 
-                            <p>Salpicão de frango simples</p>
-                            <div class="avaliacao-receita">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                            </div> 
-                        </div>
-                        <div class="cardReceita">
-                            <img class="foto-receita" src="../static/img/fotoReceita2.png"> 
-                            <p>Salpicão de frango simples</p>
-                            <div class="avaliacao-receita">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
                             </div> 
                         </div>
                      </div>
                      <div class="linha-cardReceita">
                         <div class="cardReceita">
-                            <img class="foto-receita" src="../static/img/fotoReceita2.png"> 
+                            <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}"> 
                             <p>Salpicão de frango simples</p>
                             <div class="avaliacao-receita">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
                             </div> 
                         </div>
                         <div class="cardReceita">
-                            <img class="foto-receita" src="../static/img/fotoReceita2.png"> 
+                            <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}"> 
                             <p>Salpicão de frango simples</p>
                             <div class="avaliacao-receita">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
                             </div> 
                         </div>
                         <div class="cardReceita">
-                            <img class="foto-receita" src="../static/img/fotoReceita2.png"> 
+                            <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}"> 
                             <p>Salpicão de frango simples</p>
                             <div class="avaliacao-receita">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
                             </div> 
                         </div>
                      </div>
                      <div class="linha-cardReceita">
                         <div class="cardReceita">
-                            <img class="foto-receita" src="../static/img/fotoReceita2.png"> 
+                            <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}"> 
                             <p>Salpicão de frango simples</p>
                             <div class="avaliacao-receita">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
                             </div> 
                         </div>
                         <div class="cardReceita">
-                            <img class="foto-receita" src="../static/img/fotoReceita2.png"> 
+                            <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}"> 
                             <p>Salpicão de frango simples</p>
                             <div class="avaliacao-receita">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
                             </div> 
                         </div>
                         <div class="cardReceita">
-                            <img class="foto-receita" src="../static/img/fotoReceita2.png"> 
+                            <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}"> 
                             <p>Salpicão de frango simples</p>
                             <div class="avaliacao-receita">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
-                                <img class="estrela-avaliacao" src="../static/img/icon-estrelaAvaliacao.png">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                            </div> 
+                        </div>
+                     </div>
+                     <div class="linha-cardReceita">
+                        <div class="cardReceita">
+                            <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}"> 
+                            <p>Salpicão de frango simples</p>
+                            <div class="avaliacao-receita">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                            </div> 
+                        </div>
+                        <div class="cardReceita">
+                            <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}"> 
+                            <p>Salpicão de frango simples</p>
+                            <div class="avaliacao-receita">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                            </div> 
+                        </div>
+                        <div class="cardReceita">
+                            <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}"> 
+                            <p>Salpicão de frango simples</p>
+                            <div class="avaliacao-receita">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
                             </div> 
                         </div>
                      </div>
@@ -245,10 +242,10 @@
         <div id="banner-anuncio"></div>
     </main>
     <footer class="rodape">
-        <img class="fundo-rodape" src="../static/img/fundo-rodape.png">
+        <img class="fundo-rodape" src="{% static 'img/fundo-rodape.png' %}">
         <div class="itens">
-            <img class="logo-cabaret" src="../static/img/logo-cabaret.png">
-            <img class="logo-cacaReceita" src="../static/img/logo-cacaReceita.png">
+            <img class="logo-cabaret" src="{% static 'img/logo-cabaret.png' %}">
+            <img class="logo-cacaReceita" src="{% static 'img/logo-cacaReceita.png' %}">
             <div>
                 <p style="font-weight: 500;">CaçaReceita</p>
                 <p>+55 (81) 9 0000-0000</p>
