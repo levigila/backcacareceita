@@ -96,3 +96,6 @@ def plataforma():
 
 def login_error(request):
          return render(request, 'loginerror.html')
+
+def buscaReceitaAprendiz(request):
+    return render(request, 'buscaReceitaAprendiz.html')
