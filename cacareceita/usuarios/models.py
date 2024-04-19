@@ -6,14 +6,14 @@ from django.contrib.auth.models import Group, Permission
 class CustomUser(AbstractUser):
     groups = models.ManyToManyField(
         Group,
-        verbose_name=_('groups'),
+        verbose_name=('groups'),
         blank=True,
         related_name='customuser_set',  # Adicione este related_name para evitar conflitos
         related_query_name='user',
     )
     user_permissions = models.ManyToManyField(
         Permission,
-        verbose_name=_('user permissions'),
+        verbose_name=('user permissions'),
         blank=True,
         related_name='customuser_set',  # Adicione este related_name para evitar conflitos
         related_query_name='user',
@@ -61,13 +61,13 @@ class Ingrediente(models.Model):
     def _str_(self):
         return self.nome
 
-class Alergeno(models.Model):
-    ingrediente = models.OneToOneField(Ingrediente, on_delete=models.CASCADE, related_name='alergenos')
-    glúten = models.BooleanField(default=False)
-    lactose = models.BooleanField(default=False)
-    nozes = models.BooleanField(default=False)
-    # Adicione outros alérgenos conforme necessário
+# class Alergeno(models.Model):
+#     ingrediente = models.OneToOneField(Ingrediente, on_delete=models.CASCADE, related_name='alergenos')
+#     glúten = models.BooleanField(default=False)
+#     lactose = models.BooleanField(default=False)
+#     nozes = models.BooleanField(default=False)
+#     # Adicione outros alérgenos conforme necessário
 
-    def _str_(self):
-        return f"Alergenos de {self.ingrediente.nome}"
-    #enviando novamente
+#     def _str_(self):
+#         return f"Alergenos de {self.ingrediente.nome}"
+#     #enviando novamente
