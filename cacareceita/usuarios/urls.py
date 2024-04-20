@@ -11,6 +11,8 @@ urlpatterns = [
     path('loginerror/', views.login_error, name='loginerror'),
     path('buscaReceitaAprendiz/', views.buscaReceitaAprendiz, name='buscaReceitaAprendiz'),
     path('buscaReceitaMiniChef/', views.buscaReceitaMiniChef, name='buscaReceitaMiniChef'),
+    path('buscaReceitaSubChef/', views.buscaReceitaSubChef, name='buscaReceitaSubChef'),
     path('homeAprendiz/', views.homeAprendiz, name='homeAprendiz'),
-    path('homeMiniChef/', views.homeMiniChef, name='homeMiniChef')
+    path('homeMiniChef/', views.homeMiniChef, name='homeMiniChef'),
+    path('homeSubChef/', views.homeSubChef, name='homeSubChef')
 ]
