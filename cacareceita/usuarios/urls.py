@@ -16,5 +16,6 @@ urlpatterns = [
     path('homeAprendiz/', views.homeAprendiz, name='homeAprendiz'),
     path('homeMiniChef/', views.homeMiniChef, name='homeMiniChef'),
     path('homeSubChef/', views.homeSubChef, name='homeSubChef'),
-    path('homeChef/', views.homeChef, name='homeChef')
+    path('homeChef/', views.homeChef, name='homeChef'),
+    path('homeConfeiteiro/', views.homeConfeiteiro, name='homeConfeiteiro')
 ]

@@ -119,3 +119,6 @@ def homeSubChef(request):
 
 def homeChef(request):
     return render(request, 'homeChef.html')
+
+def homeConfeiteiro(request):
+    return render(request, 'homeConfeiteiro.html')
