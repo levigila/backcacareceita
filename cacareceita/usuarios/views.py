@@ -52,6 +52,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login as login_django
 
+
 def cadastro(request):
     if request.method == "GET":
         return render(request, 'cadastro.html')
@@ -59,16 +60,29 @@ def cadastro(request):
         username = request.POST.get('username')
         email = request.POST.get('email')
         senha = request.POST.get('senha')
+        confirma_senha = request.POST.get('confirma_senha')
 
-# Check if the user already exists
+        # Check if the user already exists
         if User.objects.filter(username=username).exists():
-            return HttpResponse('Já existe um usuário com esse nome. Tente outro.')
+            return render(request, 'cadastroerror.html',
+                          {'error_msg': 'Já existe um usuário com esse nome. Tente outro.'})
+
+        # Check if a user with the same email already exists
+        if User.objects.filter(email=email).exists():
+            return render(request, 'cadastroerror.html', {
+                'error_msg': 'Já existe um usuário com este endereço de e-mail. Por favor, use outro endereço de e-mail.'})
+
+        # Check if passwords match
+        if senha != confirma_senha:
+            return render(request, 'cadastroerror.html',
+                          {'error_msg': 'As senhas não correspondem. Por favor, tente novamente.'})
 
         # Create the user with hashed password
         user = User.objects.create_user(username=username, email=email, password=senha)
         user.save()
 
         return HttpResponse('Parabéns! Seu cadastro foi realizado com sucesso!')
+
 
 def login(request):
     if request.method == 'GET':
@@ -84,11 +98,13 @@ def login(request):
             return render(request, template_name='homeAprendiz.html')
         else:
             return render(request, 'loginerror.html')
-        
+
+
 def receitaAprendiz(request):
     if request.method == "GET":
         return render(request, 'ReceitaAprendiz.html')
-    
+
+
 def receitaSubChefe(request):
     if request.method == "GET":
         return render(request, 'ReceitaSubChefe.html')
@@ -97,25 +113,34 @@ def receitaSubChefe(request):
 def plataforma():
     pass
 
+
 def receitaMiniChefe(request):
     if request.method == "GET":
         return render(request, 'ReceitaMiniChefe.html')
-    
+
+
 def receitaConfeiteiro(request):
     if request.method == "GET":
         return render(request, 'ReceitaConfeiteiro.html')
-    
+
+
 def receitaVegano(request):
     if request.method == "GET":
         return render(request, 'ReceitaVegano.html')
-    
+
+
 def receitaChefe(request):
     if request.method == "GET":
         return render(request, 'ReceitaChefe.html')
 
 
 def login_error(request):
-         return render(request, 'loginerror.html')
+    return render(request, 'loginerror.html')
+
+
+def cadastro_error(request):
+    return render(request, 'cadastroerror.html')
+
 
 def buscaReceitaAprendiz(request):
     return render(request, 'buscaReceitaAprendiz.html')
@@ -124,36 +149,46 @@ def buscaReceitaAprendiz(request):
 def buscaReceitaMiniChef(request):
     return render(request, 'buscaReceitaMiniChef.html')
 
+
 def buscaReceitaSubChef(request):
     return render(request, 'buscaReceitaSubChef.html')
+
 
 def buscaReceitaChef(request):
     return render(request, 'buscaReceitaChef.html')
 
+
 def buscaReceitaConfeiteiro(request):
     return render(request, 'buscaReceitaConfeiteiro.html')
+
 
 def buscaReceitaVegano(request):
     return render(request, 'buscaReceitaVegano.html')
 
+
 def homeAprendiz(request):
     return render(request, 'homeAprendiz.html')
+
 
 def homeMiniChef(request):
     return render(request, 'homeMiniChef.html')
 
+
 def homeSubChef(request):
     return render(request, 'homeSubChef.html')
+
 
 def homeChef(request):
     return render(request, 'homeChef.html')
 
+
 def homeConfeiteiro(request):
     return render(request, 'homeConfeiteiro.html')
+
 
 def homeVegano(request):
     return render(request, 'homeVegano.html')
 
+
 def plataforma():
     pass
-

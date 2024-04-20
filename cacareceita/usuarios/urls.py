@@ -8,7 +8,8 @@ urlpatterns = [
     path ('plataforma/', views.plataforma, name='PlataForma'),
 
 
-    path('loginerror/', views.login_error, name='loginerror')  ,  
+    path('loginerror/', views.login_error, name='loginerror')  ,
+    path('cadastroerror/', views.cadastro_error, name='cadastro_error')  ,
     path('receitaAprendiz/', views.receitaAprendiz, name='receitaAprendiz')  ,  
     path('receitaSubChefe/', views.receitaSubChefe, name='receitaSubChefe')  ,  
     path('receitaMiniChefe/', views.receitaMiniChefe, name='receitaMiniChefe')  ,  
