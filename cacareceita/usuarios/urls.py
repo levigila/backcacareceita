@@ -13,8 +13,10 @@ urlpatterns = [
     path('buscaReceitaMiniChef/', views.buscaReceitaMiniChef, name='buscaReceitaMiniChef'),
     path('buscaReceitaSubChef/', views.buscaReceitaSubChef, name='buscaReceitaSubChef'),
     path('buscaReceitaChef/', views.buscaReceitaChef, name='buscaReceitaChef'),
+    path('buscaReceitaConfeiteiro/', views.buscaReceitaConfeiteiro, name='buscaReceitaConfeiteiro'),
     path('homeAprendiz/', views.homeAprendiz, name='homeAprendiz'),
     path('homeMiniChef/', views.homeMiniChef, name='homeMiniChef'),
     path('homeSubChef/', views.homeSubChef, name='homeSubChef'),
-    path('homeChef/', views.homeChef, name='homeChef')
+    path('homeChef/', views.homeChef, name='homeChef'),
+    path('homeConfeiteiro/', views.homeConfeiteiro, name='homeConfeiteiro')
 ]
