@@ -148,6 +148,9 @@ def homeChef(request):
 def homeConfeiteiro(request):
     return render(request, 'homeConfeiteiro.html')
 
+def homeVegano(request):
+    return render(request, 'homeVegano.html')
+
 def plataforma():
     pass
 
