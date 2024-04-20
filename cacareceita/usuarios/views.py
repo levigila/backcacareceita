@@ -84,9 +84,18 @@ def login(request):
             return render(request, template_name='homeAprendiz.html')
         else:
             return render(request, 'loginerror.html')
+        
+def receita(request):
+    if request.method == "GET":
+        return render(request, 'ReceitaAprendiz.html')
+    
+
 
 def plataforma():
     pass
 
 def login_error(request):
          return render(request, 'loginerror.html')
+
+def buscaReceitaAprendiz(request):
+    return render(request, 'buscaReceitaAprendiz.html')

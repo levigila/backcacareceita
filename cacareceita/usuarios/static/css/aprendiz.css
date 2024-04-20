@@ -37,10 +37,13 @@
     margin-top: 2px;
 }
 
-.icon-perfil {
-    width: 40px;
+.perfil {
     position: absolute;
     right: 100px;
+}
+
+.icon-perfil {
+    width: 40px;
     cursor: pointer;
 }
 .navegacao {

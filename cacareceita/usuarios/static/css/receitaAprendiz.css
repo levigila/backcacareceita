@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Jost", sans-serif;
+}
+
+body {
+    width: 1240px;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.fundo-barraPesquisa {
+    background-color: #B13D0C;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.fundo-barraPesquisa div {
+    display: flex;
+}
+
+.barra-pesquisa {
+    background-color: #fff;
+    height: 25px;
+    width: 300px;
+    border-radius: 3px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    padding-left: 4px;
+    font-size: 15px;
+    color: #B13D0C;
+}
+
+.botao-pesquisar {
+    height: 25px;
+    background-color: #fff;
+    border: none;
+    border-radius: 3px;
+    position: absolute;
+    margin-left: 300px;
+    cursor: pointer;
+
+
+}
+
+.botao-pesquisar img {
+    width: 20px;
+    margin-top: 2px;
+}
+
+.perfil {
+    position: absolute;
+    right: 100px;
+}
+
+.icon-perfil {
+    width: 40px;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 90px;
+}
+
+.navegacao {
+    height: 30px;
+    border-bottom: 5px solid #B13D0C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lista-menu {
+    display: flex;
+}
+
+.lista-menu li a {
+    text-decoration: none;
+    font-family: "Jost", sans-serif;
+    font-size: 18px;
+    color: #B13D0C;
+    font-weight: 500;
+    margin-right: 100px;
+
+}
+
+.lista-menu li:nth-child(2) a {
+    color: #496300;
+}
+
+#anuncio-ifood {
+    width: 80%;
+    margin: 80px auto 40px;
+}
+
+.receita-top {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+#anuncio-ifood img {
+    width: 100%;
+}
+
+.receita-img-audio {
+    width: 500px;
+}
+
+.receita-img-audio img {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.receita-img-audio audio {
+    width: 100%;
+}
+
+.receita-info {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.receita-info h1 {
+    font-size: 42px;
+    color: #B13D0C;
+}
+
+.receita-acoes {
+    display: flex;
+    gap: 20px;
+}
+
+.favoritar, .compartilhar, .imprimir, .copiar {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: #d9d9d9;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.estrelas img {
+    cursor: pointer;
+}
+
+.qtd-pessoas, .tempo-preparo {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.receita-info2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    height: 176px;
+}
+
+.qtd-pessoas p, .tempo-preparo p {
+    font-size: 20px;
+}
+
+
+.receita-main {
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+
+
+#dica {
+    width: 300px;
+    height: 120px;
+    border: 3px solid #8D3F12;
+    border-radius: 50px;
+    background-color: hsla(25, 89%, 35%, 0.333);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+#dica h4 {
+    color: #631800;
+}
+
+#anuncio-sadia {
+    width: 300px;
+    height: 300px;
+}
+
+#anuncio-sadia img{
+    width: 100%;
+}
+
+.receita-modo-prep, .receita-ing {
+    width: 300px;
+}
+
+.receita-modo-prep ol, .receita-ing ol {
+    list-style: decimal;
+}
+
+.receita-modo-prep ul, .receita-ing ul {
+    list-style: circle;
+}
+
+.rodape{
+    margin-top: 50px;
+}
+
+.fundo-rodape{
+    position: absolute;
+    width: 1240px;
+    height: 222px;
+   
+}
+
+.itens {
+    position: absolute;
+    display: flex;
+    margin-left: 70px;
+    align-items: center;
+    height: 222px;
+    align-content: center;
+ 
+}
+
+.itens img {
+    width: 130px;
+    margin-right: 40px;
+}
+
+.itens p {
+    font-family: "Inter", sans-serif;
+    margin-bottom: 7px;
+}
