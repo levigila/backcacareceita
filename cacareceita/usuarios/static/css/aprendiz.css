@@ -11,19 +11,32 @@
 .fundo-barraPesquisa div {
     display: flex;
 }
+
+.logoPrincipal-cacareceita {
+    position: absolute;
+    left: 100px;
+}
+
+.logoPrincipal-cacareceita img{
+    width: 60px;
+}
 .barra-pesquisa {
-    background-color: #fff;
+    background-color: #FFF9F0;
     height: 25px;
     width: 300px;
     border-radius: 3px;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
     padding-left: 4px;
     font-size: 15px;
-    color: #B13D0C;
+    color: #994E0D;
+}
+
+.barra-pesquisa::placeholder {
+    color: #994E0D;
 }
 .botao-pesquisar {
     height: 25px;
-    background-color: #fff;
+    background-color: #FFF9F0;
     border: none;
     border-radius: 3px;
     position: absolute;
@@ -79,7 +92,7 @@ main {
     align-items: center;
 }
 
-.banner-aprendiz {
+.banner-principal {
    width: 1000px;
    margin-top: 40px;
 }
@@ -91,7 +104,10 @@ main {
     font-size: 18px;
     text-transform: uppercase;
     font-weight: 400;
+    width: 400px;
+    line-height: 1.5em;
 }
+
 
 .botao-busqueAqui {
     border: none;
@@ -110,15 +126,15 @@ main {
 .fundoUtensilio2 {
     position: absolute;
     width: 200px;
-    left: 20px;
-    top: 400px;
+    left: 2px;
+    top: 300px;
 }
 
 .fundoUtensilio1 {
     position: absolute;
     width: 250px;
-    right: 20px;
-    top: 420px;
+    right: 0px;
+    top: 300px;
 }
 
 #texto-ReceitaIncrivel {
@@ -132,7 +148,7 @@ main {
 
 #linha-ReceitaIncrivel {
     margin-top: 10px;
-    border-bottom: 6px solid #496300;
+    border-bottom: 4px solid #496300;
     border-radius: 4px;
     width: 750px;
 }
@@ -154,10 +170,10 @@ main {
 
 .cardReceita {
     background-color: #FFF9F0;
-    width: 280px;
-    height: 300px;
-    margin-right: 30px;
-    border: 3px solid #EACFA7;
+    width: 200px;
+    height: 200px;
+    margin-right: 20px ;
+    border: 2px solid #EACFA7;
     border-radius: 4px;
     display: flex;
     flex-direction: column;
@@ -167,15 +183,15 @@ main {
 }
 
 .foto-receita {
-    width: 220px;
+    width: 150px;
     margin-bottom: 10px;
 }
 
 .cardReceita p {
     font-family: "Josefin Sans", sans-serif;
-    font-size: 25px;
+    font-size: 18px;
     font-weight: 400;
-    width: 200px;
+    width: 150px;
     text-align: center;
     margin-bottom: 5px;
     
@@ -186,21 +202,21 @@ main {
 }
 
 .estrela-avaliacao {
-    width: 30px;
+    width: 20px;
 }
 
 #banner-anuncio {
     background-color: #D9D9D9;
-    width: 1000px;
+    width: 800px;
     height: 200px;
     margin-bottom: 30px;
 }
 
 #anuncio2  {
     background-color: #D9D9D9;
-    width: 220px;
-    height: 500px;
-    margin-right: 100px;
+    width: 200px;
+    height: 300px;
+    margin-right: 30px;
 }
 
 .rodape{
@@ -209,7 +225,7 @@ main {
 
 .fundo-rodape{
     position: absolute;
-    width: 1500px;
+    width: 1200px;
     height: 222px;
    
 }

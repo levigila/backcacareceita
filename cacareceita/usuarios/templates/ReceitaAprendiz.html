@@ -24,12 +24,12 @@
             </div>
             <nav class="navegacao">
                 <ul class="lista-menu">
-                    <li><a href="#">Mini Chef</a></li>
-                    <li><a href="#">Aprendiz</a></li>
-                    <li><a href="#">SubChef</a></li>
-                    <li><a href="#">Chef</a></li>
-                    <li><a href="#">Confeiteiro</a></li>
-                    <li><a href="#">Vegano</a></li>
+                    <li><a href="{% url 'homeMiniChef' %}">Mini Chef</a></li>
+                    <li><a href="{% url 'homeAprendiz' %}">Aprendiz</a></li>
+                    <li><a href="{% url 'homeSubChef' %}">SubChef</a></li>
+                    <li><a href="{% url 'homeChef' %}">Chef</a></li>
+                    <li><a href="{% url 'homeConfeiteiro' %}">Confeiteiro</a></li>
+                    <li><a href="{% url 'homeVegano' %}">Vegano</a></li>
                 </ul>
             </nav>
         </header>
@@ -236,9 +236,9 @@
     </div>
     <script>
         function imprimirPagina() {
-          window.print();
+            window.print();
         }
-      </script>
+    </script>
 </body>
 
 </html>
