@@ -14,7 +14,7 @@ main {
 }
 
 .fundo-barraPesquisa {
-    background-color: #B13D0C;
+    background-color: #496300;
     height: 50px;
     display: flex;
     align-items: center;
@@ -69,7 +69,7 @@ main {
 
 .navegacao {
     height: 30px;
-    border-bottom: 5px solid #B13D0C;
+    border-bottom: 5px solid #496300;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -83,13 +83,13 @@ main {
     text-decoration: none;
     font-family: "Jost", sans-serif;
     font-size: 18px;
-    color: #B13D0C;
+    color: #994E0D;
     font-weight: 500;
     margin-right: 100px;
 
 }
 
-.lista-menu li:nth-child(2) a {
+.lista-menu li:nth-child(6) a {
     color: #496300;
 }
 
@@ -131,7 +131,7 @@ main {
 
 .receita-info h1 {
     font-size: 42px;
-    color: #B13D0C;
+    color: #496300;
 }
 
 .receita-acoes {
@@ -193,9 +193,9 @@ main {
 #dica {
     width: 350px;
     height: 160px;
-    border: 3px solid #8D3F12;
+    border: 3px solid #496300;
     border-radius: 50px;
-    background-color: hsla(25, 89%, 35%, 0.333);
+    background-color: rgba(112, 211, 14, 0.333);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -206,7 +206,7 @@ main {
 }
 
 #dica h3 {
-    color: #631800;
+    color: #496300;
     margin: 15px 0 20px 0;
 }
 
@@ -221,7 +221,7 @@ main {
 }
 
 .receita-main h1 {
-    color: #B13D0C;
+    color: #EFBE71;
     font-size: 27px;
     margin-bottom: 60px;
 } 
@@ -306,7 +306,7 @@ main {
 }
 
 #escrever-comentario::placeholder {
-    color: #B13D0C;
+    color: #496300;
 }
 
 .comentario-info {
@@ -395,4 +395,5 @@ main {
 .itens p {
     font-family: "Jost", sans-serif;
     margin-bottom: 7px;
+    color: white;
 }

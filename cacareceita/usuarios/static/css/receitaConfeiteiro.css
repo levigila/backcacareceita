@@ -14,7 +14,7 @@ main {
 }
 
 .fundo-barraPesquisa {
-    background-color: #B13D0C;
+    background-color: #E5B671;
     height: 50px;
     display: flex;
     align-items: center;
@@ -69,7 +69,7 @@ main {
 
 .navegacao {
     height: 30px;
-    border-bottom: 5px solid #B13D0C;
+    border-bottom: 5px solid #E5B671;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -83,14 +83,14 @@ main {
     text-decoration: none;
     font-family: "Jost", sans-serif;
     font-size: 18px;
-    color: #B13D0C;
+    color: #994E0D;
     font-weight: 500;
     margin-right: 100px;
 
 }
 
-.lista-menu li:nth-child(2) a {
-    color: #496300;
+.lista-menu li:nth-child(5) a {
+    color: #E5B671;
 }
 
 #anuncio-ifood {
@@ -221,7 +221,7 @@ main {
 }
 
 .receita-main h1 {
-    color: #B13D0C;
+    color: #EFBE71;
     font-size: 27px;
     margin-bottom: 60px;
 } 
@@ -395,4 +395,5 @@ main {
 .itens p {
     font-family: "Jost", sans-serif;
     margin-bottom: 7px;
+    color: white;
 }
