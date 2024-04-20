@@ -7,6 +7,7 @@ urlpatterns = [
     path ('login/', views.login, name='login'),
     path ('plataforma/', views.plataforma, name='PlataForma'),
 
+
     path('loginerror/', views.login_error, name='loginerror')  ,  
     path('receitaAprendiz/', views.receitaAprendiz, name='receitaAprendiz')  ,  
     path('receitaSubChefe/', views.receitaSubChefe, name='receitaSubChefe')  ,  
@@ -15,6 +16,9 @@ urlpatterns = [
     path('receitaChefe/', views.receitaChefe, name='receitaChefe')  ,  
     path('receitaVegano/', views.receitaVegano, name='receitaVegano')  ,  
     path('loginerror/', views.login_error, name='loginerror'),
+    path('buscaReceitaAprendiz/', views.buscaReceitaAprendiz, name='buscaReceitaAprendiz'),
+    path('loginerror/', views.login_error, name='loginerror')  ,  
+    path('receita/', views.receita, name='receita'),
+    path('loginerror/', views.login_error, name='loginerror'),
     path('buscaReceitaAprendiz/', views.buscaReceitaAprendiz, name='buscaReceitaAprendiz')
-
 ]
