@@ -1,0 +1,280 @@
+/* CSS DO HEADER/NAVEGAÇÃO */
+
+.fundo-barraPesquisa {
+    background-color: #7A3B28;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fundo-barraPesquisa div {
+    display: flex;
+}
+
+.logoPrincipal-cacareceita {
+    position: absolute;
+    left: 100px;
+}
+
+.logoPrincipal-cacareceita img{
+    width: 60px;
+}
+.barra-pesquisa {
+    background-color: #FFF9F0;
+    height: 25px;
+    width: 300px;
+    border-radius: 3px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    padding-left: 4px;
+    font-size: 15px;
+    color: #994E0D;
+}
+
+.barra-pesquisa::placeholder {
+    color: #7A3B28;
+}
+.botao-pesquisar {
+    height: 25px;
+    background-color: #FFF9F0;
+    border: none;
+    border-radius: 3px;
+    position: absolute;
+    margin-left: 300px;
+    cursor: pointer;
+
+    
+}
+.botao-pesquisar img{
+    width: 20px;
+    margin-top: 2px;
+}
+
+.perfil {
+    position: absolute;
+    right: 100px;
+}
+
+.icon-perfil {
+    width: 40px;
+    cursor: pointer;
+}
+.navegacao {
+    height: 30px;
+    border-bottom: 5px solid #7A3B28;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lista-menu {
+    display: flex;
+}
+
+.lista-menu li a{
+    text-decoration: none;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 18px;
+    color: #7A3B28;
+    font-weight: 500;
+    margin-right: 100px;
+ 
+}
+.lista-menu li:nth-child(3) a {
+    color: #496300;
+}
+
+/*CSS DA ÁREA PRINCIPAL*/
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner-principal {
+   width: 1000px;
+   margin-top: 40px;
+}
+
+.titulo-pesquiseReceita {
+    margin-top: 40px;
+    font-family: "Inter", sans-serif; 
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 400;
+    width: 400px;
+}
+
+.destaque:nth-of-type(1){
+    background-color: rgb(242,133,86,0.6);
+    border-radius: 10px;
+    padding-left: 4px;
+    padding-right: 7px;
+    line-height: 2em;
+}
+.destaque:nth-of-type(2){
+    background-color: rgb(157,171,117,0.8);
+    border-radius: 10px;
+    padding-left: 4px;
+    padding-right: 7px;
+    line-height: 2em;
+}
+.destaque:nth-of-type(3){
+    background-color: rgb(234,207,167);
+    border-radius: 10px;
+    padding-left: 4px;
+    padding-right: 7px;
+    line-height: 1em;
+    
+}
+
+.destaque:nth-of-type(4){
+    background-color: rgb(71,139,3,0.4);
+    border-radius: 10px;
+    padding-left: 4px;
+    padding-right: 7px;
+    line-height: 2em;
+}
+
+.botao-busqueAqui {
+    border: none;
+    background-color: #EFBE71;
+    width: 170px;
+    height: 30px;
+    border-radius: 10px;
+    margin-top: 40px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.fundoUtensilio2 {
+    position: absolute;
+    width: 200px;
+    left: 0px;
+    top: 270px;
+}
+
+.fundoUtensilio1 {
+    position: absolute;
+    width: 250px;
+    right: 0px;
+    top: 280px;
+}
+
+#texto-ReceitaIncrivel {
+    margin-top: 50px;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 25px;
+    font-weight: 900;
+    color: #994E0D;
+    text-transform: uppercase;
+}
+
+#linha-ReceitaIncrivel {
+    margin-top: 10px;
+    border-bottom: 4px solid #9DAB75;
+    border-radius: 4px;
+    width: 750px;
+}
+
+.conteudo-receitas {
+    margin-top: 50px;
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.linha-cardReceita {
+    display: flex;
+    width: 1000px;
+    margin-bottom: 50px;
+    justify-content: center;
+}
+
+.cardReceita {
+    background-color: #FFF9F0;
+    width: 200px;
+    height: 200px;
+    margin-right: 20px ;
+    border: 2px solid #EACFA7;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.foto-receita {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.cardReceita p {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    width: 150px;
+    text-align: center;
+    margin-bottom: 5px;
+    
+}
+
+.avaliacao-receita {
+    display: flex;
+}
+
+.estrela-avaliacao {
+    width: 20px;
+}
+
+#banner-anuncio {
+    background-color: #D9D9D9;
+    width: 800px;
+    height: 200px;
+    margin-bottom: 30px;
+}
+
+#anuncio2  {
+    background-color: #D9D9D9;
+    width: 200px;
+    height: 300px;
+    margin-right: 30px;
+}
+
+.rodape{
+    margin-top: 50px;
+}
+
+.fundo-rodape{
+    position: absolute;
+    width: 1100px;
+    height: 222px;
+   
+}
+
+.itens {
+    position: absolute;
+    display: flex;
+    margin-left: 70px;
+    align-items: center;
+    height: 222px;
+    align-content: center;
+ 
+}
+
+.itens img {
+    width: 120px;
+    margin-right: 40px;
+}
+
+.itens p {
+    font-family: "Inter", sans-serif;
+    margin-bottom: 7px;
+}

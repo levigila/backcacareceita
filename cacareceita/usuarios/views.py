@@ -107,3 +107,6 @@ def homeAprendiz(request):
 
 def homeMiniChef(request):
     return render(request, 'homeMiniChef.html')
+
+def homeSubChef(request):
+    return render(request, 'homeSubChef.html')
