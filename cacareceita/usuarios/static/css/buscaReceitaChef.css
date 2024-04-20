@@ -96,7 +96,7 @@ main {
  }
 
 .caixa-filtroReceita {
-    background-color: #7A3B28;
+    background-color: #121900;
     width: 250px;
     height: 1150px;
     border-radius: 10px;
@@ -118,16 +118,16 @@ main {
     border-radius: 5px;
     font-size: 14px;
     padding-left: 5px;
-    color: #994E0D;
+    color: #121900;
 }
 
 .caixa-pesquisaFiltro  input::placeholder{
     font-family: "Inter", sans-serif; 
-    color: #994E0D;
+    color: #121900;
 }
 
 .caixa-filtro {
-    background-color: rgb(239,190,113);
+    background-color: #121900;
     width: 250px;
     height: 1200px;
     position: absolute;
@@ -178,7 +178,7 @@ main {
 }
 
 .opcoes-ingredientes {
-    background-color: #FFF8D4;
+    background-color: #fff;
     width: 200px;
     height: 200px;
     border-radius: 10px;
@@ -255,7 +255,7 @@ main {
     width: 200px;
     height: 200px;
     margin-right: 20px ;
-    border: 2px solid #EACFA7;
+    border: 2px solid #261E1A;
     border-radius: 4px;
     display: flex;
     flex-direction: column;
