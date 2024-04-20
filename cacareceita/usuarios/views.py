@@ -105,6 +105,9 @@ def buscaReceitaMiniChef(request):
 def buscaReceitaSubChef(request):
     return render(request, 'buscaReceitaSubChef.html')
 
+def buscaReceitaChef(request):
+    return render(request, 'buscaReceitaChef.html')
+
 def homeAprendiz(request):
     return render(request, 'homeAprendiz.html')
 
@@ -113,3 +116,6 @@ def homeMiniChef(request):
 
 def homeSubChef(request):
     return render(request, 'homeSubChef.html')
+
+def homeChef(request):
+    return render(request, 'homeChef.html')

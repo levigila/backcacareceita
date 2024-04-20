@@ -12,7 +12,9 @@ urlpatterns = [
     path('buscaReceitaAprendiz/', views.buscaReceitaAprendiz, name='buscaReceitaAprendiz'),
     path('buscaReceitaMiniChef/', views.buscaReceitaMiniChef, name='buscaReceitaMiniChef'),
     path('buscaReceitaSubChef/', views.buscaReceitaSubChef, name='buscaReceitaSubChef'),
+    path('buscaReceitaChef/', views.buscaReceitaChef, name='buscaReceitaChef'),
     path('homeAprendiz/', views.homeAprendiz, name='homeAprendiz'),
     path('homeMiniChef/', views.homeMiniChef, name='homeMiniChef'),
-    path('homeSubChef/', views.homeSubChef, name='homeSubChef')
+    path('homeSubChef/', views.homeSubChef, name='homeSubChef'),
+    path('homeChef/', views.homeChef, name='homeChef')
 ]

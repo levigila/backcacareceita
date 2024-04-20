@@ -84,178 +84,125 @@
     color: #496300;
 }
 
-/* CSS MAIN */
+/*CSS DA ÁREA PRINCIPAL*/
+
 main {
     display: flex;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
 }
-.banner-aprendiz {
-    width: 1000px;
+
+.banner-principal {
+   width: 1000px;
+   margin-top: 40px;
+}
+
+.titulo-pesquiseReceita {
     margin-top: 40px;
- }
-
-.caixa-filtroReceita {
-    background-color: #7A3B28;
-    width: 250px;
-    height: 1150px;
-    border-radius: 10px;
-    
-}
-.caixa-pesquisaFiltro {
-    display: flex;
-    height: 60px;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.caixa-pesquisaFiltro  input{
-    position: absolute;
-    width: 200px;
-    background-color: #fff;
-    height: 25px;
-    border-radius: 5px;
-    font-size: 14px;
-    padding-left: 5px;
-    color: #994E0D;
-}
-
-.caixa-pesquisaFiltro  input::placeholder{
     font-family: "Inter", sans-serif; 
-    color: #994E0D;
-}
-
-.caixa-filtro {
-    background-color: rgb(239,190,113);
-    width: 250px;
-    height: 1200px;
-    position: absolute;
-    border-radius: 10px ;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-
-}
-#area-indicador {
-    height: 60px;
-}
-
-#area-indicador p{
-    position: relative;
-    top: 15px;
-    z-index: 1;
     text-align: center;
-    color: #fff;
-    font-family: "Inter", sans-serif; 
     font-size: 18px;
-    
-
-}
-
-#circulo {
-    width: 250px;
-    height: 150px;
-    background-color: #9DAB75; 
-    border-radius: 50%;
-    clip-path: inset(50% 0 0 0);
-    position: relative;
-    bottom: 111px;
-}
-
-.secao-ingredientes {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.secao-titulo {
-    font-family: "Inter", sans-serif; 
-    color: #fff;
-    font-size: 16px;
+    text-transform: uppercase;
     font-weight: 400;
-    margin-top: 40px;
+    width: 400px;
 }
 
-.opcoes-ingredientes {
-    background-color: #FFF8D4;
-    width: 200px;
-    height: 200px;
+.destaque:nth-of-type(1){
+    background-color: rgb(242,133,86,0.5);
     border-radius: 10px;
-    margin-top: 20px;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 10px 0px inset;
-
+    padding-left: 4px;
+    padding-right: 7px;
+    line-height: 2em;
+}
+.destaque:nth-of-type(2){
+    background-color: #FDF7AA;
+    border-radius: 10px;
+    padding-left: 4px;
+    padding-right: 7px;
+    line-height: 2em;
+}
+.destaque:nth-of-type(3){
+    background-color: rgb(238,2,200,0.3);
+    border-radius: 10px;
+    padding-left: 4px;
+    padding-right: 7px;
+    line-height: 1em;
+    
 }
 
-.opcoes {
-    width: 200px;
-    height: 200px;
-    margin-top: 5px;
+.destaque:nth-of-type(4){
+    background-color: rgb(71,139,3,0.4);
+    border-radius: 10px;
+    padding-left: 4px;
+    padding-right: 7px;
+    line-height: 2em;
 }
 
-.opcoes button {
+.botao-busqueAqui {
     border: none;
-    font-family: "Inter", sans-serif; 
-    background-color: #f3f2f2;
-    font-size: 16px;
-    padding-left: 5px;
-    padding-right: 5px;
+    background-color: #9DAB75;
+    width: 170px;
+    height: 30px;
     border-radius: 10px;
-    display: inline-block;
-    margin: 2px 2px 7px 2px;
-    cursor: pointer;
-
-}
-
-.area-receitas {
-    width: 1000px;
-    height: 1150px;
-    display: flex;
-    margin-top: 50px;
-}
-.receitas-aprendiz {
-    width: 750px;
-    height: 1150px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#receitasCompativeis {
+    margin-top: 40px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
     font-family: "Josefin Sans", sans-serif;
-    font-size: 24px;
-    margin-top: 30px;
-   
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
 }
 
-#linha {
+.fundoUtensilio2 {
+    position: absolute;
+    width: 220px;
+    left: 0px;
+    top: 270px;
+}
+
+.fundoUtensilio1 {
+    position: absolute;
+    width: 250px;
+    right: 0px;
+    top: 230px;
+}
+
+#texto-ReceitaIncrivel {
+    margin-top: 50px;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 25px;
+    font-weight: 900;
+    color: #080B00;
+    text-transform: uppercase;
+}
+
+#linha-ReceitaIncrivel {
     margin-top: 10px;
-    border-bottom: 4px solid #496300;
+    border-bottom: 4px solid #9DAB75;
     border-radius: 4px;
-    width: 600px;
-    margin-bottom: 30px;
+    width: 750px;
 }
-
 
 .conteudo-receitas {
-    width: 750px;
+    margin-top: 50px;
+    width: 1000px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .linha-cardReceita {
-    width: 750px;
     display: flex;
-    justify-content: center;
+    width: 1000px;
     margin-bottom: 50px;
-    
+    justify-content: center;
 }
+
 .cardReceita {
     background-color: #FFF9F0;
     width: 200px;
     height: 200px;
     margin-right: 20px ;
-    border: 2px solid #EACFA7;
+    border: 2px solid #261E1A;
     border-radius: 4px;
     display: flex;
     flex-direction: column;
@@ -291,11 +238,15 @@ main {
     background-color: #D9D9D9;
     width: 800px;
     height: 200px;
-    margin-top: 140px;
     margin-bottom: 30px;
 }
 
-/* RODAPÉ */
+#anuncio2  {
+    background-color: #D9D9D9;
+    width: 200px;
+    height: 300px;
+    margin-right: 30px;
+}
 
 .rodape{
     margin-top: 50px;
