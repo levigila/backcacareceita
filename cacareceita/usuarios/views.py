@@ -90,7 +90,6 @@ def receita(request):
         return render(request, 'ReceitaAprendiz.html')
     
 
-
 def plataforma():
     pass
 
@@ -99,3 +98,9 @@ def login_error(request):
 
 def buscaReceitaAprendiz(request):
     return render(request, 'buscaReceitaAprendiz.html')
+
+def homeAprendiz(request):
+    return render(request, 'homeAprendiz.html')
+
+def homeMiniChef(request):
+    return render(request, 'homeMiniChef.html')

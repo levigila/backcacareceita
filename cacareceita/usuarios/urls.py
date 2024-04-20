@@ -9,5 +9,7 @@ urlpatterns = [
     path('loginerror/', views.login_error, name='loginerror')  ,  
     path('receita/', views.receita, name='receita'),
     path('loginerror/', views.login_error, name='loginerror'),
-    path('buscaReceitaAprendiz/', views.buscaReceitaAprendiz, name='buscaReceitaAprendiz')
+    path('buscaReceitaAprendiz/', views.buscaReceitaAprendiz, name='buscaReceitaAprendiz'),
+    path('homeAprendiz/', views.homeAprendiz, name='homeAprendiz'),
+    path('homeMiniChef/', views.homeMiniChef, name='homeMiniChef')
 ]
