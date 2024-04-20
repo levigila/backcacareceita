@@ -85,17 +85,35 @@ def login(request):
         else:
             return render(request, 'loginerror.html')
         
-def receita(request):
+def receitaAprendiz(request):
     if request.method == "GET":
         return render(request, 'ReceitaAprendiz.html')
     
+def receitaSubChefe(request):
+    if request.method == "GET":
+        return render(request, 'ReceitaSubChefe.html')
 
-
-def plataforma():
-    pass
+def receitaMiniChefe(request):
+    if request.method == "GET":
+        return render(request, 'ReceitaMiniChefe.html')
+    
+def receitaConfeiteiro(request):
+    if request.method == "GET":
+        return render(request, 'ReceitaConfeiteiro.html')
+    
+def receitaVegano(request):
+    if request.method == "GET":
+        return render(request, 'ReceitaVegano.html')
+    
+def receitaChefe(request):
+    if request.method == "GET":
+        return render(request, 'ReceitaChefe.html')
 
 def login_error(request):
          return render(request, 'loginerror.html')
 
 def buscaReceitaAprendiz(request):
     return render(request, 'buscaReceitaAprendiz.html')
+
+def plataforma():
+    pass

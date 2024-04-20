@@ -14,7 +14,7 @@ main {
 }
 
 .fundo-barraPesquisa {
-    background-color: #B13D0C;
+    background-color: #7A3B28;
     height: 50px;
     display: flex;
     align-items: center;
@@ -69,7 +69,7 @@ main {
 
 .navegacao {
     height: 30px;
-    border-bottom: 5px solid #B13D0C;
+    border-bottom: 5px solid #7A3B28;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -89,8 +89,8 @@ main {
 
 }
 
-.lista-menu li:nth-child(2) a {
-    color: #496300;
+.lista-menu li:nth-child(3) a {
+    color: #9DAB75;
 }
 
 #anuncio-ifood {
@@ -395,4 +395,5 @@ main {
 .itens p {
     font-family: "Jost", sans-serif;
     margin-bottom: 7px;
+    color: white;
 }
