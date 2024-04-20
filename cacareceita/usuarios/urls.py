@@ -18,7 +18,6 @@ urlpatterns = [
     path('loginerror/', views.login_error, name='loginerror'),
     path('buscaReceitaAprendiz/', views.buscaReceitaAprendiz, name='buscaReceitaAprendiz'),
     path('loginerror/', views.login_error, name='loginerror')  ,  
-    path('receita/', views.receita, name='receita'),
     path('loginerror/', views.login_error, name='loginerror'),
     path('buscaReceitaAprendiz/', views.buscaReceitaAprendiz, name='buscaReceitaAprendiz'),
     path('buscaReceitaMiniChef/', views.buscaReceitaMiniChef, name='buscaReceitaMiniChef'),
