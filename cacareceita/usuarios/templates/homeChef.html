@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sub Chef</title>
+    <title>Chefe</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/homeSubChef.css' %}">
+    <link rel="stylesheet" href="{% static 'css/homeChef.css' %}">
     <link rel="stylesheet" href="{% static 'css/reset.css' %}">
 </head>
 
@@ -41,13 +41,11 @@
         </nav>
     </header>
     <main>
-        <img class="banner-principal" src="{% static 'img/banner-principal-minichef.png' %}">
-        <p class="titulo-pesquiseReceita">Você <mark class="destaque">não sabe</mark> qual <mark
-                class="destaque">receita fazer?</mark> pesquise aqui pelos <mark class="destaque">ingredientes
-                que</mark> <mark class="destaque">você tem!</mark></p>
+        <img class="banner-principal" src="{% static 'img/banner-aprendiz.png' %}">
+        <p class="titulo-pesquiseReceita">Você não sabe qual receita fazer? pesquise aqui pelos ingredientes que você tem!</p>
         <a href="{% url 'buscaReceitaSubChef' %}"><button class="botao-busqueAqui">Busque aqui</button></a>
-        <img class="fundoUtensilio2" src="{% static 'img/utensilio1-subchef.png' %}">
-        <img class="fundoUtensilio1" src="{% static 'img/utensilio2-subchef.png' %}">
+        <img class="fundoUtensilio2" src="{% static 'img/utensilio1-chef.png' %}">
+        <img class="fundoUtensilio1" src="{% static 'img/utensilio2-chef.png' %}">
 
         <p id="texto-ReceitaIncrivel">Receitas incríveis e fáceis para você começar!</p>
         <div id="linha-ReceitaIncrivel"></div>
@@ -226,7 +224,7 @@
     </main>
 
     <footer class="rodape">
-        <img class="fundo-rodape" src="{% static 'img/fundo-rodape-subchef.png' %}">
+        <img class="fundo-rodape" src="{% static 'img/fundo-rodape-chef.png' %}">
         <div class="itens">
             <img class="logo-cabaret" src="{% static 'img/logo-cabaret.png' %}">
             <img class="logo-cacaReceita" src="{% static 'img/logo-cacaReceita.png' %}">

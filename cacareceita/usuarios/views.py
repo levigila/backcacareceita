@@ -113,3 +113,6 @@ def homeMiniChef(request):
 
 def homeSubChef(request):
     return render(request, 'homeSubChef.html')
+
+def homeChef(request):
+    return render(request, 'homeChef.html')
