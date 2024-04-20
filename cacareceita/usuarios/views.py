@@ -99,6 +99,9 @@ def login_error(request):
 def buscaReceitaAprendiz(request):
     return render(request, 'buscaReceitaAprendiz.html')
 
+def buscaReceitaMiniChef(request):
+    return render(request, 'buscaReceitaMiniChef.html')
+
 def homeAprendiz(request):
     return render(request, 'homeAprendiz.html')
 
