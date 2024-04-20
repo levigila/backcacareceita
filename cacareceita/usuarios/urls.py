@@ -24,6 +24,7 @@ urlpatterns = [
     path('buscaReceitaSubChef/', views.buscaReceitaSubChef, name='buscaReceitaSubChef'),
     path('buscaReceitaChef/', views.buscaReceitaChef, name='buscaReceitaChef'),
     path('buscaReceitaConfeiteiro/', views.buscaReceitaConfeiteiro, name='buscaReceitaConfeiteiro'),
+    path('buscaReceitaVegano/', views.buscaReceitaVegano, name='buscaReceitaVegano'),
     path('homeAprendiz/', views.homeAprendiz, name='homeAprendiz'),
     path('homeMiniChef/', views.homeMiniChef, name='homeMiniChef'),
     path('homeSubChef/', views.homeSubChef, name='homeSubChef'),

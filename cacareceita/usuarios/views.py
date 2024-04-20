@@ -133,6 +133,9 @@ def buscaReceitaChef(request):
 def buscaReceitaConfeiteiro(request):
     return render(request, 'buscaReceitaConfeiteiro.html')
 
+def buscaReceitaVegano(request):
+    return render(request, 'buscaReceitaVegano.html')
+
 def homeAprendiz(request):
     return render(request, 'homeAprendiz.html')
 
