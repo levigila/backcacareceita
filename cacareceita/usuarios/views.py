@@ -105,18 +105,18 @@ def receitaAprendiz(request):
         return render(request, 'ReceitaAprendiz.html')
 
 
-def receitaSubChefe(request):
+def receitaSubChef(request):
     if request.method == "GET":
-        return render(request, 'ReceitaSubChefe.html')
+        return render(request, 'ReceitaSubChef.html')
 
 
 def plataforma():
     pass
 
 
-def receitaMiniChefe(request):
+def receitaMiniChef(request):
     if request.method == "GET":
-        return render(request, 'ReceitaMiniChefe.html')
+        return render(request, 'ReceitaMiniChef.html')
 
 
 def receitaConfeiteiro(request):
@@ -129,9 +129,9 @@ def receitaVegano(request):
         return render(request, 'ReceitaVegano.html')
 
 
-def receitaChefe(request):
+def receitaChef(request):
     if request.method == "GET":
-        return render(request, 'ReceitaChefe.html')
+        return render(request, 'ReceitaChef.html')
 
 
 def login_error(request):

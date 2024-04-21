@@ -5,34 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/receitaChefe.css' %}">
+    <link rel="stylesheet" href="{% static 'css/receitaMiniChefe.css' %}">
     <link rel="stylesheet" href="{% static 'css/reset.css' %}">
     <title>Receita</title>
 </head>
 
 <body>
     <div class="container">
-        <header>
-            <div class="fundo-barraPesquisa">
-                <div>
-                    <input class="barra-pesquisa" type="text">
-                    <button class="botao-pesquisar"><img src="{% static 'img/icon-pesquisa.png' %}"></button>
-                </div>
-                <a href="{% url 'cadastro' %}">
-                    <img class="icon-perfil" src="{% static 'img/icon-perfil.png' %}">
-                </a>
+    <header>
+        <div class="fundo-barraPesquisa">
+            <a href="{% url 'homeMiniChef' %}" class="logoPrincipal-cacareceita">
+                <img src="{% static 'img/logo-cacareceita2.png' %}">
+            </a>
+            <div>
+                <input class="barra-pesquisa" type="text" placeholder="Encontre sua receita">
+                <button class="botao-pesquisar"><img src="{% static 'img/icon-pesquisa.png' %}"></button>
             </div>
-            <nav class="navegacao">
-                <ul class="lista-menu">
-                    <li><a href="{% url 'homeMiniChef' %}">Mini Chef</a></li>
-                    <li><a href="{% url 'homeAprendiz' %}">Aprendiz</a></li>
-                    <li><a href="{% url 'homeSubChef' %}">SubChef</a></li>
-                    <li><a href="{% url 'homeChef' %}">Chef</a></li>
-                    <li><a href="{% url 'homeConfeiteiro' %}">Confeiteiro</a></li>
-                    <li><a href="{% url 'homeVegano' %}">Vegano</a></li>
-                </ul>
-            </nav>
-        </header>
+            <a class="perfil" href="{% url 'cadastro' %}">
+                <img class="icon-perfil" src="{% static 'img/icon-perfil.png' %}">
+            </a>
+        </div>
+        <nav class="navegacao">
+            <ul class="lista-menu">
+                <li><a href="{% url 'homeMiniChef' %}">Mini Chef</a></li>
+                <li><a href="{% url 'homeAprendiz' %}">Aprendiz</a></li>
+                <li><a href="{% url 'homeSubChef' %}">SubChef</a></li>
+                <li><a href="{% url 'homeChef' %}">Chef</a></li>
+                <li><a href="{% url 'homeConfeiteiro' %}">Confeiteiro</a></li>
+                <li><a href="{% url 'homeVegano' %}">Vegano</a></li>
+            </ul>
+        </nav>
+    </header>
 
         <main>
 
@@ -221,7 +224,7 @@
 
         </main>
         <footer class="rodape">
-            <img class="fundo-rodape" src="{% static 'img/footer-chefe.svg' %}">
+            <img class="fundo-rodape" src="{% static 'img/footer-mini-chefe.svg' %}">
             <div class="itens">
                 <img class="logo-cabaret" src="{% static 'img/logo-cabaret.png' %}">
                 <img class="logo-cacaReceita" src="{% static 'img/logo-cacaReceita.png' %}">
@@ -236,9 +239,9 @@
     </div>
     <script>
         function imprimirPagina() {
-            window.print();
+          window.print();
         }
-    </script>
+      </script>
 </body>
 
 </html>

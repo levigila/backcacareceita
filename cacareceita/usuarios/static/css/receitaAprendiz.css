@@ -19,27 +19,37 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
 }
 
 .fundo-barraPesquisa div {
     display: flex;
 }
 
+.logoPrincipal-cacareceita {
+    position: absolute;
+    left: 100px;
+}
+
+.logoPrincipal-cacareceita img{
+    width: 60px;
+}
 .barra-pesquisa {
-    background-color: #fff;
+    background-color: #FFF9F0;
     height: 25px;
     width: 300px;
     border-radius: 3px;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
     padding-left: 4px;
     font-size: 15px;
-    color: #B13D0C;
+    color: #994E0D;
 }
 
+.barra-pesquisa::placeholder {
+    color: #994E0D;
+}
 .botao-pesquisar {
     height: 25px;
-    background-color: #fff;
+    background-color: #FFF9F0;
     border: none;
     border-radius: 3px;
     position: absolute;
@@ -48,8 +58,7 @@ main {
 
 
 }
-
-.botao-pesquisar img {
+.botao-pesquisar img{
     width: 20px;
     margin-top: 2px;
 }
@@ -62,11 +71,7 @@ main {
 .icon-perfil {
     width: 40px;
     cursor: pointer;
-    position: absolute;
-    top: 5px;
-    right: 90px;
 }
-
 .navegacao {
     height: 30px;
     border-bottom: 5px solid #B13D0C;
@@ -79,7 +84,7 @@ main {
     display: flex;
 }
 
-.lista-menu li a {
+.lista-menu li a{
     text-decoration: none;
     font-family: "Jost", sans-serif;
     font-size: 18px;
@@ -88,7 +93,6 @@ main {
     margin-right: 100px;
 
 }
-
 .lista-menu li:nth-child(2) a {
     color: #496300;
 }
