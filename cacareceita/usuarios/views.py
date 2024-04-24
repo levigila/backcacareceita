@@ -64,25 +64,22 @@ def cadastro(request):
 
         # Check if the user already exists
         if User.objects.filter(username=username).exists():
-            return render(request, 'cadastroerror.html',
-                          {'error_msg': 'Já existe um usuário com esse nome. Tente outro.'})
+            return render(request, 'cadastroerrornome.html')
 
         # Check if a user with the same email already exists
         if User.objects.filter(email=email).exists():
-            return render(request, 'cadastroerror.html', {
-                'error_msg': 'Já existe um usuário com este endereço de e-mail. Por favor, use outro endereço de e-mail.'})
+            return render(request, 'cadastroerroremail.html')
 
-        # Check if passwords match
+        # # Check if passwords match
         if senha != confirma_senha:
-            return render(request, 'cadastroerror.html',
-                          {'error_msg': 'As senhas não correspondem. Por favor, tente novamente.'})
+            return render(request, 'cadastroerrorsenha.html')
 
         # Create the user with hashed password
-        user = User.objects.create_user(username=username, email=email, password=senha)
-        user.save()
-
-        return HttpResponse('Parabéns! Seu cadastro foi realizado com sucesso!')
-
+        else: 
+            user = User.objects.create_user(username=username, email=email, password=senha)
+            user.save()
+            return HttpResponse('Parabéns! Seu cadastro foi realizado com sucesso!')
+        
 
 def login(request):
     if request.method == 'GET':
@@ -136,11 +133,6 @@ def receitaChef(request):
 
 def login_error(request):
     return render(request, 'loginerror.html')
-
-
-def cadastro_error(request):
-    return render(request, 'cadastroerror.html')
-
 
 def buscaReceitaAprendiz(request):
     return render(request, 'buscaReceitaAprendiz.html')
