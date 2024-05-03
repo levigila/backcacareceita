@@ -9,32 +9,6 @@
     <link rel="stylesheet" href="{% static 'css/cadastro.css' %}">
     <script src="{% static 'js/cadastro.js' %}"></script>
     <title>Caça Receita</title>
-
-    <style>
-        /* Estilos CSS para o pop-up de erro */
-        .pop-up {
-            width: 80%;
-            max-width: 400px; /* Defina o máximo para evitar que o pop-up fique muito grande */
-            height: auto; /* Altura ajustável com base no conteúdo */
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: #FFFFFF;
-            border-radius: 15px;
-            color: #B13D0C;
-            font-size: 20px;
-            display: none;
-            z-index: 1001;
-            padding: 20px; /* Adicione um espaçamento interno */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Adicione uma sombra para destacar o pop-up */
-        }
-
-        /* Estilo CSS para o texto de erro */
-        .error-text {
-            margin-top: 20px;
-        }
-    </style>
 </head>
 
 <body>
@@ -96,14 +70,13 @@
     <!-- Pop-up de erro -->
     <div class="pop-up" id="error-popup">
         <div class="pop-up-header">
-            <h4>Atenção!</h4>
             <img src="{% static 'img/icon-X.svg' %}" alt="" onclick="closePopup()">
         </div>
-        <div class="bar"></div>
+        <h4>Atenção!</h4>
         <div class="error-msg" id="status-cadastro">
             <img src="{% static 'img/icon-atencao.svg' %}" alt="">
 
-                            <p class="error-text">Nome já cadastrado!</p><!-- Mensagem de erro será preenchida dinamicamente -->
+            <p class="error-text">Nome já cadastrado!</p><!-- Mensagem de erro será preenchida dinamicamente -->
         </div>
     </div>
 

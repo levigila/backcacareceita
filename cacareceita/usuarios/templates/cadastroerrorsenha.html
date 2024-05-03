@@ -9,32 +9,6 @@
     <link rel="stylesheet" href="{% static 'css/cadastro.css' %}">
     <script src="{% static 'js/cadastro.js' %}"></script>
     <title>Caça Receita</title>
-
-    <style>
-        /* Estilos CSS para o pop-up de erro */
-        .pop-up {
-            width: 80%;
-            max-width: 400px; /* Defina o máximo para evitar que o pop-up fique muito grande */
-            height: auto; /* Altura ajustável com base no conteúdo */
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: #FFFFFF;
-            border-radius: 15px;
-            color: #B13D0C;
-            font-size: 20px;
-            display: none;
-            z-index: 1001;
-            padding: 20px; /* Adicione um espaçamento interno */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Adicione uma sombra para destacar o pop-up */
-        }
-
-        /* Estilo CSS para o texto de erro */
-        .error-text {
-            margin-top: 20px;
-        }
-    </style>
 </head>
 
 <body>
@@ -64,20 +38,17 @@
                     {%csrf_token %}
                     <label>
                         <p>E-mail</p>
-                        <input id="email" type="email" name="email"  required
-                            onchange="validateFields()">
+                        <input id="email" type="email" name="email" required onchange="validateFields()">
                     </label>
 
                     <label>
                         <p>Nome de Usuário</p>
-                        <input id="user" type="text" name="username"  required
-                            onchange="validateFields()">
+                        <input id="user" type="text" name="username" required onchange="validateFields()">
                     </label>
 
                     <label>
                         <p>Senha</p>
-                        <input id="password" type="password" name="senha" required
-                            onchange="validateFields()">
+                        <input id="password" type="password" name="senha" required onchange="validateFields()">
                     </label>
 
                     <label>
@@ -96,24 +67,23 @@
     <!-- Pop-up de erro -->
     <div class="pop-up" id="error-popup">
         <div class="pop-up-header">
-            <h4>Atenção!</h4>
             <img src="{% static 'img/icon-X.svg' %}" alt="" onclick="closePopup()">
         </div>
-        <div class="bar"></div>
+        <h4>Atenção!</h4>
         <div class="error-msg" id="status-cadastro">
             <img src="{% static 'img/icon-atencao.svg' %}" alt="">
 
-                            <p class="error-text">Senhas não conferem!</p><!-- Mensagem de erro será preenchida dinamicamente -->
+            <p class="error-text">Senhas não conferem!</p><!-- Mensagem de erro será preenchida dinamicamente -->
         </div>
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Exibe o pop-up de erro quando a página é carregada
             document.querySelector('.pop-up').style.display = 'block';
 
             // Esconde o pop-up de erro após 2 segundos
-            setTimeout(function() {
+            setTimeout(function () {
                 document.querySelector('.pop-up').style.display = 'none';
             }, 2000);
         });
