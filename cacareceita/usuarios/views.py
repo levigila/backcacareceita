@@ -184,5 +184,8 @@ def homeVegano(request):
 def livroReceitaAprendiz(request):
     return render(request, 'livroReceitaAprendiz.html')
 
+def minhasReceitasAprendiz(request):
+    return render(request, 'minhasReceitasAprendiz.html')
+
 def plataforma():
     pass
