@@ -24,23 +24,20 @@
     background-color: #FFF9F0;
     height: 25px;
     width: 300px;
-    border-radius: 3px;
+    border-radius: 10px;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
     padding-left: 4px;
     font-size: 15px;
     color: #994E0D;
 }
 
-.barra-pesquisa::placeholder {
-    color: #994E0D;
-}
 .botao-pesquisar {
     height: 25px;
     background-color: #FFF9F0;
     border: none;
-    border-radius: 3px;
+    border-radius: 10px;
     position: absolute;
-    margin-left: 300px;
+    margin-left: 270px;
     cursor: pointer;
 
     
@@ -125,16 +122,16 @@ main {
 
 .fundoUtensilio2 {
     position: absolute;
-    width: 200px;
-    left: 2px;
-    top: 300px;
+    width: 225px;
+    left: -37px;
+    top: 341px;
 }
 
 .fundoUtensilio1 {
     position: absolute;
-    width: 250px;
+    width: 261px;
     right: 0px;
-    top: 300px;
+    top: 357px;
 }
 
 #texto-ReceitaIncrivel {
@@ -230,29 +227,22 @@ main {
    height: 150px;
 }
 
-/* .fundo-rodape{
-    position: absolute;
-    width: 1200px;
-    height: 200px;
-   
+.logo-cabaret {
+    width: 80px;
 }
+
 
 .itens {
-    position: absolute;
     display: flex;
-    margin-left: 70px;
     align-items: center;
-    height: 222px;
-    align-content: center;
- 
+    padding-left: 50px;
+    padding-top: 40px;
+    width: 400px;
+    gap: 20px;
 }
 
-.itens img {
-    width: 130px;
-    margin-right: 40px;
-}
 
 .itens p {
     font-family: "Inter", sans-serif;
     margin-bottom: 7px;
-} */
+}  
