@@ -45,8 +45,6 @@
 #     if request.user.is_authenticated:
 #         return HttpResponse('Plataforma')
 #     return HttpResponse('Você precisa estar logado')
-
-
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
@@ -96,6 +94,11 @@ def login(request):
         else:
             return render(request, 'loginerror.html')
 
+def esqueciSenha(request):
+    return render(request, 'esqueciSenha.html')
+
+def alterarSenha(request, cod):
+    return render(request, 'alterarSenha.html')
 
 def receitaAprendiz(request):
     if request.method == "GET":

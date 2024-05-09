@@ -68,7 +68,7 @@ a {
 }
 
 .area-laranja a {
-    border: 1px solid;
+    border: 1px solid #496300;
     width: 305px;
     height: 62px;
     border-radius: 20px;
@@ -103,7 +103,7 @@ a {
 .area-transparente h1 {
     font-weight: 500;
     font-size: 96px;
-    color: white;
+    color: #EACFA7;
     text-shadow: 1px 1px 1px black;
     margin-top: 60px;
 }
@@ -173,11 +173,11 @@ a {
 
 .area-transparente form p {
     font-size: 30px;
-    color: #994E0D;
+    color: #FFF;
 }
 
 .area-transparente h3 {
-    color: #994E0D;
+    color: #FFF;
     font-size: 32px;
     font-weight: 300;
     font-weight: bold;

@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar Senha</title>
+    <link rel="stylesheet" href="{% static 'css/alterarSenha.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-senha">
+            <h1>Alterar Senha</h1>
+            <p>Criar nova senha</p>
+
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li {% if message.tags %}class="alert alert-{{message.tags}}" {% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+
+            <form method="POST">
+                {%csrf_token %}
+                <input type="password" name="senha" id="senha">
+                <input type="password" name="confirmar-senha" id="confirmar-senha">
+                <button>Continuar</button>
+            </form>
+        </div>
+        <div class="img">
+            <img src="{% static 'img/esqueciSenhalogo2.svg' %}" alt="">
+        </div>
+
+        <a href="{% url 'login'%}">
+            <img src="{% static 'img/icon-x.svg' %}" id="icon-x" alt="">
+        </a>
+    </div>
+</body>
+
+</html>

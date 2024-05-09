@@ -207,6 +207,7 @@ a {
     font-size: 20px;
     display: none;
     z-index: 1;
+    border-bottom: 13px solid #496300;
 }
 
 .pop-up h4 {

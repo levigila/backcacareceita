@@ -3,22 +3,19 @@ from.import views
 
 
 urlpatterns = [
-    path ('cadastro/', views.cadastro, name='cadastro'),
-    path ('login/', views.login, name='login'),
-    path ('plataforma/', views.plataforma, name='PlataForma'),
-
-    
-    path('loginerror/', views.login_error, name='loginerror')  ,
-    path('receitaAprendiz/', views.receitaAprendiz, name='receitaAprendiz')  ,  
-    path('receitaSubChef/', views.receitaSubChef, name='receitaSubChef')  ,
-    path('receitaMiniChef/', views.receitaMiniChef, name='receitaMiniChef')  ,
-    path('receitaConfeiteiro/', views.receitaConfeiteiro, name='receitaConfeiteiro')  ,  
-    path('receitaChef/', views.receitaChef, name='receitaChef')  ,
-    path('receitaVegano/', views.receitaVegano, name='receitaVegano')  ,  
+    path('cadastro/', views.cadastro, name='cadastro'),
+    path('login/', views.login, name='login'),
     path('loginerror/', views.login_error, name='loginerror'),
+    path('esqueciSenha/', views.esqueciSenha, name='esqueci-senha'),
+    path('alterarSenha/<int:cod>', views.alterarSenha, name='alterar-senha'),
+    path('plataforma/', views.plataforma, name='PlataForma'),
+    path('receitaAprendiz/', views.receitaAprendiz, name='receitaAprendiz'),
+    path('receitaSubChef/', views.receitaSubChef, name='receitaSubChef'),
+    path('receitaMiniChef/', views.receitaMiniChef, name='receitaMiniChef'),
+    path('receitaConfeiteiro/', views.receitaConfeiteiro, name='receitaConfeiteiro'),
+    path('receitaChef/', views.receitaChef, name='receitaChef'),
+    path('receitaVegano/', views.receitaVegano, name='receitaVegano'),
     path('buscaReceitaAprendiz/', views.buscaReceitaAprendiz, name='buscaReceitaAprendiz'),
-    path('loginerror/', views.login_error, name='loginerror')  ,  
-    path('loginerror/', views.login_error, name='loginerror'),
     path('buscaReceitaAprendiz/', views.buscaReceitaAprendiz, name='buscaReceitaAprendiz'),
     path('buscaReceitaMiniChef/', views.buscaReceitaMiniChef, name='buscaReceitaMiniChef'),
     path('buscaReceitaSubChef/', views.buscaReceitaSubChef, name='buscaReceitaSubChef'),

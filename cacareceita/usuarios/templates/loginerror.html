@@ -10,10 +10,6 @@
     <script src="{% static 'js/login.js' %}"></script>
 
     <title>Caça Receita</title>
-
-    <style>
-
-    </style>
 </head>
 
 <body>
@@ -37,7 +33,7 @@
                     <div class="error-msg" id="status-cadastro">
                         <img src="{% static 'img/icon-atencao.svg' %}" alt="">
             
-                        <p class="error-text">E-mail já cadastrado!</p><!-- Mensagem de erro será preenchida dinamicamente -->
+                        <p class="error-text">E-mail ou senha invalidos!</p><!-- Mensagem de erro será preenchida dinamicamente -->
                     </div>
                 </div>
 
@@ -55,7 +51,7 @@
                         <input id="password" type="password" name="senha" placeholder="Digite sua senha" required>
                     </label>
 
-                    <a href="#">Esqueci a senha</a>
+                    <a href="{% url 'esqueci-senha' %}">Esqueci a senha</a>
 
                     <button id="entrar" type="submit" disabled>Entrar</button>
                 </form>
