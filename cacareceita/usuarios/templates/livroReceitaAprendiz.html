@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Livro de Receita</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/livroReceitaAprendiz.css' %}">
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+</head>
+
+<body>
+    <header>
+        <div class="fundo-barraPesquisa">
+            <a href="{% url 'homeAprendiz' %}" class="logoPrincipal-cacareceita">
+                <img src="{% static 'img/logo-cacareceita2.png' %}">
+            </a>
+            <div>
+                <input class="barra-pesquisa" type="text" placeholder="Encontre sua receita">
+                <button class="botao-pesquisar"><img src="{% static 'img/icon-pesquisa.png' %}"></button>
+            </div>
+            <a class="perfil" href="{% url 'cadastro' %}">
+                <img class="icon-perfil" src="{% static 'img/icon-perfil.png' %}">
+            </a>
+        </div>
+        <nav class="navegacao">
+            <ul class="lista-menu">
+                <li><a href="{% url 'homeMiniChef' %}">Mini Chef</a></li>
+                <li><a href="{% url 'homeAprendiz' %}">Aprendiz</a></li>
+                <li><a href="{% url 'homeSubChef' %}">SubChef</a></li>
+                <li><a href="{% url 'homeChef' %}">Chef</a></li>
+                <li><a href="{% url 'homeConfeiteiro' %}">Confeiteiro</a></li>
+                <li><a href="{% url 'homeVegano' %}">Vegano</a></li>
+            </ul>
+        </nav>
+        <img id="imgOndasNav" src="{% static 'img/imgOndasNav.png' %}">
+    </header>
+
+    <main>
+        <div class="tituloLivroReceita">
+            <div class="linhaTitulo"></div>
+            <p>Meu livro de Receita</p>
+            <div class="linhaTitulo"></div>
+        </div>
+
+        <section class="secao-livrosReceitas">
+            <div class="linhaReceitasFavoritas">
+                <div class="cardReceita">
+                    <img class="foto-cardReceita" src="{% static 'img/imagem-receita.png' %}">
+                    <p  class="titulo-cardReceita">Tortinha de Arroz</p>
+                    <div class="descricao-cardReceita">
+                        <div class="qntdPessoas-receita">
+                            <img src="{% static 'img/iconPessoa-receita.png' %}">
+                            <p>5</p>
+                        </div>
+                        <div class="tempoEstimado-receita">
+                            <img src="{% static 'img/iconTempo-receita.png' %}">
+                            <p>10 min</p>
+                        </div>
+                    </div>
+                    <button class="botaoRemover-receita">
+                        <img src="{% static 'img/iconRemover-receita.png' %}">
+                        <p>Remover Receita</p>
+                    </button>
+                    <button class="botaoAnotacoes-receita">
+                        <img src="{% static 'img/iconAnotacoes-receita.png' %}">
+                        <p>Ver minhas anotações</p>
+                    </button>
+                </div>
+                <div class="cardReceita">
+                    <img class="foto-cardReceita" src="{% static 'img/imagem-receita.png' %}">
+                    <p  class="titulo-cardReceita">Tortinha de Arroz</p>
+                    <div class="descricao-cardReceita">
+                        <div class="qntdPessoas-receita">
+                            <img src="{% static 'img/iconPessoa-receita.png' %}">
+                            <p>5</p>
+                        </div>
+                        <div class="tempoEstimado-receita">
+                            <img src="{% static 'img/iconTempo-receita.png' %}">
+                            <p>10 min</p>
+                        </div>
+                    </div>
+                    <button class="botaoRemover-receita">
+                        <img src="{% static 'img/iconRemover-receita.png' %}">
+                        <p>Remover Receita</p>
+                    </button>
+                    <button class="botaoAnotacoes-receita">
+                        <img src="{% static 'img/iconAnotacoes-receita.png' %}">
+                        <p>Ver minhas anotações</p>
+                    </button>
+                </div>
+                <div class="cardReceita">
+                    <img class="foto-cardReceita" src="{% static 'img/imagem-receita.png' %}">
+                    <p  class="titulo-cardReceita">Tortinha de Arroz</p>
+                    <div class="descricao-cardReceita">
+                        <div class="qntdPessoas-receita">
+                            <img src="{% static 'img/iconPessoa-receita.png' %}">
+                            <p>5</p>
+                        </div>
+                        <div class="tempoEstimado-receita">
+                            <img src="{% static 'img/iconTempo-receita.png' %}">
+                            <p>10 min</p>
+                        </div>
+                    </div>
+                    <button class="botaoRemover-receita">
+                        <img src="{% static 'img/iconRemover-receita.png' %}">
+                        <p>Remover Receita</p>
+                    </button>
+                    <button class="botaoAnotacoes-receita">
+                        <img src="{% static 'img/iconAnotacoes-receita.png' %}">
+                        <p>Ver minhas anotações</p>
+                    </button>
+                </div>
+                <div class="cardReceita">
+                    <img class="foto-cardReceita" src="{% static 'img/imagem-receita.png' %}">
+                    <p  class="titulo-cardReceita">Tortinha de Arroz</p>
+                    <div class="descricao-cardReceita">
+                        <div class="qntdPessoas-receita">
+                            <img src="{% static 'img/iconPessoa-receita.png' %}">
+                            <p>5</p>
+                        </div>
+                        <div class="tempoEstimado-receita">
+                            <img src="{% static 'img/iconTempo-receita.png' %}">
+                            <p>10 min</p>
+                        </div>
+                    </div>
+                    <button class="botaoRemover-receita">
+                        <img src="{% static 'img/iconRemover-receita.png' %}">
+                        <p>Remover Receita</p>
+                    </button>
+                    <button class="botaoAnotacoes-receita">
+                        <img src="{% static 'img/iconAnotacoes-receita.png' %}">
+                        <p>Ver minhas anotações</p>
+                    </button>
+                </div>
+                <div class="cardReceita">
+                    <img class="foto-cardReceita" src="{% static 'img/imagem-receita.png' %}">
+                    <p  class="titulo-cardReceita">Tortinha de Arroz</p>
+                    <div class="descricao-cardReceita">
+                        <div class="qntdPessoas-receita">
+                            <img src="{% static 'img/iconPessoa-receita.png' %}">
+                            <p>5</p>
+                        </div>
+                        <div class="tempoEstimado-receita">
+                            <img src="{% static 'img/iconTempo-receita.png' %}">
+                            <p>10 min</p>
+                        </div>
+                    </div>
+                    <button class="botaoRemover-receita">
+                        <img src="{% static 'img/iconRemover-receita.png' %}">
+                        <p>Remover Receita</p>
+                    </button>
+                    <button class="botaoAnotacoes-receita">
+                        <img src="{% static 'img/iconAnotacoes-receita.png' %}">
+                        <p>Ver minhas anotações</p>
+                    </button>
+                </div>
+            </div>
+            <div class="linhaReceitasFavoritas">
+                <div class="cardReceita">
+                    <img class="foto-cardReceita" src="{% static 'img/imagem-receita.png' %}">
+                    <p  class="titulo-cardReceita">Tortinha de Arroz</p>
+                    <div class="descricao-cardReceita">
+                        <div class="qntdPessoas-receita">
+                            <img src="{% static 'img/iconPessoa-receita.png' %}">
+                            <p>5</p>
+                        </div>
+                        <div class="tempoEstimado-receita">
+                            <img src="{% static 'img/iconTempo-receita.png' %}">
+                            <p>10 min</p>
+                        </div>
+                    </div>
+                    <button class="botaoRemover-receita">
+                        <img src="{% static 'img/iconRemover-receita.png' %}">
+                        <p>Remover Receita</p>
+                    </button>
+                    <button class="botaoAnotacoes-receita">
+                        <img src="{% static 'img/iconAnotacoes-receita.png' %}">
+                        <p>Ver minhas anotações</p>
+                    </button>
+                </div>
+                <div class="cardReceita">
+                    <img class="foto-cardReceita" src="{% static 'img/imagem-receita.png' %}">
+                    <p  class="titulo-cardReceita">Tortinha de Arroz</p>
+                    <div class="descricao-cardReceita">
+                        <div class="qntdPessoas-receita">
+                            <img src="{% static 'img/iconPessoa-receita.png' %}">
+                            <p>5</p>
+                        </div>
+                        <div class="tempoEstimado-receita">
+                            <img src="{% static 'img/iconTempo-receita.png' %}">
+                            <p>10 min</p>
+                        </div>
+                    </div>
+                    <button class="botaoRemover-receita">
+                        <img src="{% static 'img/iconRemover-receita.png' %}">
+                        <p>Remover Receita</p>
+                    </button>
+                    <button class="botaoAnotacoes-receita">
+                        <img src="{% static 'img/iconAnotacoes-receita.png' %}">
+                        <p>Ver minhas anotações</p>
+                    </button>
+                </div>
+                <div class="cardReceita">
+                    <img class="foto-cardReceita" src="{% static 'img/imagem-receita.png' %}">
+                    <p  class="titulo-cardReceita">Tortinha de Arroz</p>
+                    <div class="descricao-cardReceita">
+                        <div class="qntdPessoas-receita">
+                            <img src="{% static 'img/iconPessoa-receita.png' %}">
+                            <p>5</p>
+                        </div>
+                        <div class="tempoEstimado-receita">
+                            <img src="{% static 'img/iconTempo-receita.png' %}">
+                            <p>10 min</p>
+                        </div>
+                    </div>
+                    <button class="botaoRemover-receita">
+                        <img src="{% static 'img/iconRemover-receita.png' %}">
+                        <p>Remover Receita</p>
+                    </button>
+                    <button class="botaoAnotacoes-receita">
+                        <img src="{% static 'img/iconAnotacoes-receita.png' %}">
+                        <p>Ver minhas anotações</p>
+                    </button>
+                </div>
+                <div class="cardReceita">
+                    <img class="foto-cardReceita" src="{% static 'img/imagem-receita.png' %}">
+                    <p  class="titulo-cardReceita">Tortinha de Arroz</p>
+                    <div class="descricao-cardReceita">
+                        <div class="qntdPessoas-receita">
+                            <img src="{% static 'img/iconPessoa-receita.png' %}">
+                            <p>5</p>
+                        </div>
+                        <div class="tempoEstimado-receita">
+                            <img src="{% static 'img/iconTempo-receita.png' %}">
+                            <p>10 min</p>
+                        </div>
+                    </div>
+                    <button class="botaoRemover-receita">
+                        <img src="{% static 'img/iconRemover-receita.png' %}">
+                        <p>Remover Receita</p>
+                    </button>
+                    <button class="botaoAnotacoes-receita">
+                        <img src="{% static 'img/iconAnotacoes-receita.png' %}">
+                        <p>Ver minhas anotações</p>
+                    </button>
+                </div>
+                <div class="cardReceita">
+                    <img class="foto-cardReceita" src="{% static 'img/imagem-receita.png' %}">
+                    <p  class="titulo-cardReceita">Tortinha de Arroz</p>
+                    <div class="descricao-cardReceita">
+                        <div class="qntdPessoas-receita">
+                            <img src="{% static 'img/iconPessoa-receita.png' %}">
+                            <p>5</p>
+                        </div>
+                        <div class="tempoEstimado-receita">
+                            <img src="{% static 'img/iconTempo-receita.png' %}">
+                            <p>10 min</p>
+                        </div>
+                    </div>
+                    <button class="botaoRemover-receita">
+                        <img src="{% static 'img/iconRemover-receita.png' %}">
+                        <p>Remover Receita</p>
+                    </button>
+                    <button class="botaoAnotacoes-receita">
+                        <img src="{% static 'img/iconAnotacoes-receita.png' %}">
+                        <p>Ver minhas anotações</p>
+                    </button>
+                </div>
+            </div>
+            <div class="linhaReceitasFavoritas">
+                <div class="cardReceita">
+                    <img class="foto-cardReceita" src="{% static 'img/imagem-receita.png' %}">
+                    <p  class="titulo-cardReceita">Tortinha de Arroz</p>
+                    <div class="descricao-cardReceita">
+                        <div class="qntdPessoas-receita">
+                            <img src="{% static 'img/iconPessoa-receita.png' %}">
+                            <p>5</p>
+                        </div>
+                        <div class="tempoEstimado-receita">
+                            <img src="{% static 'img/iconTempo-receita.png' %}">
+                            <p>10 min</p>
+                        </div>
+                    </div>
+                    <button class="botaoRemover-receita">
+                        <img src="{% static 'img/iconRemover-receita.png' %}">
+                        <p>Remover Receita</p>
+                    </button>
+                    <button class="botaoAnotacoes-receita">
+                        <img src="{% static 'img/iconAnotacoes-receita.png' %}">
+                        <p>Ver minhas anotações</p>
+                    </button>
+                </div>
+                <div class="cardReceita">
+                    <img class="foto-cardReceita" src="{% static 'img/imagem-receita.png' %}">
+                    <p  class="titulo-cardReceita">Tortinha de Arroz</p>
+                    <div class="descricao-cardReceita">
+                        <div class="qntdPessoas-receita">
+                            <img src="{% static 'img/iconPessoa-receita.png' %}">
+                            <p>5</p>
+                        </div>
+                        <div class="tempoEstimado-receita">
+                            <img src="{% static 'img/iconTempo-receita.png' %}">
+                            <p>10 min</p>
+                        </div>
+                    </div>
+                    <button class="botaoRemover-receita">
+                        <img src="{% static 'img/iconRemover-receita.png' %}">
+                        <p>Remover Receita</p>
+                    </button>
+                    <button class="botaoAnotacoes-receita">
+                        <img src="{% static 'img/iconAnotacoes-receita.png' %}">
+                        <p>Ver minhas anotações</p>
+                    </button>
+                </div>
+                <div class="cardReceita">
+                    <img class="foto-cardReceita" src="{% static 'img/imagem-receita.png' %}">
+                    <p  class="titulo-cardReceita">Tortinha de Arroz</p>
+                    <div class="descricao-cardReceita">
+                        <div class="qntdPessoas-receita">
+                            <img src="{% static 'img/iconPessoa-receita.png' %}">
+                            <p>5</p>
+                        </div>
+                        <div class="tempoEstimado-receita">
+                            <img src="{% static 'img/iconTempo-receita.png' %}">
+                            <p>10 min</p>
+                        </div>
+                    </div>
+                    <button class="botaoRemover-receita">
+                        <img src="{% static 'img/iconRemover-receita.png' %}">
+                        <p>Remover Receita</p>
+                    </button>
+                    <button class="botaoAnotacoes-receita">
+                        <img src="{% static 'img/iconAnotacoes-receita.png' %}">
+                        <p>Ver minhas anotações</p>
+                    </button>
+                </div>
+                <div class="cardReceita">
+                    <img class="foto-cardReceita" src="{% static 'img/imagem-receita.png' %}">
+                    <p  class="titulo-cardReceita">Tortinha de Arroz</p>
+                    <div class="descricao-cardReceita">
+                        <div class="qntdPessoas-receita">
+                            <img src="{% static 'img/iconPessoa-receita.png' %}">
+                            <p>5</p>
+                        </div>
+                        <div class="tempoEstimado-receita">
+                            <img src="{% static 'img/iconTempo-receita.png' %}">
+                            <p>10 min</p>
+                        </div>
+                    </div>
+                    <button class="botaoRemover-receita">
+                        <img src="{% static 'img/iconRemover-receita.png' %}">
+                        <p>Remover Receita</p>
+                    </button>
+                    <button class="botaoAnotacoes-receita">
+                        <img src="{% static 'img/iconAnotacoes-receita.png' %}">
+                        <p>Ver minhas anotações</p>
+                    </button>
+                </div>
+                <div class="cardReceita">
+                    <img class="foto-cardReceita" src="{% static 'img/imagem-receita.png' %}">
+                    <p  class="titulo-cardReceita">Tortinha de Arroz</p>
+                    <div class="descricao-cardReceita">
+                        <div class="qntdPessoas-receita">
+                            <img src="{% static 'img/iconPessoa-receita.png' %}">
+                            <p>5</p>
+                        </div>
+                        <div class="tempoEstimado-receita">
+                            <img src="{% static 'img/iconTempo-receita.png' %}">
+                            <p>10 min</p>
+                        </div>
+                    </div>
+                    <button class="botaoRemover-receita">
+                        <img src="{% static 'img/iconRemover-receita.png' %}">
+                        <p>Remover Receita</p>
+                    </button>
+                    <button class="botaoAnotacoes-receita">
+                        <img src="{% static 'img/iconAnotacoes-receita.png' %}">
+                        <p>Ver minhas anotações</p>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <img class="fundo-rodape" src="{% static 'img/fundo-rodape.png' %}">
+        <div class="itens">
+            <img class="logo-cabaret" src="{% static 'img/logo-cabaret.png' %}">
+            <div>
+                <p style="font-weight: 500;">CaçaReceita</p>
+                <p>+55 (81) 9 0000-0000</p>
+                <p>Cabaret_startup@gmail.com</p>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>
