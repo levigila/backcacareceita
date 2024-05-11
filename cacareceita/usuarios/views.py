@@ -203,11 +203,6 @@ def homeConfeiteiro(request):
 def homeVegano(request):
     return render(request, 'homeVegano.html')
 
-def livroReceitaAprendiz(request):
-    return render(request, 'livroReceitaAprendiz.html')
-
-def minhasReceitasAprendiz(request):
-    return render(request, 'minhasReceitasAprendiz.html')
 
 def plataforma():
     pass

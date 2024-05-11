@@ -28,7 +28,5 @@ urlpatterns = [
     path('homeSubChef/', views.homeSubChef, name='homeSubChef'),
     path('homeChef/', views.homeChef, name='homeChef'),
     path('homeConfeiteiro/', views.homeConfeiteiro, name='homeConfeiteiro'),
-    path('homeVegano/', views.homeVegano, name='homeVegano'),
-    path('livroReceitaAprendiz/', views.livroReceitaAprendiz, name='livroReceitaAprendiz'),
-    path('minhasReceitasAprendiz/', views.minhasReceitasAprendiz, name='minhasReceitasAprendiz')
+    path('homeVegano/', views.homeVegano, name='homeVegano')
 ]
