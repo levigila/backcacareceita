@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        {% load static %}
+    {% load static %}
     <link rel="stylesheet" href="{% static 'css/cadastro.css' %}">
     <script src="{% static 'js/cadastro.js' %}"></script>
     <title>Caça Receita</title>
@@ -34,6 +35,7 @@
                         <img src="{% static 'img/icon-facebook.svg' %}" alt="">
                     </a>
                 </div>
+            
                 <form id="cadastroForm" action="{% url 'cadastro' %}" method="POST">
                     {%csrf_token %}
                     <label>
@@ -56,7 +58,7 @@
 
                     <label>
                         <p>Confirmar senha</p>
-                        <input id="password-confirm" type="password" name="confirma-senha" required
+                        <input id="password-confirm" type="password" name="confirma_senha" required
                             onchange="validateFields()">
                     </label>
 

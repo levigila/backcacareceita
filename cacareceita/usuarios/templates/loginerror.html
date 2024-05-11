@@ -10,32 +10,6 @@
     <script src="{% static 'js/login.js' %}"></script>
 
     <title>Caça Receita</title>
-
-    <style>
-        /* Estilos CSS para o pop-up de erro */
-        .pop-up {
-            width: 80%;
-            max-width: 400px; /* Defina o máximo para evitar que o pop-up fique muito grande */
-            height: auto; /* Altura ajustável com base no conteúdo */
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: #FFFFFF;
-            border-radius: 15px;
-            color: #B13D0C;
-            font-size: 20px;
-            display: none;
-            z-index: 1001;
-            padding: 20px; /* Adicione um espaçamento interno */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Adicione uma sombra para destacar o pop-up */
-        }
-
-        /* Estilo CSS para o texto de erro */
-        .error-text {
-            margin-top: 20px;
-        }
-    </style>
 </head>
 
 <body>
@@ -51,18 +25,19 @@
                 <h1>Login</h1>
 
                 <!-- Aqui está o pop-up de erro -->
-                <div id="error-popup" class="pop-up">
-                    <div class="popup-content">
-                        <span class="close-btn" onclick="closePopup()">&times;</span>
-                        <h2>Atenção!</h2>
-                        <div class="bar"></div>
-                        <div class="error-msg">
-                            <img src="{% static 'img/icon-atencao.svg' %}" alt="">
-                            <p>{{ error_msg }}</p> <!-- Mensagem de erro dinâmica -->
-                            <p class="error-text">E-mail ou senha inválidos.</p> <!-- Texto fixo de erro -->
-                        </div>
+                <div class="pop-up" id="error-popup">
+                    <div class="pop-up-header">
+                        <img src="{% static 'img/icon-X.svg' %}" alt="" onclick="closePopup()">
+                    </div>
+                    <h4>Atenção!</h4>
+                    <div class="error-msg" id="status-cadastro">
+                        <img src="{% static 'img/icon-atencao.svg' %}" alt="">
+            
+                        <p class="error-text">E-mail ou senha invalidos!</p><!-- Mensagem de erro será preenchida dinamicamente -->
                     </div>
                 </div>
+
+                
 
                 <form id="loginForm" action="{% url 'login' %}" method="POST">
                     {% csrf_token %}
@@ -76,7 +51,7 @@
                         <input id="password" type="password" name="senha" placeholder="Digite sua senha" required>
                     </label>
 
-                    <a href="#">Esqueci a senha</a>
+                    <a href="{% url 'esqueci-senha' %}">Esqueci a senha</a>
 
                     <button id="entrar" type="submit" disabled>Entrar</button>
                 </form>

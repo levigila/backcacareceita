@@ -14,32 +14,42 @@ main {
 }
 
 .fundo-barraPesquisa {
-    background-color: hsla(43, 100%, 60%, 0.912);
+    background-color: #FFC635;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
 }
 
 .fundo-barraPesquisa div {
     display: flex;
 }
 
+.logoPrincipal-cacareceita {
+    position: absolute;
+    left: 100px;
+}
+
+.logoPrincipal-cacareceita img{
+    width: 60px;
+}
 .barra-pesquisa {
-    background-color: #fff;
+    background-color: #FFF9F0;
     height: 25px;
     width: 300px;
     border-radius: 3px;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
     padding-left: 4px;
     font-size: 15px;
-    color: #B13D0C;
+    color: #994E0D;
 }
 
+.barra-pesquisa::placeholder {
+    color: #994E0D;
+}
 .botao-pesquisar {
     height: 25px;
-    background-color: #fff;
+    background-color: #FFF9F0;
     border: none;
     border-radius: 3px;
     position: absolute;
@@ -48,8 +58,7 @@ main {
 
 
 }
-
-.botao-pesquisar img {
+.botao-pesquisar img{
     width: 20px;
     margin-top: 2px;
 }
@@ -62,11 +71,7 @@ main {
 .icon-perfil {
     width: 40px;
     cursor: pointer;
-    position: absolute;
-    top: 5px;
-    right: 90px;
 }
-
 .navegacao {
     height: 30px;
     border-bottom: 5px solid #F28556;
@@ -79,18 +84,17 @@ main {
     display: flex;
 }
 
-.lista-menu li a {
+.lista-menu li a{
     text-decoration: none;
     font-family: "Jost", sans-serif;
     font-size: 18px;
-    color: #B13D0C;
+    color: #F28556;
     font-weight: 500;
     margin-right: 100px;
 
 }
-
 .lista-menu li:nth-child(1) a {
-    color: #9DAB75;
+    color: #496300;
 }
 
 #anuncio-ifood {
@@ -395,4 +399,99 @@ main {
 .itens p {
     font-family: "Jost", sans-serif;
     margin-bottom: 7px;
+}
+
+/* Menu perfil */
+
+.menu-perfil {
+    width: 300px;
+    height: 700px;
+    position: fixed;
+    right: 0;
+    top: 50px;
+    background-color: #FFF;
+    z-index: 1;
+    font-family: "Josefin Sans", sans-serif;
+    display: none;
+    border: 1px solid #496300;
+}
+
+.show-perfil {
+    display: block;
+}
+
+.menu-perfil-header {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 24px;
+    color: #B13D0C;
+    margin-top: 20px;
+}
+
+.menu-perfil-header img {
+    width: 100px;
+    height: 100px;
+}
+
+.menu-perfil-content {
+    width: 100%;
+}
+
+.menu-perfil-content ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: 000000;
+    font-size: 20px;
+}
+
+.menu-perfil-content ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu-perfil-content ul li {
+    border-top: 1px solid #496300;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0 15px;
+}
+
+.menu-perfil-content ul li:nth-child(5) {
+    border-bottom: 1px solid #496300;
+}
+
+.menu-perfil-logout button{
+    margin: 70px auto 0;
+    width: 140px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    border: none;
+    background-color: #B13D0C;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.menu-perfil-logout button img {
+    width: 30px;
+}
+
+#onda-menu-top {
+    width: 300px;
+    position: absolute;
+    top: 0;
+}
+
+#onda-menu-footer {
+    width: 300px;
+    position: absolute;
+    bottom: 0;
 }

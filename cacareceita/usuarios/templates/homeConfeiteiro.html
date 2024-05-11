@@ -25,9 +25,9 @@
                 <input class="barra-pesquisa" type="text" placeholder="Encontre sua receita">
                 <button class="botao-pesquisar"><img src="{% static 'img/icon-pesquisa.png' %}"></button>
             </div>
-            <a class="perfil" href="{% url 'cadastro' %}">
+            <div class="perfil" id="menu-perfil">
                 <img class="icon-perfil" src="{% static 'img/icon-perfil.png' %}">
-            </a>
+            </div>
         </div>
         <nav class="navegacao">
             <ul class="lista-menu">
@@ -39,6 +39,30 @@
                 <li><a href="{% url 'homeVegano' %}">Vegano</a></li>
             </ul>
         </nav>
+
+        <div class="menu-perfil">
+            <img src="{% static 'img/ondas-menu-perfil-top.svg' %}" id="onda-menu-top" alt="">
+            <div class="menu-perfil-header">
+                <img src="{% static 'img/icon-menu-perfil.svg' %}" alt="">
+                <h1>Ana Luísa</h1>
+            </div>
+            <div class="menu-perfil-content">
+                <ul>
+                    <li><a href="#">Editar perfil</a></li>
+                    <li><a href="#">Livro de receita</a></li>
+                    <li><a href="#">Adicionar receita</a></li>
+                    <li><a href="#">Minhas receitas</a></li>
+                    <li><a href="#">Assinaturas</a></li>
+                </ul>
+            </div>
+            <div class="menu-perfil-logout">
+                <button id="logout">
+                    <img src="{% static 'img/icon-porta.svg' %}" alt="">
+                    <p>Sair</p>
+                </button>
+            </div>
+            <img src="{% static 'img/ondas-menu-perfil-footer.svg' %}" id="onda-menu-footer" alt="">
+        </div>
     </header>
     <main>
         <img class="banner-principal" src="{% static 'img/banner-principal-minichef.png' %}">
@@ -236,6 +260,7 @@
 
         </div>
     </footer>
+    <script src="{% static 'js/menuPerfil.js' %}"></script>
 </body>
 
 </html>

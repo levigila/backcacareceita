@@ -68,12 +68,12 @@ a {
 }
 
 .area-laranja a {
-    border: 1px solid;
+    border: 1px solid #496300;
     width: 305px;
     height: 62px;
     border-radius: 20px;
-    color: #994E0D;
-    background-color: #D8AE7D;
+    color: #FFFEEC;
+    background-color: #496300;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -103,7 +103,7 @@ a {
 .area-transparente h1 {
     font-weight: 500;
     font-size: 96px;
-    color: white;
+    color: #EACFA7;
     text-shadow: 1px 1px 1px black;
     margin-top: 60px;
 }
@@ -173,11 +173,11 @@ a {
 
 .area-transparente form p {
     font-size: 30px;
-    color: #994E0D;
+    color: #FFF;
 }
 
 .area-transparente h3 {
-    color: #994E0D;
+    color: #FFF;
     font-size: 32px;
     font-weight: 300;
     font-weight: bold;
@@ -221,22 +221,29 @@ a {
     display: none;
 }
 
+.pop-up h4 {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
 .pop-up-header {
     width: 100%;
+    border-radius: 15px 15px 0 0;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 15px 0;
+    flex-direction: column;
+    align-items: end;
+    /* justify-content: end; */
+    padding: 5px 5px 0 0;
     text-transform: uppercase;
+    background-color: #496300;
+
 }
 
-.bar {
-    width: 100%;
-    background-color: #994E0D;
-    height: 10px;
-    animation: loginIncorreto 2s infinite;
+.pop-up-header img {
+    width: 15px;
+    height: 15px;
 }
-
 
 @keyframes loginIncorreto {
     from {
@@ -254,6 +261,7 @@ a {
     align-items: center;
     justify-content: center;
     margin-top: 20px;
+    gap: 10px;
 }
 
 #status-login {
