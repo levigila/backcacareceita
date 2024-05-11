@@ -49,6 +49,7 @@ from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login as login_django
+from django.urls import reverse
 
 
 def cadastro(request):
@@ -76,7 +77,7 @@ def cadastro(request):
         else: 
             user = User.objects.create_user(username=username, email=email, password=senha)
             user.save()
-            return HttpResponse('Parabéns! Seu cadastro foi realizado com sucesso!')
+            return redirect('/')
         
 
 def login(request):
@@ -94,11 +95,29 @@ def login(request):
         else:
             return render(request, 'loginerror.html')
 
+
 def esqueciSenha(request):
+    if request.method == "POST":
+        return render(request, 'verificacaoSenha.html')
     return render(request, 'esqueciSenha.html')
 
+
+def verificacao(request):
+    if request.method == "POST":
+        print(request.POST.get('cod-otp4'))
+        return render(request, 'alterarSenha.html')
+
+    return render(request, 'verificacaoSenha.html')
+
+
 def alterarSenha(request, cod):
+    if request.method == "POST":
+
+        cod = request.POST.get('cod-otp1')
+        print(cod)
+        pass
     return render(request, 'alterarSenha.html')
+
 
 def receitaAprendiz(request):
     if request.method == "GET":

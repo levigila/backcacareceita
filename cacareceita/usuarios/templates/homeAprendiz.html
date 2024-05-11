@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mini Chef</title>
+    <title>Aprendiz</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
@@ -39,12 +39,12 @@
                 <li><a href="{% url 'homeVegano' %}">Vegano</a></li>
             </ul>
         </nav>
-
+        {% if user.is_authenticated %}
         <div class="menu-perfil">
             <img src="{% static 'img/ondas-menu-perfil-top.svg' %}" id="onda-menu-top" alt="">
             <div class="menu-perfil-header">
                 <img src="{% static 'img/icon-menu-perfil.svg' %}" alt="">
-                <h1>Ana Luísa</h1>
+                <h1>{% user.request.user %}</h1>
             </div>
             <div class="menu-perfil-content">
                 <ul>
@@ -63,10 +63,26 @@
             </div>
             <img src="{% static 'img/ondas-menu-perfil-footer.svg' %}" id="onda-menu-footer" alt="">
         </div>
+        {% else %}
+        <div class="menu-perfil">
+            <img src="{% static 'img/ondas-menu-perfil-top.svg' %}" id="onda-menu-top" alt="">
+            <div class="login-register">
+                <a href="{% url 'login' %}">Entrar</a>
+                <a href="{% url 'cadastro' %}">Cadastrar-se</a>
+            </div>
+            <div class="div-assinatura">
+                <ul>
+                    <li><a href="#">Assinaturas</a></li>
+                </ul>
+            </div>
+            <img src="{% static 'img/ondas-menu-perfil-footer.svg' %}" id="onda-menu-footer" alt="">
+        </div>
+        {% endif %}
     </header>
     <main>
         <img class="banner-principal" src="{% static 'img/banner-aprendiz.png' %}">
-        <p class="titulo-pesquiseReceita">Você não tem esses ingredientes em casa? pesquise aqui com os ingrediente que você tem em casa!</p>
+        <p class="titulo-pesquiseReceita">Você não tem esses ingredientes em casa? pesquise aqui com os ingrediente que
+            você tem em casa!</p>
         <a href="{% url 'buscaReceitaAprendiz' %}"><button class="botao-busqueAqui">Busque aqui</button></a>
         <img class="fundoUtensilio2" src="{% static 'img/fundoUtensilio2.png' %}">
         <img class="fundoUtensilio1" src="{% static 'img/fundoUtensilio1.png' %}">
@@ -246,7 +262,26 @@
         </div>
         </div>
     </main>
+    <div class="blur">
+        <div class="sair">
+            <img src="{% static 'img/onda-menu-perfil-sair.svg' %}" id="onda-sair" alt="">
+            <img src="{% static 'img/icon-x-menu-sair.svg' %}" class="voltar" id="icon-x-sair" alt="">
+            <div class="header-sair">
+                <h1>Deseja realmente sair?</h1>
+            </div>
+            <div class="form-sair">
+                <form method="post">
+                    {%csrf_token %}
+                    <button type="submit">
+                        <a href="{% url 'login' %}">Sim, desejo sair!</a>
+                    </button>
+                </form>
 
+                <button class="voltar">Não, desejo voltar!</button>
+            </div>
+            <img src="{% static 'img/prato-img-sair.svg' %}" id="prato-sair" alt="">
+        </div>
+    </div>
     <footer class="rodape">
         <img class="fundo-rodape" src="{% static 'img/fundo-rodape.png' %}">
         <div class="itens">

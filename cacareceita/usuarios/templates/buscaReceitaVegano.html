@@ -38,6 +38,7 @@
                 <li><a href="{% url 'homeVegano' %}">Vegano</a></li>
             </ul>
         </nav>
+        {% if user.is_authenticated %}
         <div class="menu-perfil">
             <img src="{% static 'img/ondas-menu-perfil-top.svg' %}" id="onda-menu-top" alt="">
             <div class="menu-perfil-header">
@@ -61,6 +62,21 @@
             </div>
             <img src="{% static 'img/ondas-menu-perfil-footer.svg' %}" id="onda-menu-footer" alt="">
         </div>
+        {% else %}
+        <div class="menu-perfil">
+            <img src="{% static 'img/ondas-menu-perfil-top.svg' %}" id="onda-menu-top" alt="">
+            <div class="login-register">
+                <a href="{% url 'login' %}">Entrar</a>
+                <a href="{% url 'cadastro' %}">Cadastrar-se</a>
+            </div>
+            <div class="div-assinatura">
+                <ul>
+                    <li><a href="#">Assinaturas</a></li>
+                </ul>
+            </div>
+            <img src="{% static 'img/ondas-menu-perfil-footer.svg' %}" id="onda-menu-footer" alt="">
+        </div>
+        {% endif %}
     </header>
     <main>
         <img class="banner-aprendiz" src="{% static 'img/banner-aprendiz.png' %}">
@@ -267,6 +283,26 @@
         </section>
         <div id="banner-anuncio"></div>
     </main>
+    <div class="blur">
+        <div class="sair">
+            <img src="{% static 'img/onda-menu-perfil-sair.svg' %}" id="onda-sair" alt="">
+            <img src="{% static 'img/icon-x-menu-sair.svg' %}" class="voltar" id="icon-x-sair" alt="">
+            <div class="header-sair">
+                <h1>Deseja realmente sair?</h1>
+            </div>
+            <div class="form-sair">
+                <form method="post">
+                    {%csrf_token %}
+                    <button type="submit">
+                        <a href="{% url 'login' %}">Sim, desejo sair!</a>
+                    </button>
+                </form>
+
+                <button class="voltar">Não, desejo voltar!</button>
+            </div>
+            <img src="{% static 'img/prato-img-sair.svg' %}" id="prato-sair" alt="">
+        </div>
+    </div>
     <footer class="rodape">
         <img class="fundo-rodape" src="{% static 'img/fundo-rodape-vegano.png' %}">
         <div class="itens">

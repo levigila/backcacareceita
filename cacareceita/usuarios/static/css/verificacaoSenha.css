@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    position: relative;
+    width: 1242px;
+    height: 528px;
+    border-radius: 30px;
+    border: 1px solid #496300;
+
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    gap: 0;
+}
+
+/** Formulário */
+
+.container .form-senha {
+    width: 1115px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.container .form-senha h1 {
+    color: #B13D0C;
+    font-size: 50px;
+}
+
+.container .form-senha p {
+    color: #496300;
+    font-size: 32px;
+}
+
+.container .form-senha form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.container .form-senha form input { 
+    width: 70px;
+    height: 70px;
+    font-size: 32px;
+    outline: none;
+    border: 1px solid #496300;
+    color: #496300;
+    text-align: center;
+}
+
+.container .form-senha form button { 
+    width: 403px;
+    height: 65px;
+    border-radius: 80px;
+    font-size: 40px;
+    color: white;
+    background-color: #496300;
+    border: 0;
+}
+
+/** div da imagem */
+
+.container .img {
+    width: 324px;
+    height: 538px;
+}
+
+/** Imagem  */
+
+.img img {
+    width: 100%;
+    height: 100%;
+}
+
+/** X */
+
+#icon-x {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 42px;
+    top: 21px;
+    cursor: pointer;
+}

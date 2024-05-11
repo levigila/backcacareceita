@@ -5,15 +5,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Esqueci Senha</title>
-    <link rel="stylesheet" href="{% static 'css/alterarSenha.css' %}">
+    <title>Verificação</title>
+    <link rel="stylesheet" href="{% static 'css/verificacaoSenha.css' %}">
 </head>
 
 <body>
     <div class="container">
         <div class="form-senha">
-            <h1>Nova Senha</h1>
-            <p>Criar nova senha</p>
+            <h1>Verificação </h1>
+            <p>Insira o codigo de verificação que enviamos para o seu E-mail</p>
 
             {% if messages %}
             <ul class="messages">
@@ -23,11 +23,15 @@
             </ul>
             {% endif %}
 
-            <form method="POST">
+            <form method="POST" class="form-otp">
                 {%csrf_token %}
-                <input type="password" name="senha" id="senha">
-                <input type="password" name="confirmar-senha" id="confirmar-senha">
-                <button>Continuar</button>
+                <div class="otp">
+                    <input type="text" name="cod-otp1" class="otpInput" maxlength="1">
+                    <input type="text" name="cod-otp2" class="otpInput" maxlength="1">
+                    <input type="text" name="cod-otp3" class="otpInput" maxlength="1">
+                    <input type="text" name="cod-otp4" class="otpInput" maxlength="1">
+                </div>
+                <button type="submit">Continuar</button>
             </form>
         </div>
         <div class="img">
@@ -38,6 +42,8 @@
             <img src="{% static 'img/icon-x.svg' %}" id="icon-x" alt="">
         </a>
     </div>
+    <script src="{% static 'js/verificacaoSenha.js' %}"></script>
+    
 </body>
 
 </html>
