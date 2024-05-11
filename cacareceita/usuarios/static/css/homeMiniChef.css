@@ -260,16 +260,29 @@ main {
     height: 150px;
  }
  
+ .fundo-rodape {
+    position: absolute;
+    width: 1200px;
+    height: 150px;
+}
 
-.itens img {
-    width: 130px;
-    margin-right: 40px;
+.logo-cabaret {
+    width: 80px;
+}
+
+.itens {
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    padding-top: 40px;
+    width: 400px;
+    gap: 20px;
 }
 
 .itens p {
     font-family: "Inter", sans-serif;
     margin-bottom: 7px;
-}
+}  
 
 /* Menu perfil */
 
