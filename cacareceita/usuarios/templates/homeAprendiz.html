@@ -44,7 +44,7 @@
             <img src="{% static 'img/ondas-menu-perfil-top.svg' %}" id="onda-menu-top" alt="">
             <div class="menu-perfil-header">
                 <img src="{% static 'img/icon-menu-perfil.svg' %}" alt="">
-                <h1>{% user.request.user %}</h1>
+                <h1>{{user.username}}</h1>
             </div>
             <div class="menu-perfil-content">
                 <ul>
