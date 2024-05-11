@@ -1,7 +1,7 @@
 /* CSS DO HEADER/NAVEGAÇÃO */
 
 .fundo-barraPesquisa {
-    background-color: #080B00;
+    background-color: #7A3B28;
     height: 50px;
     display: flex;
     align-items: center;
@@ -21,22 +21,22 @@
     width: 60px;
 }
 .barra-pesquisa {
-    background-color: #ffffff;
+    background-color: #FFF9F0;
     height: 25px;
     width: 300px;
     border-radius: 3px;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
     padding-left: 4px;
     font-size: 15px;
-    color: #000;
+    color: #994E0D;
 }
 
 .barra-pesquisa::placeholder {
-    color: #000;
+    color: #7A3B28;
 }
 .botao-pesquisar {
     height: 25px;
-    background-color: #fff;
+    background-color: #FFF9F0;
     border: none;
     border-radius: 3px;
     position: absolute;
@@ -61,7 +61,7 @@
 }
 .navegacao {
     height: 30px;
-    border-bottom: 5px solid #080B00;
+    border-bottom: 5px solid #7A3B28;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -75,14 +75,15 @@
     text-decoration: none;
     font-family: "Josefin Sans", sans-serif;
     font-size: 18px;
-    color: #080B00;
+    color: #7A3B28;
     font-weight: 500;
     margin-right: 100px;
  
 }
-.lista-menu li:nth-child(4) a {
+.lista-menu li:nth-child(3) a {
     color: #496300;
 }
+
 
 /* CSS MAIN */
 main {

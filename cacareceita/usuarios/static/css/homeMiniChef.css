@@ -24,23 +24,20 @@
     background-color: #FFF9F0;
     height: 25px;
     width: 300px;
-    border-radius: 3px;
+    border-radius: 10px;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
     padding-left: 4px;
     font-size: 15px;
     color: #994E0D;
 }
 
-.barra-pesquisa::placeholder {
-    color: #994E0D;
-}
 .botao-pesquisar {
     height: 25px;
     background-color: #FFF9F0;
     border: none;
-    border-radius: 3px;
+    border-radius: 10px;
     position: absolute;
-    margin-left: 300px;
+    margin-left: 270px;
     cursor: pointer;
 
     
@@ -141,11 +138,11 @@ main {
 .botao-busqueAqui {
     border: none;
     background-color: #FF9A62;
-    width: 170px;
+    width: 190px;
     height: 30px;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-top: 40px;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
     font-family: "Josefin Sans", sans-serif;
     font-size: 18px;
     color: #fff;
@@ -183,7 +180,7 @@ main {
 }
 
 .conteudo-receitas {
-    margin-top: 50px;
+    margin-top: 20px;
     width: 1000px;
     display: flex;
     flex-direction: column;
@@ -192,28 +189,39 @@ main {
 
 .linha-cardReceita {
     display: flex;
-    width: 1000px;
-    margin-bottom: 50px;
-    justify-content: center;
+    margin-bottom: 30px;
+    justify-content: space-between;
+    gap: 43px;
 }
 
 .cardReceita {
     background-color: #FFF9F0;
-    width: 200px;
-    height: 200px;
-    margin-right: 20px ;
+    width: 210px;
+    height: 270px;
     border: 2px solid #EACFA7;
     border-radius: 4px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     cursor: pointer;
+    justify-content: center;
+    position: relative;
+}
+
+.caixaEtiqueta-receita {
+    position: absolute;
+    top: -6px;
+    left: 21px;
+}
+
+.etiquetaReceita {
+    width: 50px;
 }
 
 .foto-receita {
-    width: 150px;
-    margin-bottom: 10px;
+    width: 170px;
+    margin-top: 20px;
+    margin-bottom: 12px;
 }
 
 .cardReceita p {
@@ -222,7 +230,7 @@ main {
     font-weight: 400;
     width: 150px;
     text-align: center;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     
 }
 
@@ -235,39 +243,23 @@ main {
 }
 
 #banner-anuncio {
-    background-color: #D9D9D9;
-    width: 800px;
+    width: 1000px;
     height: 200px;
     margin-bottom: 30px;
 }
 
 #anuncio2  {
-    background-color: #D9D9D9;
-    width: 200px;
+    width: 210px;
     height: 300px;
-    margin-right: 30px;
+    margin-right: 10px;
 }
 
 .rodape{
-    margin-top: 50px;
-}
-
-.fundo-rodape{
-    position: absolute;
-    width: 1100px;
-    height: 222px;
-   
-}
-
-.itens {
-    position: absolute;
-    display: flex;
-    margin-left: 70px;
-    align-items: center;
-    height: 222px;
-    align-content: center;
+    background-image: url("../img/fundo-rodape-minichef.png");
+    width: 1200px;
+    height: 150px;
+ }
  
-}
 
 .itens img {
     width: 130px;
