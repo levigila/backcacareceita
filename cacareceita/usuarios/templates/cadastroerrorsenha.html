@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/cadastro.css' %}">
+    <script src="{% static 'js/cadastro.js' %}"></script>
+    <title>Caça Receita</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="area-cadastro">
+            <div class="area-laranja">
+                <img src="{% static 'img/logo.svg' %}" alt="">
+                <h1>Bem vindo</h1>
+                <h3>Já possui login?</h3>
+                <a href="{% url 'login' %}">Logar</a>
+            </div>
+            <div class="area-transparente">
+                <h1>Cadastro</h1>
+                <h3>Entre com: </h3>
+                <div class="outras-formas-cadastro">
+                    <a href="#" target="_blank">
+                        <img src="{% static 'img/icon-google.svg' %}" alt="">
+                    </a>
+                    <a href="#" target="_blank">
+                        <img src="{% static 'img/icon-apple.svg' %}" alt="">
+                    </a>
+                    <a href="#" target="_blank">
+                        <img src="{% static 'img/icon-facebook.svg' %}" alt="">
+                    </a>
+                </div>
+                <form id="cadastroForm" action="{% url 'cadastro' %}" method="POST">
+                    {%csrf_token %}
+                    <label>
+                        <p>E-mail</p>
+                        <input id="email" type="email" name="email" required onchange="validateFields()">
+                    </label>
+
+                    <label>
+                        <p>Nome de Usuário</p>
+                        <input id="user" type="text" name="username" required onchange="validateFields()">
+                    </label>
+
+                    <label>
+                        <p>Senha</p>
+                        <input id="password" type="password" name="senha" required onchange="validateFields()">
+                    </label>
+
+                    <label>
+                        <p>Confirmar senha</p>
+                        <input id="password-confirm" type="password" name="confirma_senha" required
+                            onchange="validateFields()">
+                    </label>
+
+                    <button id="entrar" type="submit" disabled>Entrar</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Pop-up de erro -->
+    <div class="pop-up" id="error-popup">
+        <div class="pop-up-header">
+            <img src="{% static 'img/icon-X.svg' %}" alt="" onclick="closePopup()">
+        </div>
+        <h4>Atenção!</h4>
+        <div class="error-msg" id="status-cadastro">
+            <img src="{% static 'img/icon-atencao.svg' %}" alt="">
+
+            <p class="error-text">Senhas não conferem!</p><!-- Mensagem de erro será preenchida dinamicamente -->
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Exibe o pop-up de erro quando a página é carregada
+            document.querySelector('.pop-up').style.display = 'block';
+
+            // Esconde o pop-up de erro após 2 segundos
+            setTimeout(function () {
+                document.querySelector('.pop-up').style.display = 'none';
+            }, 2000);
+        });
+    </script>
+</body>
+
+</html>
