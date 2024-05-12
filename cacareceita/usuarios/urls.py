@@ -4,7 +4,7 @@ from.import views
 
 urlpatterns = [
     path('cadastro/', views.cadastro, name='cadastro'),
-    path('login/', views.login, name='login'),
+    path('login/', views.login_view, name='login'),
     path('loginerror/', views.login_error, name='loginerror'),
     path('esqueciSenha/', views.esqueciSenha, name='esqueci-senha'),
     path('alterarSenha/<int:cod>/', views.alterarSenha, name='alterar-senha'),
@@ -30,5 +30,6 @@ urlpatterns = [
     path('homeConfeiteiro/', views.homeConfeiteiro, name='homeConfeiteiro'),
     path('homeVegano/', views.homeVegano, name='homeVegano'),
     path('livroReceitaAprendiz/', views.livroReceitaAprendiz, name='livroReceitaAprendiz'),
-    path('minhasReceitasAprendiz/', views.minhasReceitasAprendiz, name='minhasReceitasAprendiz')
+    path('minhasReceitasAprendiz/', views.minhasReceitasAprendiz, name='minhasReceitasAprendiz'),
+    path('logout/', views.logout_view, name='logout'),
 ]

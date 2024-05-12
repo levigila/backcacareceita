@@ -437,15 +437,19 @@
                 <h1>Deseja realmente sair?</h1>
             </div>
             <div class="form-sair">
-                <form method="post">
-                    {%csrf_token %}
+                <form action="{% url 'logout' %}" method="post">
+                    {% csrf_token %}
                     <button type="submit">
-                        <a href="{% url 'login' %}">Sim, desejo sair!</a>
+                        Sim, desejo sair!
                     </button>
                 </form>
-
-                <button class="voltar">Não, desejo voltar!</button>
+            
+                <form action="{% url 'login' %}" method="get">
+                    <button type="submit" class="voltar">Não, desejo voltar!</button>
+                </form>
             </div>
+            
+            
             <img src="{% static 'img/prato-img-sair.svg' %}" id="prato-sair" alt="">
         </div>
     </div>
