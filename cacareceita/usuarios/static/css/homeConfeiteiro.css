@@ -1,7 +1,7 @@
 /* CSS DO HEADER/NAVEGAÇÃO */
 
 .fundo-barraPesquisa {
-    background-color: #E5B671;
+    background-color: #D39055;
     height: 50px;
     display: flex;
     align-items: center;
@@ -14,33 +14,32 @@
 
 .logoPrincipal-cacareceita {
     position: absolute;
-    left: 100px;
+    left: 74px;
+    margin-top: 6px;
 }
 
-.logoPrincipal-cacareceita img{
-    width: 60px;
+.logoPrincipal-cacareceita img {
+    width: 131px;
 }
+
 .barra-pesquisa {
     background-color: #FFF9F0;
     height: 25px;
     width: 300px;
-    border-radius: 3px;
+    border-radius: 10px;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
     padding-left: 4px;
     font-size: 15px;
-    color: #994E0D;
+    color: #A97344;
 }
 
-.barra-pesquisa::placeholder {
-    color: #994E0D;
-}
 .botao-pesquisar {
     height: 25px;
     background-color: #FFF9F0;
     border: none;
-    border-radius: 3px;
+    border-radius: 10px;
     position: absolute;
-    margin-left: 300px;
+    margin-left: 270px;
     cursor: pointer;
 
     
@@ -61,7 +60,7 @@
 }
 .navegacao {
     height: 30px;
-    border-bottom: 5px solid #E5B671;
+    border-bottom: 5px solid #D39055;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -75,13 +74,13 @@
     text-decoration: none;
     font-family: "Josefin Sans", sans-serif;
     font-size: 18px;
-    color: #E5B671;
+    color: #A97344;
     font-weight: 500;
     margin-right: 100px;
  
 }
 .lista-menu li:nth-child(5) a {
-    color: #496300;
+    color: #88AA27;
 }
 
 /*CSS DA ÁREA PRINCIPAL*/
@@ -108,21 +107,21 @@ main {
 }
 
 .destaque:nth-of-type(1){
-    background-color: rgb(229,182,113,0.5);
+    background-color: #FDF7AA;
     border-radius: 10px;
     padding-left: 4px;
     padding-right: 7px;
     line-height: 2em;
 }
 .destaque:nth-of-type(2){
-    background-color: rgb(229,182,113,0.4);
+    background-color: rgb(71, 139, 3, 0.4);
     border-radius: 10px;
     padding-left: 4px;
     padding-right: 7px;
     line-height: 2em;
 }
 .destaque:nth-of-type(3){
-    background-color: rgb(153,78,13,0.6);
+    background-color: rgb(221, 107, 7,0.4);
     border-radius: 10px;
     padding-left: 4px;
     padding-right: 7px;
@@ -131,7 +130,7 @@ main {
 }
 
 .destaque:nth-of-type(4){
-    background-color: rgb(211,144,85,0.3);
+    background-color: rgb(253, 247, 170,0.6);
     border-radius: 10px;
     padding-left: 4px;
     padding-right: 7px;
@@ -141,24 +140,37 @@ main {
 .botao-busqueAqui {
     border: none;
     background-color: #994E0D;
-    width: 170px;
+    width: 190px;
     height: 30px;
     border-radius: 10px;
     margin-top: 40px;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
     font-family: "Josefin Sans", sans-serif;
     font-size: 18px;
     color: #fff;
     cursor: pointer;
 }
 
+.fundoUtensilio2 {
+    position: absolute;
+    width: 200px;
+    left: 0px;
+    top: 269px;
+}
+
+.fundoUtensilio1 {
+    position: absolute;
+    width: 160px;
+    right: 2px;
+    top: 291px;
+}
 
 #texto-ReceitaIncrivel {
     margin-top: 50px;
     font-family: "Josefin Sans", sans-serif;
     font-size: 25px;
     font-weight: 900;
-    color: #E5B671;
+    color: #CCA16F;
     text-transform: uppercase;
 }
 
@@ -170,7 +182,7 @@ main {
 }
 
 .conteudo-receitas {
-    margin-top: 50px;
+    margin-top: 35px;
     width: 1000px;
     display: flex;
     flex-direction: column;
@@ -179,28 +191,39 @@ main {
 
 .linha-cardReceita {
     display: flex;
-    width: 1000px;
-    margin-bottom: 50px;
-    justify-content: center;
+    margin-bottom: 30px;
+    justify-content: space-between;
+    gap: 43px;
 }
 
 .cardReceita {
     background-color: #FFF9F0;
-    width: 200px;
-    height: 200px;
-    margin-right: 20px ;
+    width: 210px;
+    height: 270px;
     border: 2px solid #EACFA7;
     border-radius: 4px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     cursor: pointer;
+    justify-content: center;
+    position: relative;
+}
+
+.caixaEtiqueta-receita {
+    position: absolute;
+    top: 4px;
+    left: 21px;
+}
+
+.etiquetaReceita {
+    width: 75px;
 }
 
 .foto-receita {
-    width: 150px;
-    margin-bottom: 10px;
+    width: 170px;
+    margin-top: 20px;
+    margin-bottom: 12px;
 }
 
 .cardReceita p {
@@ -209,7 +232,7 @@ main {
     font-weight: 400;
     width: 150px;
     text-align: center;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     
 }
 
@@ -222,49 +245,48 @@ main {
 }
 
 #banner-anuncio {
-    background-color: #D9D9D9;
-    width: 800px;
+    width: 1000px;
     height: 200px;
     margin-bottom: 30px;
 }
 
 #anuncio2  {
-    background-color: #D9D9D9;
-    width: 200px;
+    width: 210px;
     height: 300px;
-    margin-right: 30px;
+    margin-right: 10px;
 }
 
 .rodape{
-    margin-top: 50px;
+    background-image: url("../img/fundo-rodape-confeiteiro.png");
+    width: 1200px;
+    height: 150px;
+ }
+ 
+ .fundo-rodape {
+    position: absolute;
+    width: 1200px;
+    height: 150px;
 }
 
-.fundo-rodape{
-    position: absolute;
-    width: 1100px;
-    height: 222px;
-   
+.logo-cabaret {
+    width: 80px;
 }
 
 .itens {
-    position: absolute;
     display: flex;
-    margin-left: 70px;
     align-items: center;
-    height: 222px;
-    align-content: center;
- 
-}
-
-.itens img {
-    width: 130px;
-    margin-right: 40px;
+    padding-left: 50px;
+    padding-top: 40px;
+    width: 400px;
+    gap: 20px;
 }
 
 .itens p {
     font-family: "Inter", sans-serif;
     margin-bottom: 7px;
-}
+    color: #fff;
+    font-weight: 100;
+}  
 
 /* Menu perfil */
 

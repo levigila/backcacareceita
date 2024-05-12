@@ -14,33 +14,33 @@
 
 .logoPrincipal-cacareceita {
     position: absolute;
-    left: 100px;
+    left: 74px;
+    margin-top: 6px;
 }
 
-.logoPrincipal-cacareceita img{
-    width: 60px;
+.logoPrincipal-cacareceita img {
+    width: 131px;
 }
+
+
 .barra-pesquisa {
     background-color: #FFF9F0;
     height: 25px;
     width: 300px;
-    border-radius: 3px;
+    border-radius: 10px;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
     padding-left: 4px;
     font-size: 15px;
     color: #994E0D;
 }
 
-.barra-pesquisa::placeholder {
-    color: #994E0D;
-}
 .botao-pesquisar {
     height: 25px;
     background-color: #FFF9F0;
     border: none;
-    border-radius: 3px;
+    border-radius: 10px;
     position: absolute;
-    margin-left: 300px;
+    margin-left: 270px;
     cursor: pointer;
 
     
@@ -81,7 +81,7 @@
  
 }
 .lista-menu li:nth-child(1) a {
-    color: #496300;
+    color: #88AA27;
 }
 
 /* CSS MAIN */
@@ -96,9 +96,9 @@ main {
  }
 
 .caixa-filtroReceita {
-    background-color: #B13D0C;
+    background-color: #EDAB00;
     width: 250px;
-    height: 1150px;
+    height: 1220px;
     border-radius: 10px;
     
 }
@@ -115,10 +115,11 @@ main {
     width: 200px;
     background-color: #fff;
     height: 25px;
-    border-radius: 5px;
-    font-size: 14px;
+    border-radius: 10px;
+    font-size: 12px;
     padding-left: 5px;
     color: #994E0D;
+    font-weight: 500;
 }
 
 .caixa-pesquisaFiltro  input::placeholder{
@@ -127,9 +128,9 @@ main {
 }
 
 .caixa-filtro {
-    background-color: #D39055;
+    background-color: #F28556;
     width: 250px;
-    height: 1200px;
+    height: 1220px;
     position: absolute;
     border-radius: 10px ;
     display: flex;
@@ -138,6 +139,14 @@ main {
 
 
 }
+
+.caixa-pesquisaFiltro  img{
+    position: absolute;
+    width: 18px;
+    left: 319px;
+}
+
+
 #area-indicador {
     height: 60px;
 }
@@ -151,13 +160,12 @@ main {
     font-family: "Inter", sans-serif; 
     font-size: 18px;
     
-
 }
 
 #circulo {
     width: 250px;
     height: 150px;
-    background-color: #496300; 
+    background-color: #9DAB75; 
     border-radius: 50%;
     clip-path: inset(50% 0 0 0);
     position: relative;
@@ -223,50 +231,55 @@ main {
 
 #receitasCompativeis {
     font-family: "Josefin Sans", sans-serif;
-    font-size: 24px;
+    font-size: 22px;
     margin-top: 30px;
-   
+    text-align: center;
+    margin-bottom: 20px;
+    width: 300px;
 }
-
-#linha {
-    margin-top: 10px;
-    border-bottom: 4px solid #496300;
-    border-radius: 4px;
-    width: 600px;
-    margin-bottom: 30px;
-}
-
 
 .conteudo-receitas {
     width: 750px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 20px;
 }
 .linha-cardReceita {
-    width: 750px;
     display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    justify-content: space-between;
+    gap: 43px;
     
 }
 .cardReceita {
     background-color: #FFF9F0;
-    width: 200px;
-    height: 200px;
-    margin-right: 20px ;
+    width: 210px;
+    height: 270px;
     border: 2px solid #EACFA7;
     border-radius: 4px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     cursor: pointer;
+    justify-content: center;
+    position: relative;
+}
+
+.caixaEtiqueta-receita {
+    position: absolute;
+    top: 4px;
+    left: 21px;
+}
+
+.etiquetaReceita {
+    width: 75px;
 }
 
 .foto-receita {
-    width: 150px;
-    margin-bottom: 10px;
+    width: 170px;
+    margin-top: 20px;
+    margin-bottom: 12px;
 }
 
 .cardReceita p {
@@ -275,7 +288,7 @@ main {
     font-weight: 400;
     width: 150px;
     text-align: center;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     
 }
 
@@ -288,45 +301,43 @@ main {
 }
 
 #banner-anuncio {
-    background-color: #D9D9D9;
-    width: 800px;
+    width: 700px;
     height: 200px;
-    margin-top: 140px;
-    margin-bottom: 30px;
+    margin-top: 220px;
+    margin-bottom: 100px;
 }
 
 /* RODAPÉ */
 
 .rodape{
-    margin-top: 50px;
+    background-image: url("../img/fundo-rodape-minichef.png");
+    width: 1200px;
+    height: 150px;
+ }
+ 
+ .fundo-rodape {
+    position: absolute;
+    width: 1200px;
+    height: 150px;
 }
 
-.fundo-rodape{
-    position: absolute;
-    width: 1100px;
-    height: 222px;
-   
+.logo-cabaret {
+    width: 80px;
 }
 
 .itens {
-    position: absolute;
     display: flex;
-    margin-left: 70px;
     align-items: center;
-    height: 222px;
-    align-content: center;
- 
-}
-
-.itens img {
-    width: 130px;
-    margin-right: 40px;
+    padding-left: 50px;
+    padding-top: 40px;
+    width: 400px;
+    gap: 20px;
 }
 
 .itens p {
     font-family: "Inter", sans-serif;
     margin-bottom: 7px;
-}
+}  
 
 
 /* Menu perfil */

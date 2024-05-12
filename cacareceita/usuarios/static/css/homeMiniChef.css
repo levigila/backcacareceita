@@ -14,12 +14,15 @@
 
 .logoPrincipal-cacareceita {
     position: absolute;
-    left: 100px;
+    left: 74px;
+    margin-top: 6px;
 }
 
-.logoPrincipal-cacareceita img{
-    width: 60px;
+.logoPrincipal-cacareceita img {
+    width: 131px;
 }
+
+
 .barra-pesquisa {
     background-color: #FFF9F0;
     height: 25px;
@@ -78,7 +81,7 @@
  
 }
 .lista-menu li:nth-child(1) a {
-    color: #496300;
+    color: #88AA27;
 }
 
 /*CSS DA ÁREA PRINCIPAL*/
@@ -180,7 +183,7 @@ main {
 }
 
 .conteudo-receitas {
-    margin-top: 20px;
+    margin-top: 35px;
     width: 1000px;
     display: flex;
     flex-direction: column;
@@ -210,12 +213,12 @@ main {
 
 .caixaEtiqueta-receita {
     position: absolute;
-    top: -6px;
+    top: 4px;
     left: 21px;
 }
 
 .etiquetaReceita {
-    width: 50px;
+    width: 75px;
 }
 
 .foto-receita {
