@@ -364,6 +364,14 @@ main {
     border: 1px solid #B13D0C;
 }
 
+main #text-h1 {
+    margin-left: -450px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    color: #496300;
+    font-size: 20px;
+}
+
 /** Footer  */
 
 .rodape {
