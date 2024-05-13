@@ -180,8 +180,20 @@ def livroReceitaMiniChef(request):
 def minhasReceitasAprendiz(request):
     return render(request, 'minhasReceitasAprendiz.html')
 
+def minhasReceitasMiniChef(request):
+    return render(request, 'minhasReceitasMiniChef.html')
 
+def minhasReceitasSubChef(request):
+    return render(request, 'minhasReceitasSubChef.html')
 
+def minhasReceitasChef(request):
+    return render(request, 'minhasReceitasChef.html')
+
+def minhasReceitasConfeiteiro(request):
+    return render(request, 'minhasReceitasConfeiteiro.html')
+
+def minhasReceitasVegano(request):
+    return render(request, 'minhasReceitasVegano.html')
 
 # Assinatura
 

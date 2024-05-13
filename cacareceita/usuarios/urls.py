@@ -36,6 +36,11 @@ urlpatterns = [
     path('livroReceitaConfeiteiro/', views.livroReceitaConfeiteiro, name='livroReceitaConfeiteiro'),
     path('livroReceitaVegano/', views.livroReceitaVegano, name='livroReceitaVegano'),
     path('minhasReceitasAprendiz/', views.minhasReceitasAprendiz, name='minhasReceitasAprendiz'),
+    path('minhasReceitasMiniChef/', views.minhasReceitasMiniChef, name='minhasReceitasMiniChef'),
+    path('minhasReceitasSubChef/', views.minhasReceitasSubChef, name='minhasReceitasSubChef'),
+    path('minhasReceitasChef/', views.minhasReceitasChef, name='minhasReceitasChef'),
+    path('minhasReceitasConfeiteiro/', views.minhasReceitasConfeiteiro, name='minhasReceitasConfeiteiro'),
+    path('minhasReceitasVegano/', views.minhasReceitasVegano, name='minhasReceitasVegano'),
     path('logout/', views.logout_view, name='logout'),
 
         # Assinatura
