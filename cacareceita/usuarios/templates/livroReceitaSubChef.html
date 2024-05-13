@@ -11,7 +11,7 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/livroReceitaAprendiz.css' %}">
+    <link rel="stylesheet" href="{% static 'css/livroReceitaSubChef.css' %}">
     <link rel="stylesheet" href="{% static 'css/reset.css' %}">
 </head>
 
@@ -39,7 +39,7 @@
                 <li><a href="{% url 'homeVegano' %}">Vegano</a></li>
             </ul>
         </nav>
-        <img id="imgOndasNav" src="{% static 'img/imgOndasNav.png' %}">
+        <img id="imgOndasNav" src="{% static 'img/imgOndasNavSubChef_Vegano.png' %}">
         {% if user.is_authenticated %}
         <div class="menu-perfil">
             <img src="{% static 'img/ondas-menu-perfil-top.svg' %}" id="onda-menu-top" alt="">

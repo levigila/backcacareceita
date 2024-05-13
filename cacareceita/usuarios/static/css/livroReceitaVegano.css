@@ -1,9 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
-
 /* CSS DO HEADER/NAVEGAÇÃO */
 
 .fundo-barraPesquisa {
-    background-color: #B13D0C;
+    background-color: #496300;
     height: 50px;
     display: flex;
     align-items: center;
@@ -23,35 +21,32 @@
 .logoPrincipal-cacareceita img {
     width: 131px;
 }
-
 .barra-pesquisa {
-    background-color: #FFF9F0;
+    background-color: #ffffff;
     height: 25px;
     width: 300px;
     border-radius: 10px;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
     padding-left: 4px;
     font-size: 15px;
-    color: #994E0D;
+    color: #496300;
 }
 
 .barra-pesquisa::placeholder {
-    color: #994E0D;
+    color: #496300;
 }
-
 .botao-pesquisar {
     height: 25px;
-    background-color: #FFF9F0;
+    background-color: #fff;
     border: none;
     border-radius: 10px;
     position: absolute;
     margin-left: 270px;
     cursor: pointer;
 
-
+    
 }
-
-.botao-pesquisar img {
+.botao-pesquisar img{
     width: 20px;
     margin-top: 2px;
 }
@@ -65,10 +60,9 @@
     width: 40px;
     cursor: pointer;
 }
-
 .navegacao {
     height: 30px;
-    border-bottom: 5px solid #B13D0C;
+    border-bottom: 5px solid #7A3B28;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -78,17 +72,16 @@
     display: flex;
 }
 
-.lista-menu li a {
+.lista-menu li a{
     text-decoration: none;
     font-family: "Josefin Sans", sans-serif;
     font-size: 18px;
     color: #B13D0C;
     font-weight: 500;
     margin-right: 100px;
-
+ 
 }
-
-.lista-menu li:nth-child(2) a {
+.lista-menu li:nth-child(6) a {
     color: #88AA27;
 }
 
@@ -116,7 +109,7 @@ main {
 
 .linhaTitulo {
     width: 300px;
-    border-bottom: 3px solid #496300;
+    border-bottom: 3px solid #9DAB75;
 
 }
 
@@ -143,17 +136,12 @@ main {
 .cardReceita {
     width: 200px;
     height: 270px;
-    border: 2px solid #994E0D;
+    border: 2px solid #B13D0C;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.titulo-cardReceita {
-    color: #B13D0C;
-    font-size: 14px;
-    margin-bottom: 10px;
+    cursor: pointer;
 }
 
 .foto-cardReceita{
@@ -167,6 +155,8 @@ main {
     font-family: "Inter", sans-serif;
     color: #B13D0C;
     font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 10px;
 }
 
 .descricao-cardReceita {
@@ -184,7 +174,7 @@ main {
 
 .qntdPessoas-receita p, .tempoEstimado-receita p{
     font-family: "Inter", sans-serif;
-    color: #496300;
+    color: #9DAB75;
     font-size: 10px;
 }
 
@@ -219,7 +209,7 @@ main {
 .botaoAnotacoes-receita {
     border: none;
     border-radius: 10px;
-    background-color: #496300;
+    background-color: #9DAB75;
     width: 140px;
     height: 20px;
     display: flex;
@@ -229,13 +219,13 @@ main {
 }
 
 /* RODAPÉ */
-.rodape {
-    background-image: url("../img/fundo-rodape.png");
+.rodape{
+    background-image: url("../img/fundo-rodape-chef.png");
     width: 1200px;
     height: 150px;
-}
-
-.fundo-rodape {
+ }
+ 
+ .fundo-rodape {
     position: absolute;
     width: 1200px;
     height: 150px;
@@ -257,6 +247,8 @@ main {
 .itens p {
     font-family: "Inter", sans-serif;
     margin-bottom: 7px;
+    color: #fff;
+    font-weight: 100;
 }  
 
 /* Menu perfil */
@@ -475,5 +467,4 @@ main {
     left: 0;
     width: 160px;
     z-index: -1;
-}
-
+} 
