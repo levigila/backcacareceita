@@ -174,8 +174,12 @@ def homeVegano(request):
 def livroReceitaAprendiz(request):
     return render(request, 'livroReceitaAprendiz.html')
 
+def livroReceitaMiniChef(request):
+    return render(request, 'livroReceitaMiniChef.html')
+
 def minhasReceitasAprendiz(request):
     return render(request, 'minhasReceitasAprendiz.html')
+
 
 
 
@@ -205,6 +209,17 @@ def novaSenha(request):
     if request.method == "POST":
         pass
     return render(request, 'novaSenha.html')
+def livroReceitaSubChef(request):
+    return render(request, 'livroReceitaSubChef.html')
+
+def livroReceitaChef(request):
+    return render(request, 'livroReceitaChef.html')
+
+def livroReceitaConfeiteiro(request):
+    return render(request, 'livroReceitaConfeiteiro.html')
+
+def livroReceitaVegano(request):
+    return render(request, 'livroReceitaVegano.html')
 
 def plataforma():
     pass

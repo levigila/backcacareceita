@@ -30,6 +30,11 @@ urlpatterns = [
     path('homeConfeiteiro/', views.homeConfeiteiro, name='homeConfeiteiro'),
     path('homeVegano/', views.homeVegano, name='homeVegano'),
     path('livroReceitaAprendiz/', views.livroReceitaAprendiz, name='livroReceitaAprendiz'),
+    path('livroReceitaMiniChef/', views.livroReceitaMiniChef, name='livroReceitaMiniChef'),
+    path('livroReceitaSubChef/', views.livroReceitaSubChef, name='livroReceitaSubChef'),
+    path('livroReceitaChef/', views.livroReceitaChef, name='livroReceitaChef'),
+    path('livroReceitaConfeiteiro/', views.livroReceitaConfeiteiro, name='livroReceitaConfeiteiro'),
+    path('livroReceitaVegano/', views.livroReceitaVegano, name='livroReceitaVegano'),
     path('minhasReceitasAprendiz/', views.minhasReceitasAprendiz, name='minhasReceitasAprendiz'),
     path('logout/', views.logout_view, name='logout'),
 

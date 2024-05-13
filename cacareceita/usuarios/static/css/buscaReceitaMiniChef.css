@@ -110,8 +110,12 @@ main {
 
 }
 
-.caixa-pesquisaFiltro  input{
-    position: absolute;
+.input-pesquisaFiltro {
+    display: flex;
+    align-items: center;
+}
+
+.input-pesquisaFiltro input {
     width: 200px;
     background-color: #fff;
     height: 25px;
@@ -122,9 +126,16 @@ main {
     font-weight: 500;
 }
 
-.caixa-pesquisaFiltro  input::placeholder{
+.input-pesquisaFiltro input::placeholder{
     font-family: "Inter", sans-serif; 
     color: #994E0D;
+}
+
+.input-pesquisaFiltro img {
+    width: 18px;
+    position: absolute;
+    margin-left: 179px;
+
 }
 
 .caixa-filtro {
@@ -138,12 +149,6 @@ main {
     align-items: center;
 
 
-}
-
-.caixa-pesquisaFiltro  img{
-    position: absolute;
-    width: 18px;
-    left: 319px;
 }
 
 
