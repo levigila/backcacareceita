@@ -32,4 +32,13 @@ urlpatterns = [
     path('livroReceitaAprendiz/', views.livroReceitaAprendiz, name='livroReceitaAprendiz'),
     path('minhasReceitasAprendiz/', views.minhasReceitasAprendiz, name='minhasReceitasAprendiz'),
     path('logout/', views.logout_view, name='logout'),
+
+        # Assinatura
+    path('assinaturaAprendiz/', views.assinaturaAprendiz, name='assinatura-aprendiz'),
+    path('assinaturaAprendizInfo1/', views.assinaturaAprendizInfor1, name='assinatura-aprendiz-info1'),
+    path('assinaturaAprendizInfo2/', views.assinaturaAprendizInfor2, name='assinatura-aprendiz-info2'),
+
+    # Perfil -> Alterar Senha
+    path('alterarSenha/', views.alterarSenha, name='alterar-senha'),
+    path('novaSenha/', views.novaSenha, name='nova-senha'),
 ]

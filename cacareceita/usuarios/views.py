@@ -29,7 +29,7 @@ def cadastro(request):
             return render(request, 'cadastroerrorsenha.html')
 
         # Create the user with hashed password
-        else: 
+        else:
             user = CustomUser.objects.create_user(username=username, email=email, password=senha)
             user.save()
              # Authenticate the user and log them in
@@ -40,7 +40,7 @@ def cadastro(request):
         else:
             # Tratar erro de autenticação, se necessário
             pass
-        
+
 
 def login_view(request):
     if request.method == 'POST':
@@ -49,17 +49,17 @@ def login_view(request):
             username = form.cleaned_data['username']
             password = form.cleaned_data['senha']
             CustomUser = authenticate(username=username, password=password)
-            
+
             if CustomUser is not None:
                 login_django(request, CustomUser)
-                return redirect('homeAprendiz') 
+                return redirect('homeAprendiz')
             else:
                 form.add_error(None, 'Usuário ou senha inválidos.')
                 return render(request, 'loginerror.html')
     else:
         form = LoginForm()
         return render(request, 'login.html', {'form': form})
-    
+
 def logout_view(request):
         logout(request)
         return redirect('homeAprendiz')
@@ -176,6 +176,35 @@ def livroReceitaAprendiz(request):
 
 def minhasReceitasAprendiz(request):
     return render(request, 'minhasReceitasAprendiz.html')
+
+
+
+# Assinatura
+
+def assinaturaAprendiz(request):
+    return render(request, 'assinaturaAprendiz.html')
+
+
+def assinaturaAprendizInfor1(request):
+    return render(request, 'assinaturaAprendizInfo1.html')
+
+
+def assinaturaAprendizInfor2(request):
+    return render(request, 'assinaturaAprendizInfo2.html')
+
+# Fim Assinatura
+
+
+# Perfil -> Alterar Senha
+def alterarSenha(request):
+    if request.method == "POST":
+        return render(request, 'alterarSenha.html')
+    return render(request, 'alterarSenha.html')
+
+def novaSenha(request):
+    if request.method == "POST":
+        pass
+    return render(request, 'novaSenha.html')
 
 def plataforma():
     pass
