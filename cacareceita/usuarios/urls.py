@@ -42,6 +42,11 @@ urlpatterns = [
     path('minhasReceitasConfeiteiro/', views.minhasReceitasConfeiteiro, name='minhasReceitasConfeiteiro'),
     path('minhasReceitasVegano/', views.minhasReceitasVegano, name='minhasReceitasVegano'),
     path('adicionarReceitaAprendiz/', views.adicionarReceitaAprendiz, name='adicionarReceitaAprendiz'),
+    path('adicionarReceitaMiniChef/', views.adicionarReceitaMiniChef, name='adicionarReceitaMiniChef'),
+    path('adicionarReceitaSubChef/', views.adicionarReceitaSubChef, name='adicionarReceitaSubChef'),
+    path('adicionarReceitaChef/', views.adicionarReceitaChef, name='adicionarReceitaChef'),
+    path('adicionarReceitaConfeiteiro/', views.adicionarReceitaConfeiteiro, name='adicionarReceitaConfeiteiro'),
+    path('adicionarReceitaVegano/', views.adicionarReceitaVegano, name='adicionarReceitaVegano'),
     path('editarPerfilAprendiz/', views.editarPerfilAprendiz, name='editarPerfilAprendiz'),
     path('logout/', views.logout_view, name='logout'),
 

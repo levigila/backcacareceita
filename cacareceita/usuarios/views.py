@@ -198,6 +198,21 @@ def minhasReceitasVegano(request):
 def adicionarReceitaAprendiz(request):
     return render(request, 'adicionarReceitaAprendiz.html')
 
+def adicionarReceitaMiniChef(request):
+    return render(request, 'adicionarReceitaMiniChef.html')
+
+def adicionarReceitaSubChef(request):
+    return render(request, 'adicionarReceitaSubChef.html')
+
+def adicionarReceitaChef(request):
+    return render(request, 'adicionarReceitaChef.html')
+
+def adicionarReceitaConfeiteiro(request):
+    return render(request, 'adicionarReceitaConfeiteiro.html')
+
+def adicionarReceitaVegano(request):
+    return render(request, 'adicionarReceitaVegano.html')
+
 def editarPerfilAprendiz(request):
     return render(request, 'editarPerfilAprendiz.html')
 
