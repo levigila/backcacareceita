@@ -59,6 +59,18 @@ urlpatterns = [
     path('assinaturaAprendiz/', views.assinaturaAprendiz, name='assinatura-aprendiz'),
     path('assinaturaAprendizInfo1/', views.assinaturaAprendizInfor1, name='assinatura-aprendiz-info1'),
     path('assinaturaAprendizInfo2/', views.assinaturaAprendizInfor2, name='assinatura-aprendiz-info2'),
+    path('assinaturaAprendizFinalizada/', views.assinaturaAprendizFinalizada, name='assinatura-aprendiz-finalizada'),
+
+    path('assinaturaMiniChef/', views.assinaturaMiniChef, name='assinatura-mini-chef'),
+    path('assinaturaMiniChefInfo1/', views.assinaturaMiniChefInfor1, name='assinatura-mini-chef-info1'),
+    path('assinaturaMiniChefInfo2/', views.assinaturaMiniChefInfor2, name='assinatura-mini-chef-info2'),
+    path('assinaturaMiniChefFinalizada/', views.assinaturaMiniChefFinalizada, name='assinatura-mini-chef-finalizada'),
+
+    path('assinaturaSubChef/', views.assinaturaSubChef, name='assinatura-sub-chef'),
+    path('assinaturaSubChefInfo1/', views.assinaturaSubChefInfor1, name='assinatura-sub-chef-info1'),
+    path('assinaturaSubChefInfo2/', views.assinaturaSubChefInfor2, name='assinatura-sub-chef-info2'),
+    path('assinaturaSubChefFinalizada/', views.assinaturaSubChefFinalizada, name='assinatura-sub-chef-finalizada'),
+
 
     # Perfil -> Alterar Senha
     path('alterarSenha/', views.alterarSenha, name='alterar-senha'),

@@ -244,6 +244,40 @@ def assinaturaAprendizInfor1(request):
 def assinaturaAprendizInfor2(request):
     return render(request, 'assinaturaAprendizInfo2.html')
 
+def assinaturaAprendizFinalizada(request):
+    return render(request, 'assinaturaAprendizFinalizada.html')
+#
+
+def assinaturaMiniChef(request):
+    return render(request, 'assinaturaMiniChef.html')
+
+
+def assinaturaMiniChefInfor1(request):
+    return render(request, 'assinaturaMiniChefInfo1.html')
+
+
+def assinaturaMiniChefInfor2(request):
+    return render(request, 'assinaturaMiniChefInfo2.html')
+
+def assinaturaMiniChefFinalizada(request):
+    return render(request, 'assinaturaMiniChefFinalizada.html')
+#
+
+def assinaturaSubChef(request):
+    return render(request, 'assinaturaSubChef.html')
+
+
+def assinaturaSubChefInfor1(request):
+    return render(request, 'assinaturaSubChefInfo1.html')
+
+
+def assinaturaSubChefInfor2(request):
+    return render(request, 'assinaturaSubChefInfo2.html')
+
+def assinaturaSubChefFinalizada(request):
+    return render(request, 'assinaturaSubChefFinalizada.html')
+
+
 # Fim Assinatura
 
 
