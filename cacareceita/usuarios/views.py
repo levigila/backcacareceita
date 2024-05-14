@@ -195,6 +195,9 @@ def minhasReceitasConfeiteiro(request):
 def minhasReceitasVegano(request):
     return render(request, 'minhasReceitasVegano.html')
 
+def adicionarReceitaAprendiz(request):
+    return render(request, 'adicionarReceitaAprendiz.html')
+
 # Assinatura
 
 def assinaturaAprendiz(request):

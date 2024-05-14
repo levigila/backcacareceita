@@ -41,6 +41,7 @@ urlpatterns = [
     path('minhasReceitasChef/', views.minhasReceitasChef, name='minhasReceitasChef'),
     path('minhasReceitasConfeiteiro/', views.minhasReceitasConfeiteiro, name='minhasReceitasConfeiteiro'),
     path('minhasReceitasVegano/', views.minhasReceitasVegano, name='minhasReceitasVegano'),
+    path('adicionarReceitaAprendiz/', views.adicionarReceitaAprendiz, name='adicionarReceitaAprendiz'),
     path('logout/', views.logout_view, name='logout'),
 
         # Assinatura
