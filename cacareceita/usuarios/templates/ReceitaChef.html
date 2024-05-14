@@ -14,11 +14,11 @@
     <div class="container">
         <header>
             <div class="fundo-barraPesquisa">
-                <a href="{% url 'homeSubChef' %}" class="logoPrincipal-cacareceita">
-                    <img src="{% static 'img/logo-cacareceita2.png' %}">
+                <a href="{% url 'homeAprendiz' %}" class="logoPrincipal-cacareceita">
+                    <img src="{% static 'img/logoPrincipal-cacareceita3.png' %}">
                 </a>
                 <div>
-                    <input class="barra-pesquisa" type="text" placeholder="Encontre sua receita">
+                    <input class="barra-pesquisa" type="text">
                     <button class="botao-pesquisar"><img src="{% static 'img/icon-pesquisa.png' %}"></button>
                 </div>
                 <div class="perfil" id="menu-perfil">
@@ -35,6 +35,7 @@
                     <li><a href="{% url 'homeVegano' %}">Vegano</a></li>
                 </ul>
             </nav>
+    
             {% if user.is_authenticated %}
             <div class="menu-perfil">
                 <img src="{% static 'img/ondas-menu-perfil-top.svg' %}" id="onda-menu-top" alt="">
@@ -286,7 +287,6 @@
             <img class="fundo-rodape" src="{% static 'img/footer-chefe.svg' %}">
             <div class="itens">
                 <img class="logo-cabaret" src="{% static 'img/logo-cabaret.png' %}">
-                <img class="logo-cacaReceita" src="{% static 'img/logo-cacaReceita.png' %}">
                 <div>
                     <p style="font-weight: 500;">CaçaReceita</p>
                     <p>+55 (81) 9 0000-0000</p>

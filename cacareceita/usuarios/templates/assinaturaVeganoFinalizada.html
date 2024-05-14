@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/reset.css' %}">
-    <link rel="stylesheet" href="{% static 'css/assinaturaSubChefInfo1.css' %}">
-    <title>Assinatura Aprendiz</title>
+    <link rel="stylesheet" href="{% static 'css/assinaturaVeganoFinalizada.css' %}">
+    <title>Assinatura</title>
 </head>
 
 <body>
@@ -79,57 +79,16 @@
         <main>
 
             <div class="etapas">
-                <div class="etapa1">1</div>
+                <div class="etapa1"></div>
                 <div class="barra"></div>
                 <div class="etapa2"></div>
                 <div class="barra"></div>
-                <div class="etapa3"></div>
+                <div class="etapa3">3</div>
             </div>
 
-            <h1 id="text-h1">Escolha o plano perfeito para você!</h1>
+            <img src="{% static 'img/icon-mega-check.svg' %}" alt="">
 
-            <div class="planos">
-                <div class="plano-mensal">
-                    <h1>Plano Mensal</h1>
-                    <ul>
-                        <li>
-                            <img src="{% static 'img/icon-check.svg' %}" alt="">
-                            <p>Veja suas receitas sem anuncios te atrapalando!</p>
-                        </li>
-                        <li>
-                            <img src="{% static 'img/icon-check.svg' %}" alt="">
-                            <p>Salve quantas receitas você quiser no seu livro de receitas!</p>
-                        </li>
-                        <li>
-                            <img src="{% static 'img/icon-check.svg' %}" alt="">
-                            <p>Compartilhe com todos a sua receita!</p>
-                        </li>
-
-                    </ul>
-                    <span>Apenas R$ 9,90</span>
-                </div>
-                <div class="plano-anual">
-                    <h1>Plano Mensal</h1>
-                    <ul>
-                        <li>
-                            <img src="{% static 'img/icon-check.svg' %}" alt="">
-                            <p>Veja suas receitas sem anuncios te atrapalando!</p>
-                        </li>
-                        <li>
-                            <img src="{% static 'img/icon-check.svg' %}" alt="">
-                            <p>Salve quantas receitas você quiser no seu livro de receitas!</p>
-                        </li>
-                        <li>
-                            <img src="{% static 'img/icon-check.svg' %}" alt="">
-                            <p>Compartilhe com todos a sua receita!</p>
-                        </li>
-
-                    </ul>
-                    <span>Apenas R$ 118,00</span>
-                </div>
-            </div>
-
-            <a href="#" id="continuar">Continuar</a>
+            <h1>Assinatura finalizada!</h1>
 
         </main>
         <div class="blur">
@@ -165,6 +124,7 @@
         </footer>
     </div>
     <script src="{% static 'js/menuPerfil.js' %}"></script>
+    <script src="{% static 'js/pagamento.js' %}"></script>
 
 </body>
 

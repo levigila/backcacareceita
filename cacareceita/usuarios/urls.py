@@ -71,6 +71,21 @@ urlpatterns = [
     path('assinaturaSubChefInfo2/', views.assinaturaSubChefInfor2, name='assinatura-sub-chef-info2'),
     path('assinaturaSubChefFinalizada/', views.assinaturaSubChefFinalizada, name='assinatura-sub-chef-finalizada'),
 
+    path('assinaturaChef/', views.assinaturaChef, name='assinatura-chef'),
+    path('assinaturaChefInfo1/', views.assinaturaChefInfor1, name='assinatura-chef-info1'),
+    path('assinaturaChefInfo2/', views.assinaturaChefInfor2, name='assinatura-chef-info2'),
+    path('assinaturaChefFinalizada/', views.assinaturaChefFinalizada, name='assinatura-chef-finalizada'),
+
+    path('assinaturaConfeiteiro/', views.assinaturaConfeiteiro, name='assinatura-confeiteiro'),
+    path('assinaturaConfeiteiroInfo1/', views.assinaturaConfeiteiroInfor1, name='assinatura-confeiteiro-info1'),
+    path('assinaturaConfeiteiroInfo2/', views.assinaturaConfeiteiroInfor2, name='assinatura-confeiteiro-info2'),
+    path('assinaturaConfeiteiroFinalizada/', views.assinaturaConfeiteiroFinalizada, name='assinatura-confeiteiro-finalizada'),
+
+    path('assinaturaVegano/', views.assinaturaVegano, name='assinatura-vegano'),
+    path('assinaturaVeganoInfo1/', views.assinaturaVeganoInfor1, name='assinatura-vegano-info1'),
+    path('assinaturaVeganoInfo2/', views.assinaturaVeganoInfor2, name='assinatura-vegano-info2'),
+    path('assinaturaVeganoFinalizada/', views.assinaturaVeganoFinalizada, name='assinatura-vegano-finalizada'),
+
 
     # Perfil -> Alterar Senha
     path('alterarSenha/', views.alterarSenha, name='alterar-senha'),

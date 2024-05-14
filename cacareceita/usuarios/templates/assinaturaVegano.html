@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/reset.css' %}">
-    <link rel="stylesheet" href="{% static 'css/assinaturaSubChefInfo1.css' %}">
+    <link rel="stylesheet" href="{% static 'css/assinaturaVegano.css' %}">
     <title>Assinatura Aprendiz</title>
 </head>
 
@@ -77,60 +77,32 @@
             {% endif %}
         </header>
         <main>
+            <img src="{% static 'img/icon-prato-aprendiz.png' %}" id="icon-prato" alt="">
+            <h3 class="text">Assine agora mesmo o premium e aproveite sem limites!</h3>
 
-            <div class="etapas">
-                <div class="etapa1">1</div>
-                <div class="barra"></div>
-                <div class="etapa2"></div>
-                <div class="barra"></div>
-                <div class="etapa3"></div>
+            <div class="vantagens">
+                <h1>Vantagens</h1>
+
+                <ul>
+                    <li>
+                        <img src="{% static 'img/icon-checked.svg' %}"  alt="">
+                        <p>Veja suas receitas sem anuncios te atrapalando!</p>
+                    </li>
+                    <li>
+                        <img src="{% static 'img/icon-checked.svg' %}"  alt="">
+                        <p>Salve quantas receitas você quiser no seu livro de receitas!</p>
+                    </li>
+                    <li>
+                        <img src="{% static 'img/icon-checked.svg' %}"  alt="">
+                        <p>Compartilhe com todos a sua receita!</p>
+                    </li>
+                </ul>
+
+                <span>A partir de  R$ 9,90</span>
             </div>
-
-            <h1 id="text-h1">Escolha o plano perfeito para você!</h1>
-
-            <div class="planos">
-                <div class="plano-mensal">
-                    <h1>Plano Mensal</h1>
-                    <ul>
-                        <li>
-                            <img src="{% static 'img/icon-check.svg' %}" alt="">
-                            <p>Veja suas receitas sem anuncios te atrapalando!</p>
-                        </li>
-                        <li>
-                            <img src="{% static 'img/icon-check.svg' %}" alt="">
-                            <p>Salve quantas receitas você quiser no seu livro de receitas!</p>
-                        </li>
-                        <li>
-                            <img src="{% static 'img/icon-check.svg' %}" alt="">
-                            <p>Compartilhe com todos a sua receita!</p>
-                        </li>
-
-                    </ul>
-                    <span>Apenas R$ 9,90</span>
-                </div>
-                <div class="plano-anual">
-                    <h1>Plano Mensal</h1>
-                    <ul>
-                        <li>
-                            <img src="{% static 'img/icon-check.svg' %}" alt="">
-                            <p>Veja suas receitas sem anuncios te atrapalando!</p>
-                        </li>
-                        <li>
-                            <img src="{% static 'img/icon-check.svg' %}" alt="">
-                            <p>Salve quantas receitas você quiser no seu livro de receitas!</p>
-                        </li>
-                        <li>
-                            <img src="{% static 'img/icon-check.svg' %}" alt="">
-                            <p>Compartilhe com todos a sua receita!</p>
-                        </li>
-
-                    </ul>
-                    <span>Apenas R$ 118,00</span>
-                </div>
-            </div>
-
-            <a href="#" id="continuar">Continuar</a>
-
+            <a href="#" id="assine-ja">Assine já</a>
+            <img src="{% static 'img/bola-assinatura-aprendiz.svg' %}" id="bola1" alt="">
+            <img src="{% static 'img/bola-assinatura-aprendiz.svg' %}" id="bola2" alt="">
         </main>
         <div class="blur">
             <div class="sair">
@@ -160,7 +132,7 @@
                     <p>+55 (81) 9 0000-0000</p>
                     <p>Cabaret_startup@gmail.com</p>
                 </div>
-
+    
             </div>
         </footer>
     </div>

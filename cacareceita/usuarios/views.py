@@ -276,7 +276,51 @@ def assinaturaSubChefInfor2(request):
 
 def assinaturaSubChefFinalizada(request):
     return render(request, 'assinaturaSubChefFinalizada.html')
+#
 
+def assinaturaChef(request):
+    return render(request, 'assinaturaChef.html')
+
+
+def assinaturaChefInfor1(request):
+    return render(request, 'assinaturaChefInfo1.html')
+
+
+def assinaturaChefInfor2(request):
+    return render(request, 'assinaturaChefInfo2.html')
+
+def assinaturaChefFinalizada(request):
+    return render(request, 'assinaturaChefFinalizada.html')
+#
+
+def assinaturaConfeiteiro(request):
+    return render(request, 'assinaturaConfeiteiro.html')
+
+
+def assinaturaConfeiteiroInfor1(request):
+    return render(request, 'assinaturaConfeiteiroInfo1.html')
+
+
+def assinaturaConfeiteiroInfor2(request):
+    return render(request, 'assinaturaConfeiteiroInfo2.html')
+
+def assinaturaConfeiteiroFinalizada(request):
+    return render(request, 'assinaturaConfeiteiroFinalizada.html')
+#
+
+def assinaturaVegano(request):
+    return render(request, 'assinaturaVegano.html')
+
+
+def assinaturaVeganoInfor1(request):
+    return render(request, 'assinaturaVeganoInfo1.html')
+
+
+def assinaturaVeganoInfor2(request):
+    return render(request, 'assinaturaVeganoInfo2.html')
+
+def assinaturaVeganoFinalizada(request):
+    return render(request, 'assinaturaVeganoFinalizada.html')
 
 # Fim Assinatura
 
