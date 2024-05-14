@@ -216,6 +216,21 @@ def adicionarReceitaVegano(request):
 def editarPerfilAprendiz(request):
     return render(request, 'editarPerfilAprendiz.html')
 
+def editarPerfilMiniChef(request):
+    return render(request, 'editarPerfilMiniChef.html')
+
+def editarPerfilSubChef(request):
+    return render(request, 'editarPerfilSubChef.html')
+
+def editarPerfilChef(request):
+    return render(request, 'editarPerfilChef.html')
+
+def editarPerfilConfeiteiro(request):
+    return render(request, 'editarPerfilConfeiteiro.html')
+
+def editarPerfilVegano(request):
+    return render(request, 'editarPerfilVegano.html')
+
 # Assinatura
 
 def assinaturaAprendiz(request):

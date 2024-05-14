@@ -48,6 +48,11 @@ urlpatterns = [
     path('adicionarReceitaConfeiteiro/', views.adicionarReceitaConfeiteiro, name='adicionarReceitaConfeiteiro'),
     path('adicionarReceitaVegano/', views.adicionarReceitaVegano, name='adicionarReceitaVegano'),
     path('editarPerfilAprendiz/', views.editarPerfilAprendiz, name='editarPerfilAprendiz'),
+    path('editarPerfilMiniChef/', views.editarPerfilMiniChef, name='editarPerfilMiniChef'),
+    path('editarPerfilSubChef/', views.editarPerfilSubChef, name='editarPerfilSubChef'),
+    path('editarPerfilChef/', views.editarPerfilChef, name='editarPerfilChef'),
+    path('editarPerfilConfeiteiro/', views.editarPerfilConfeiteiro, name='editarPerfilConfeiteiro'),
+    path('editarPerfilVegano/', views.editarPerfilVegano, name='editarPerfilVegano'),
     path('logout/', views.logout_view, name='logout'),
 
         # Assinatura

@@ -1,5 +1,7 @@
+/* CSS DO HEADER/NAVEGAÇÃO */
+
 .fundo-barraPesquisa {
-    background-color: #B13D0C;
+    background-color: #496300;
     height: 50px;
     display: flex;
     align-items: center;
@@ -19,35 +21,32 @@
 .logoPrincipal-cacareceita img {
     width: 131px;
 }
-
 .barra-pesquisa {
-    background-color: #FFF9F0;
+    background-color: #ffffff;
     height: 25px;
     width: 300px;
     border-radius: 10px;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
     padding-left: 4px;
     font-size: 15px;
-    color: #994E0D;
+    color: #496300;
 }
 
 .barra-pesquisa::placeholder {
-    color: #994E0D;
+    color: #496300;
 }
-
 .botao-pesquisar {
     height: 25px;
-    background-color: #FFF9F0;
+    background-color: #fff;
     border: none;
     border-radius: 10px;
     position: absolute;
     margin-left: 270px;
     cursor: pointer;
 
-
+    
 }
-
-.botao-pesquisar img {
+.botao-pesquisar img{
     width: 20px;
     margin-top: 2px;
 }
@@ -61,10 +60,9 @@
     width: 40px;
     cursor: pointer;
 }
-
 .navegacao {
     height: 30px;
-    border-bottom: 5px solid #B13D0C;
+    border-bottom: 5px solid #496300;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -74,17 +72,16 @@
     display: flex;
 }
 
-.lista-menu li a {
+.lista-menu li a{
     text-decoration: none;
     font-family: "Josefin Sans", sans-serif;
     font-size: 18px;
     color: #B13D0C;
     font-weight: 500;
     margin-right: 100px;
-
+ 
 }
-
-.lista-menu li:nth-child(2) a {
+.lista-menu li:nth-child(6) a {
     color: #88AA27;
 }
 
@@ -107,7 +104,7 @@ main {
 
 .secao-editarPerfil {
     border-radius: 50px;
-    background-color: rgb(237, 171, 0, 0.28);
+    background-color: rgb(255, 205, 75, 0.35);
     box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
     width: 1000px;
     height: 400px;
@@ -205,27 +202,27 @@ main {
 
 .botao-salvarAlteracoes {
     border: none;
-    background-color: #496300;
+    background-color: #9DAB75;
     border-radius: 20px;
     width: 200px;
     height: 30px;
+    color: #fff;
     font-family: "Josefin Sans", sans-serif;
     font-size: 16px;
     cursor: pointer;
-    color: #fff;
     margin-left: 300px;
 }
 
 /*RODAPÉ*/
-.rodape {
-    background-image: url("../img/fundo-rodape.png");
+.rodape{
+    background-image: url("../img/fundo-rodape-chef.png");
     width: 1200px;
     height: 150px;
     position: absolute;
     bottom: 0;
-}
-
-.fundo-rodape {
+ }
+ 
+ .fundo-rodape {
     position: absolute;
     width: 1200px;
     height: 150px;
@@ -247,6 +244,8 @@ main {
 .itens p {
     font-family: "Inter", sans-serif;
     margin-bottom: 7px;
+    color: #fff;
+    font-weight: 100;
 }  
 
 /* Menu perfil */
