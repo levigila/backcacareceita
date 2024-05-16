@@ -101,8 +101,9 @@ main {
 }
 
 .banner-principal {
-    width: 1000px;
+    max-width: 1000px;
     margin-top: 40px;
+    object-fit: cover;
 }
 
 .titulo-pesquiseReceita {
@@ -133,16 +134,16 @@ main {
 
 .fundoUtensilio2 {
     position: absolute;
-    width: 225px;
+    width: 200px;
     left: -37px;
-    top: 341px;
+    top: 298px;
 }
 
 .fundoUtensilio1 {
     position: absolute;
-    width: 261px;
+    width: 200px;
     right: 0px;
-    top: 357px;
+    top: 323px;
 }
 
 #texto-ReceitaIncrivel {
@@ -163,7 +164,6 @@ main {
 
 .conteudo-receitas {
     margin-top: 35px;
-    width: 1000px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -239,13 +239,7 @@ main {
 
 .rodape {
     background-image: url("../img/fundo-rodape.png");
-    width: 1200px;
-    height: 150px;
-}
-
-.fundo-rodape {
-    position: absolute;
-    width: 1200px;
+    width: auto;
     height: 150px;
 }
 
