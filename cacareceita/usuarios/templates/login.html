@@ -1,82 +1,82 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+    <!DOCTYPE html>
+    <html lang="pt-br">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'css/login.css' %}">
-    <script src="{% static 'js/login.js' %}"></script>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/login.css' %}">
+        <script src="{% static 'js/login.js' %}"></script>
 
-    <title>Caça Receita</title>
+        <title>Caça Receita</title>
 
-</head>
+    </head>
 
-<body>
-    
-    <div class="container">
-        <div class="area-login">
-            <div class="area-laranja">
-                <img src="{% static 'img/logo.svg' %}" alt="logo">
-                <h1>Bem vindo</h1>
-                <h3>Novo login?</h3>
-                <a href="{% url 'cadastro' %}">Crie sua conta</a>
-            </div>
-            <div class="area-transparente">
-                <h1>Login</h1>
+    <body>
+        
+        <div class="container">
+            <div class="area-login">
+                <div class="area-laranja">
+                    <img src="{% static 'img/logo.svg' %}" alt="logo">
+                    <h1>Bem vindo</h1>
+                    <h3>Novo login?</h3>
+                    <a href="{% url 'cadastro' %}">Crie sua conta</a>
+                </div>
+                <div class="area-transparente">
+                    <h1>Login</h1>
 
-                <form id="loginForm" action="{% url 'login' %}" method="POST">
-                    {% csrf_token %}
-                    <label>
-                        <i><img src="{% static 'img/icon-user.svg' %}" alt="icon user"></i>
-                        <input id="user" type="text" name="username" placeholder="Digite seu usuário" required>
-                    </label>
+                    <form id="loginForm" action="{% url 'login' %}" method="POST">
+                        {% csrf_token %}
+                        <label>
+                            <i><img src="{% static 'img/icon-user.svg' %}" alt="icon user"></i>
+                            <input id="user" type="text" name="username" placeholder="Digite seu usuário" required>
+                        </label>
 
-                    <label>
-                        <i><img src="{% static 'img/icon-password.svg' %}" alt="icon password"></i>
-                        <input id="password" type="password" name="senha" placeholder="Digite sua senha" required>
-                    </label>
+                        <label>
+                            <i><img src="{% static 'img/icon-password.svg' %}" alt="icon password"></i>
+                            <input id="password" type="password" name="senha" placeholder="Digite sua senha" required>
+                        </label>
 
-                    <a id="esqueci-senha" href="{% url 'esqueci-senha' %}">Esqueci a senha</a>
+                        <a id="esqueci-senha" href="{% url 'esqueci-senha' %}">Esqueci a senha</a>
 
-                    <button id="entrar" type="submit" disabled>Entrar</button>
-                </form>
-                
+                        <button id="entrar" type="submit" disabled>Entrar</button>
+                    </form>
+                    
 
-                <h3>Entre com:</h3>
+                    <h3>Entre com:</h3>
 
-                <div class="outras-formas-login">
-                    <a href="#" target="_blank">
-                        <img src="{% static 'img/icon-google.svg' %}" alt="">
-                    </a>
-                    <a href="#" target="_blank">
-                        <img src="{% static 'img/icon-apple.svg' %}" alt="">
-                    </a>
-                    <a href="#" target="_blank">
-                        <img src="{% static 'img/icon-facebook.svg' %}" alt="">
-                    </a>
+                    <div class="outras-formas-login">
+                        <a href="#" target="_blank">
+                            <img src="{% static 'img/icon-google.svg' %}" alt="">
+                        </a>
+                        <a href="#" target="_blank">
+                            <img src="{% static 'img/icon-apple.svg' %}" alt="">
+                        </a>
+                        <a href="#" target="_blank">
+                            <img src="{% static 'img/icon-facebook.svg' %}" alt="">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        document.getElementById('loginForm').addEventListener('input', function() {
-            var username = document.getElementById('user').value;
-            var password = document.getElementById('password').value;
-            var entrarButton = document.getElementById('entrar');
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('loginForm').addEventListener('input', function() {
+                var username = document.getElementById('user').value;
+                var password = document.getElementById('password').value;
+                var entrarButton = document.getElementById('entrar');
 
-            if (username.trim() !== '' && password.trim() !== '') {
-                entrarButton.removeAttribute('disabled');
-            } else {
-                entrarButton.setAttribute('disabled', 'disabled');
-            }
+                if (username.trim() !== '' && password.trim() !== '') {
+                    entrarButton.removeAttribute('disabled');
+                } else {
+                    entrarButton.setAttribute('disabled', 'disabled');
+                }
+            });
         });
-    });
-</script>
+    </script>
 
-</body>
+    </body>
 
-</html>
+    </html>
