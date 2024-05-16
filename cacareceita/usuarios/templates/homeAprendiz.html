@@ -13,6 +13,9 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/aprendiz.css' %}">
     <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header-responsivo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home-responsivo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer-responsivo.css' %}">
 </head>
 
 <body>
@@ -48,7 +51,7 @@
             </div>
             <div class="menu-perfil-content">
                 <ul>
-                    <li><a href="#">Editar perfil</a></li>
+                    <li><a href="{% url 'editarPerfilAprendiz' %}">Editar perfil</a></li>
                     <li><a href="#">Livro de receita</a></li>
                     <li><a href="#">Adicionar receita</a></li>
                     <li><a href="#">Minhas receitas</a></li>
@@ -444,7 +447,7 @@
                     </button>
                 </form>
             
-                <form action="{% url 'login' %}" method="get">
+                
                     <button type="submit" class="voltar">Não, desejo voltar!</button>
                 </form>
             </div>

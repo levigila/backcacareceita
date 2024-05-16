@@ -1,0 +1,171 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/assinaturaMiniChefInfo1.css' %}">
+    <title>Assinatura Aprendiz</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="fundo-barraPesquisa">
+                <a href="{% url 'homeAprendiz' %}" class="logoPrincipal-cacareceita">
+                    <img src="{% static 'img/logoPrincipal-cacareceita3.png' %}">
+                </a>
+                <div>
+                    <input class="barra-pesquisa" type="text">
+                    <button class="botao-pesquisar"><img src="{% static 'img/icon-pesquisa.png' %}"></button>
+                </div>
+                <div class="perfil" id="menu-perfil">
+                    <img class="icon-perfil" src="{% static 'img/icon-perfil.png' %}">
+                </div>
+            </div>
+            <nav class="navegacao">
+                <ul class="lista-menu">
+                    <li><a href="{% url 'homeMiniChef' %}">Mini Chef</a></li>
+                    <li><a href="{% url 'homeAprendiz' %}">Aprendiz</a></li>
+                    <li><a href="{% url 'homeSubChef' %}">SubChef</a></li>
+                    <li><a href="{% url 'homeChef' %}">Chef</a></li>
+                    <li><a href="{% url 'homeConfeiteiro' %}">Confeiteiro</a></li>
+                    <li><a href="{% url 'homeVegano' %}">Vegano</a></li>
+                </ul>
+            </nav>
+            <img id="imgOndasNav" src="{% static 'img/imgOndasNavMiniChef.png' %}">
+            {% if user.is_authenticated %}
+            <div class="menu-perfil">
+                <img src="{% static 'img/ondas-menu-perfil-top.svg' %}" id="onda-menu-top" alt="">
+                <div class="menu-perfil-header">
+                    <img src="{% static 'img/icon-menu-perfil.svg' %}" alt="">
+                    <h1>Ana Luísa</h1>
+                </div>
+                <div class="menu-perfil-content">
+                    <ul>
+                        <li><a href="{% url 'editarPerfilMiniChef' %}">Editar perfil</a></li>
+                        <li><a href="#">Livro de receita</a></li>
+                        <li><a href="#">Adicionar receita</a></li>
+                        <li><a href="#">Minhas receitas</a></li>
+                        <li><a href="#">Assinaturas</a></li>
+                    </ul>
+                </div>
+                <div class="menu-perfil-logout">
+                    <button id="logout">
+                        <img src="{% static 'img/icon-porta.svg' %}" alt="">
+                        <p>Sair</p>
+                    </button>
+                </div>
+                <img src="{% static 'img/ondas-menu-perfil-footer.svg' %}" id="onda-menu-footer" alt="">
+            </div>
+            {% else %}
+            <div class="menu-perfil">
+                <img src="{% static 'img/ondas-menu-perfil-top.svg' %}" id="onda-menu-top" alt="">
+                <div class="login-register">
+                    <a href="{% url 'login' %}">Entrar</a>
+                    <a href="{% url 'cadastro' %}">Cadastrar-se</a>
+                </div>
+                <div class="div-assinatura">
+                    <ul>
+                        <li><a href="#">Assinaturas</a></li>
+                    </ul>
+                </div>
+                <img src="{% static 'img/ondas-menu-perfil-footer.svg' %}" id="onda-menu-footer" alt="">
+            </div>
+            {% endif %}
+        </header>
+        <main>
+
+            <div class="etapas">
+                <div class="etapa1">1</div>
+                <div class="barra"></div>
+                <div class="etapa2"></div>
+                <div class="barra"></div>
+                <div class="etapa3"></div>
+            </div>
+
+            <h1 id="text-h1">Escolha o plano perfeito para você!</h1>
+
+            <div class="planos">
+                <div class="plano-mensal">
+                    <h1>Plano Mensal</h1>
+                    <ul>
+                        <li>
+                            <img src="{% static 'img/icon-check.svg' %}" alt="">
+                            <p>Veja suas receitas sem anuncios te atrapalando!</p>
+                        </li>
+                        <li>
+                            <img src="{% static 'img/icon-check.svg' %}" alt="">
+                            <p>Salve quantas receitas você quiser no seu livro de receitas!</p>
+                        </li>
+                        <li>
+                            <img src="{% static 'img/icon-check.svg' %}" alt="">
+                            <p>Compartilhe com todos a sua receita!</p>
+                        </li>
+
+                    </ul>
+                    <span>Apenas R$ 9,90</span>
+                </div>
+                <div class="plano-anual">
+                    <h1>Plano Mensal</h1>
+                    <ul>
+                        <li>
+                            <img src="{% static 'img/icon-check.svg' %}" alt="">
+                            <p>Veja suas receitas sem anuncios te atrapalando!</p>
+                        </li>
+                        <li>
+                            <img src="{% static 'img/icon-check.svg' %}" alt="">
+                            <p>Salve quantas receitas você quiser no seu livro de receitas!</p>
+                        </li>
+                        <li>
+                            <img src="{% static 'img/icon-check.svg' %}" alt="">
+                            <p>Compartilhe com todos a sua receita!</p>
+                        </li>
+
+                    </ul>
+                    <span>Apenas R$ 118,00</span>
+                </div>
+            </div>
+
+            <a href="#" id="continuar">Continuar</a>
+
+        </main>
+        <div class="blur">
+            <div class="sair">
+                <img src="{% static 'img/onda-menu-perfil-sair.svg' %}" id="onda-sair" alt="">
+                <img src="{% static 'img/icon-x-menu-sair.svg' %}" class="voltar" id="icon-x-sair" alt="">
+                <div class="header-sair">
+                    <h1>Deseja realmente sair?</h1>
+                </div>
+                <div class="form-sair">
+                    <form method="post">
+                        {%csrf_token %}
+                        <button type="submit">
+                            <a href="{% url 'login' %}">Sim, desejo sair!</a>
+                        </button>
+                    </form>
+
+                    <button class="voltar">Não, desejo voltar!</button>
+                </div>
+                <img src="{% static 'img/prato-img-sair.svg' %}" id="prato-sair" alt="">
+            </div>
+        </div>
+        <footer class="rodape">
+            <div class="itens">
+                <img class="logo-cabaret" src="{% static 'img/logo-cabaret.png' %}">
+                <div>
+                    <p style="font-weight: 500;">CaçaReceita</p>
+                    <p>+55 (81) 9 0000-0000</p>
+                    <p>Cabaret_startup@gmail.com</p>
+                </div>
+
+            </div>
+        </footer>
+    </div>
+    <script src="{% static 'js/menuPerfil.js' %}"></script>
+
+</body>
+
+</html>

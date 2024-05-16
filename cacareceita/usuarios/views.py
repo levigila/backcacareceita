@@ -29,7 +29,7 @@ def cadastro(request):
             return render(request, 'cadastroerrorsenha.html')
 
         # Create the user with hashed password
-        else: 
+        else:
             user = CustomUser.objects.create_user(username=username, email=email, password=senha)
             user.save()
              # Authenticate the user and log them in
@@ -40,7 +40,7 @@ def cadastro(request):
         else:
             # Tratar erro de autenticação, se necessário
             pass
-        
+
 
 def login_view(request):
     if request.method == 'POST':
@@ -49,17 +49,17 @@ def login_view(request):
             username = form.cleaned_data['username']
             password = form.cleaned_data['senha']
             CustomUser = authenticate(username=username, password=password)
-            
+
             if CustomUser is not None:
                 login_django(request, CustomUser)
-                return redirect('homeAprendiz') 
+                return redirect('homeAprendiz')
             else:
                 form.add_error(None, 'Usuário ou senha inválidos.')
                 return render(request, 'loginerror.html')
     else:
         form = LoginForm()
         return render(request, 'login.html', {'form': form})
-    
+
 def logout_view(request):
         logout(request)
         return redirect('homeAprendiz')
@@ -174,8 +174,178 @@ def homeVegano(request):
 def livroReceitaAprendiz(request):
     return render(request, 'livroReceitaAprendiz.html')
 
+def livroReceitaMiniChef(request):
+    return render(request, 'livroReceitaMiniChef.html')
+
 def minhasReceitasAprendiz(request):
     return render(request, 'minhasReceitasAprendiz.html')
+
+def minhasReceitasMiniChef(request):
+    return render(request, 'minhasReceitasMiniChef.html')
+
+def minhasReceitasSubChef(request):
+    return render(request, 'minhasReceitasSubChef.html')
+
+def minhasReceitasChef(request):
+    return render(request, 'minhasReceitasChef.html')
+
+def minhasReceitasConfeiteiro(request):
+    return render(request, 'minhasReceitasConfeiteiro.html')
+
+def minhasReceitasVegano(request):
+    return render(request, 'minhasReceitasVegano.html')
+
+def adicionarReceitaAprendiz(request):
+    return render(request, 'adicionarReceitaAprendiz.html')
+
+def adicionarReceitaMiniChef(request):
+    return render(request, 'adicionarReceitaMiniChef.html')
+
+def adicionarReceitaSubChef(request):
+    return render(request, 'adicionarReceitaSubChef.html')
+
+def adicionarReceitaChef(request):
+    return render(request, 'adicionarReceitaChef.html')
+
+def adicionarReceitaConfeiteiro(request):
+    return render(request, 'adicionarReceitaConfeiteiro.html')
+
+def adicionarReceitaVegano(request):
+    return render(request, 'adicionarReceitaVegano.html')
+
+def editarPerfilAprendiz(request):
+    return render(request, 'editarPerfilAprendiz.html')
+
+def editarPerfilMiniChef(request):
+    return render(request, 'editarPerfilMiniChef.html')
+
+def editarPerfilSubChef(request):
+    return render(request, 'editarPerfilSubChef.html')
+
+def editarPerfilChef(request):
+    return render(request, 'editarPerfilChef.html')
+
+def editarPerfilConfeiteiro(request):
+    return render(request, 'editarPerfilConfeiteiro.html')
+
+def editarPerfilVegano(request):
+    return render(request, 'editarPerfilVegano.html')
+
+# Assinatura
+
+def assinaturaAprendiz(request):
+    return render(request, 'assinaturaAprendiz.html')
+
+
+def assinaturaAprendizInfor1(request):
+    return render(request, 'assinaturaAprendizInfo1.html')
+
+
+def assinaturaAprendizInfor2(request):
+    return render(request, 'assinaturaAprendizInfo2.html')
+
+def assinaturaAprendizFinalizada(request):
+    return render(request, 'assinaturaAprendizFinalizada.html')
+#
+
+def assinaturaMiniChef(request):
+    return render(request, 'assinaturaMiniChef.html')
+
+
+def assinaturaMiniChefInfor1(request):
+    return render(request, 'assinaturaMiniChefInfo1.html')
+
+
+def assinaturaMiniChefInfor2(request):
+    return render(request, 'assinaturaMiniChefInfo2.html')
+
+def assinaturaMiniChefFinalizada(request):
+    return render(request, 'assinaturaMiniChefFinalizada.html')
+#
+
+def assinaturaSubChef(request):
+    return render(request, 'assinaturaSubChef.html')
+
+
+def assinaturaSubChefInfor1(request):
+    return render(request, 'assinaturaSubChefInfo1.html')
+
+
+def assinaturaSubChefInfor2(request):
+    return render(request, 'assinaturaSubChefInfo2.html')
+
+def assinaturaSubChefFinalizada(request):
+    return render(request, 'assinaturaSubChefFinalizada.html')
+#
+
+def assinaturaChef(request):
+    return render(request, 'assinaturaChef.html')
+
+
+def assinaturaChefInfor1(request):
+    return render(request, 'assinaturaChefInfo1.html')
+
+
+def assinaturaChefInfor2(request):
+    return render(request, 'assinaturaChefInfo2.html')
+
+def assinaturaChefFinalizada(request):
+    return render(request, 'assinaturaChefFinalizada.html')
+#
+
+def assinaturaConfeiteiro(request):
+    return render(request, 'assinaturaConfeiteiro.html')
+
+
+def assinaturaConfeiteiroInfor1(request):
+    return render(request, 'assinaturaConfeiteiroInfo1.html')
+
+
+def assinaturaConfeiteiroInfor2(request):
+    return render(request, 'assinaturaConfeiteiroInfo2.html')
+
+def assinaturaConfeiteiroFinalizada(request):
+    return render(request, 'assinaturaConfeiteiroFinalizada.html')
+#
+
+def assinaturaVegano(request):
+    return render(request, 'assinaturaVegano.html')
+
+
+def assinaturaVeganoInfor1(request):
+    return render(request, 'assinaturaVeganoInfo1.html')
+
+
+def assinaturaVeganoInfor2(request):
+    return render(request, 'assinaturaVeganoInfo2.html')
+
+def assinaturaVeganoFinalizada(request):
+    return render(request, 'assinaturaVeganoFinalizada.html')
+
+# Fim Assinatura
+
+
+# Perfil -> Alterar Senha
+def alterarSenha(request):
+    if request.method == "POST":
+        return render(request, 'alterarSenha.html')
+    return render(request, 'alterarSenha.html')
+
+def novaSenha(request):
+    if request.method == "POST":
+        pass
+    return render(request, 'novaSenha.html')
+def livroReceitaSubChef(request):
+    return render(request, 'livroReceitaSubChef.html')
+
+def livroReceitaChef(request):
+    return render(request, 'livroReceitaChef.html')
+
+def livroReceitaConfeiteiro(request):
+    return render(request, 'livroReceitaConfeiteiro.html')
+
+def livroReceitaVegano(request):
+    return render(request, 'livroReceitaVegano.html')
 
 def plataforma():
     pass

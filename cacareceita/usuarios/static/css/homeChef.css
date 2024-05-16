@@ -29,7 +29,7 @@
     width: 300px;
     border-radius: 10px;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
-    padding-left: 6px;
+    padding-left: 4px;
     font-size: 15px;
     color: #331C10;
 }
@@ -161,9 +161,9 @@ main {
 
 .fundoUtensilio1 {
     position: absolute;
-    width: 250px;
+    width: 222px;
     right: 0px;
-    top: 230px;
+    top: 262px;
 }
 
 #texto-ReceitaIncrivel {
@@ -184,7 +184,6 @@ main {
 
 .conteudo-receitas {
     margin-top: 35px;
-    width: 1000px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -258,7 +257,7 @@ main {
 
 .rodape{
     background-image: url("../img/fundo-rodape-chef.png");
-    width: 1200px;
+    width: auto;
     height: 150px;
  }
  

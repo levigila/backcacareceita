@@ -1,0 +1,600 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fundo-barraPesquisa {
+    background-color: #7A3B28;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fundo-barraPesquisa div {
+    display: flex;
+}
+
+.logoPrincipal-cacareceita {
+    position: absolute;
+    left: 74px;
+    margin-top: 6px;
+}
+
+.logoPrincipal-cacareceita img {
+    width: 131px;
+}
+
+.barra-pesquisa {
+    background-color: #FFF9F0;
+    height: 25px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    padding-left: 4px;
+    font-size: 15px;
+    color: #994E0D;
+}
+
+.botao-pesquisar {
+    height: 25px;
+    background-color: #FFF9F0;
+    border: none;
+    border-radius: 10px;
+    position: absolute;
+    margin-left: 270px;
+    cursor: pointer;
+
+    
+}
+.botao-pesquisar img{
+    width: 20px;
+    margin-top: 2px;
+}
+
+.perfil {
+    position: absolute;
+    right: 100px;
+}
+
+.icon-perfil {
+    width: 40px;
+    cursor: pointer;
+}
+.navegacao {
+    height: 30px;
+    border-bottom: 5px solid #7A3B28;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lista-menu {
+    display: flex;
+}
+
+.lista-menu li a{
+    text-decoration: none;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 18px;
+    color: #7A3B28;
+    font-weight: 500;
+    margin-right: 100px;
+ 
+}
+.lista-menu li:nth-child(3) a {
+    color: #88AA27;
+}
+
+#imgOndasNav {
+    position: relative;
+    top: -2px;
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+
+/** Menu perfil */
+
+.menu-perfil {
+    width: 300px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #FFF;
+    z-index: 2;
+    font-family: "Josefin Sans", sans-serif;
+    display: none;
+    border: 1px solid #496300;
+}
+
+.show-perfil {
+    display: block;
+}
+
+.menu-perfil-header {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    font-size: 24px;
+    color: #B13D0C;
+    margin-top: 20px;
+}
+
+.menu-perfil-header img {
+    width: 100px;
+    height: 100px;
+}
+
+.menu-perfil-content {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.menu-perfil-content ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000000;
+    font-size: 20px;
+}
+
+.menu-perfil-content ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu-perfil-content ul li {
+    border-top: 1px solid #496300;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0 15px;
+}
+
+.menu-perfil-content ul li:nth-child(5) {
+    border-bottom: 1px solid #496300;
+}
+
+.menu-perfil-logout button {
+    margin: 100px auto 0;
+    width: 140px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    border: none;
+    background-color: #B13D0C;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.menu-perfil-logout button img {
+    width: 30px;
+}
+
+#onda-menu-top {
+    width: 300px;
+    position: absolute;
+    top: 0;
+}
+
+#onda-menu-footer {
+    width: 300px;
+    position: absolute;
+    bottom: 0;
+}
+
+/** blur */
+
+.blur {
+    width: calc(100% - 300px);
+    height: 100%;
+    position: absolute;
+    background-color: #000000b8;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 1;
+}
+
+/** Login e Registro */
+
+.login-register {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.login-register a {
+    text-decoration: none;
+
+    width: 197px;
+    height: 49px;
+    border-radius: 20px;
+    text-align: center;
+    color: #B13D0C;
+    padding: 3px 15px;
+    border: 1px solid #B13D0C;
+}
+
+.div-assinatura {
+    margin-top: 50px;
+    text-align: center;
+    padding: 15px 0;
+    border-top: 1px solid #496300;
+    border-bottom: 1px solid #496300;
+}
+
+.div-assinatura li a {
+    text-decoration: none;
+    color: black;
+}
+
+/** Modal Sair */
+
+.sair {
+    display: none;
+    font-family: "Josefin Sans", sans-serif;
+    width: 257px;
+    height: 200px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 40px;
+    overflow: hidden;
+
+}
+
+#onda-sair {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+#icon-x-sair {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 21px;
+    top: 7px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.header-sair h1 {
+    margin-top: 30px;
+    color: #B13D0C;
+    text-align: center;
+}
+
+.form-sair {
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-sair button {
+    width: 150px;
+    border-radius: 20px;
+    padding: 3px 15px;
+    margin: 0 auto;
+    background-color: #B13D0C;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.27);
+}
+
+.form-sair form a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#prato-sair {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 160px;
+    z-index: -1;
+}
+
+/** Main */
+
+.etapas {
+    display: flex;
+    align-items: center;
+}
+
+.barra {
+    width: 200px;
+    border: 1px solid #CCA16F;
+    margin: 0 10px;
+}
+
+.etapa2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+
+    width: 37px;
+    height: 37px;
+    border-radius: 20px;
+    border: 1px solid #B13D0C;
+    background-color: #B13D0C;
+}
+
+.etapa1, .etapa3 {
+    width: 37px;
+    height: 37px;
+    border-radius: 20px;
+    border: 1px solid #B13D0C;
+}
+
+main #text-h1 {
+    margin-left: -450px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    color: #496300;
+    font-size: 20px;
+}
+
+.pagamento {
+    display: flex;
+    gap: 15px;
+    margin-left: -350px;
+}
+
+.pagamento .label-pagamento {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+
+    border: 1px solid #B13D0C;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 10px 30px;
+}
+
+input[type="checkbox"] {
+    display: none;
+    /* Escondendo o input nativo */
+}
+
+/* Estilizando o rótulo para criar a aparência de checkbox */
+.label-checkbox {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 25px;
+    /* Espaçamento para a checkbox simulada */
+}
+
+/* Estilizando a aparência da checkbox simulada */
+.label-checkbox:before {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 2px solid #B13D0C;
+    border-radius: 50%;
+    /* Deixando a checkbox redonda */
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Estilizando a aparência da checkbox simulada quando está marcada */
+input[type="checkbox"]:checked+.label-checkbox:before {
+    background-color: #B13D0C;
+}
+
+main a, main button {
+    border: 0;
+    text-decoration: none;
+    color: #fff;
+    position: absolute;
+    padding: 5px 10px;
+    background-color: #496300;
+    border-radius: 30px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#voltar {
+    top: 500px;
+    left: 230px;
+}
+
+#continuar {
+    top: 505px;
+    right: 340px;
+}
+
+.cartao {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 350px;
+    border: 1px solid #496300;
+    border-top: 10px solid #496300;
+    border-radius: 20px;
+    background-color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    display: none;
+}
+
+.cartao .label-pagamento {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    position: relative;
+
+    border: 1px solid #B13D0C;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 10px 30px;
+}
+
+.cartao .tipo-cartao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cartao-dados {
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.cartao-dados img {
+    width: 250px;
+}
+
+.dados-cartao input{
+    border: 1px solid #B13D0C;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#numero-cartao {
+    width: 100%;
+}
+
+#nome-cartao {
+    width: 100%;
+    margin: 10px 0 ;
+}
+
+#cvv-cartao {
+    width: 50px;
+    margin-right: 10px;
+}
+
+#validade-cartao {
+    width: 100px;
+}
+
+#confirmar {
+    background-color: #B13D0C;
+    position: absolute;;
+    bottom: 20px;
+    right: 15px;
+}
+
+.pix {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+    width: 400px;
+    height: 400px;
+    border: 1px solid #496300;
+    border-top: 20px solid #496300;
+    border-radius: 20px;
+
+    display: none;
+}
+
+.pix #qrcode {
+	background:transparent;
+	border:0;
+	font-size:100%;
+	margin:0;
+	outline:0;
+	padding:0;
+	vertical-align:baseline;
+}
+
+#copiar {
+    bottom: 17px;
+    left: 47px;
+    background-color: #B13D0C;
+}
+
+#confirmar1 {
+    background-color: #B13D0C;
+    position: absolute;;
+    bottom: 20px;
+    right: 46px;
+}
+
+
+/** Footer  */
+
+.rodape{
+    margin-top: 408px;
+    background-image: url("../img/fundo-rodape-subchef.png");
+    width: 1200px;
+    height: 150px;
+ }
+ 
+ .fundo-rodape {
+    position: absolute;
+    width: 1200px;
+    height: 150px;
+}
+
+.logo-cabaret {
+    width: 80px;
+}
+
+.itens {
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    padding-top: 40px;
+    width: 400px;
+    gap: 20px;
+}
+
+.itens p {
+    font-family: "Inter", sans-serif;
+    margin-bottom: 7px;
+}  

@@ -47,7 +47,7 @@
             </div>
             <div class="menu-perfil-content">
                 <ul>
-                    <li><a href="#">Editar perfil</a></li>
+                    <li><a href="{% url 'editarPerfilAprendiz' %}">Editar perfil</a></li>
                     <li><a href="#">Livro de receita</a></li>
                     <li><a href="#">Adicionar receita</a></li>
                     <li><a href="#">Minhas receitas</a></li>
@@ -83,8 +83,10 @@
         <section class="area-receitas">
             <div class="caixa-filtroReceita">
                 <div class="caixa-pesquisaFiltro">
-                    <input text="" placeholder="Digite seus ingredientes">
-                    <img src="{% static 'img/icon-pesquisa.png' %}">
+                    <div class="input-pesquisaFiltro">
+                        <input text="" placeholder="Digite seus ingredientes">
+                        <img src="{% static 'img/icon-pesquisa.png' %}">
+                    </div>
                 </div>
                 <div class="caixa-filtro">
                     <div id="area-indicador">

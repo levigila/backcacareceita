@@ -14,7 +14,7 @@ main {
 }
 
 .fundo-barraPesquisa {
-    background-color: #E5B671;
+    background-color: #D39055;
     height: 50px;
     display: flex;
     align-items: center;
@@ -27,36 +27,35 @@ main {
 
 .logoPrincipal-cacareceita {
     position: absolute;
-    left: 100px;
+    left: 74px;
+    margin-top: 6px;
 }
 
-.logoPrincipal-cacareceita img{
-    width: 60px;
+.logoPrincipal-cacareceita img {
+    width: 131px;
 }
+
 .barra-pesquisa {
     background-color: #FFF9F0;
     height: 25px;
     width: 300px;
-    border-radius: 3px;
+    border-radius: 10px;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
     padding-left: 4px;
     font-size: 15px;
-    color: #994E0D;
+    color: #A97344;
 }
 
-.barra-pesquisa::placeholder {
-    color: #994E0D;
-}
 .botao-pesquisar {
     height: 25px;
     background-color: #FFF9F0;
     border: none;
-    border-radius: 3px;
+    border-radius: 10px;
     position: absolute;
-    margin-left: 300px;
+    margin-left: 270px;
     cursor: pointer;
 
-
+    
 }
 .botao-pesquisar img{
     width: 20px;
@@ -74,7 +73,7 @@ main {
 }
 .navegacao {
     height: 30px;
-    border-bottom: 5px solid #E5B671;
+    border-bottom: 5px solid #D39055;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -86,16 +85,17 @@ main {
 
 .lista-menu li a{
     text-decoration: none;
-    font-family: "Jost", sans-serif;
+    font-family: "Josefin Sans", sans-serif;
     font-size: 18px;
-    color: #E5B671;
+    color: #A97344;
     font-weight: 500;
     margin-right: 100px;
-
+ 
 }
 .lista-menu li:nth-child(5) a {
-    color: #496300;
+    color: #88AA27;
 }
+
 
 #anuncio-ifood {
     width: 80%;

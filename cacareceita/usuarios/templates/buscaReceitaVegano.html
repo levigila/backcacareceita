@@ -7,7 +7,8 @@
     <title>Receitas Vegano</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/buscaReceitaVegano.css' %}">
@@ -18,10 +19,10 @@
     <header>
         <div class="fundo-barraPesquisa">
             <a href="{% url 'homeAprendiz' %}" class="logoPrincipal-cacareceita">
-                <img src="{% static 'img/logo-cacareceita2.png' %}">
+                <img src="{% static 'img/logoPrincipal-cacareceita3.png' %}">
             </a>
             <div>
-                <input class="barra-pesquisa" type="text" placeholder="Encontre sua receita">
+                <input class="barra-pesquisa" type="text">
                 <button class="botao-pesquisar"><img src="{% static 'img/icon-pesquisa.png' %}"></button>
             </div>
             <div class="perfil" id="menu-perfil">
@@ -47,7 +48,7 @@
             </div>
             <div class="menu-perfil-content">
                 <ul>
-                    <li><a href="#">Editar perfil</a></li>
+                    <li><a href="{% url 'editarPerfilVegano' %}">Editar perfil</a></li>
                     <li><a href="#">Livro de receita</a></li>
                     <li><a href="#">Adicionar receita</a></li>
                     <li><a href="#">Minhas receitas</a></li>
@@ -83,14 +84,17 @@
         <section class="area-receitas">
             <div class="caixa-filtroReceita">
                 <div class="caixa-pesquisaFiltro">
-                    <input text="" placeholder="Digite seus ingredientes">
+                    <div class="input-pesquisaFiltro">
+                        <input text="" placeholder="Digite seus ingredientes">
+                        <img src="{% static 'img/icon-pesquisa.png' %}">
+                    </div>
                 </div>
                 <div class="caixa-filtro">
                     <div id="area-indicador">
                         <p>Selecione os seus ingredientes</p>
                         <div id="circulo">
                         </div>
-                        
+
                     </div>
                     <div class="secao-ingredientes">
                         <p class="secao-titulo">Ingredientes Essenciais</p>
@@ -104,7 +108,7 @@
                                 <button>Açúcar</button>
                                 <button>Manteiga</button>
                                 <button>Fermento em pó</button>
-                                <button>Molho de tomate</button>    
+                                <button>Molho de tomate</button>
                                 <button>+10 ingredientes</button>
                             </div>
                         </div>
@@ -141,7 +145,10 @@
                 <div class="conteudo-receitas">
                     <div class="linha-cardReceita">
                         <div class="cardReceita">
-                            <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}"> 
+                            <div class="caixaEtiqueta-receita">
+                                <img class="etiquetaReceita" src="{% static 'img/etiquetaVegano.png' %}">
+                            </div>
+                            <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}">
                             <p>Salpicão de frango simples</p>
                             <div class="avaliacao-receita">
                                 <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
@@ -149,10 +156,13 @@
                                 <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
                                 <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
                                 <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            </div> 
+                            </div>
                         </div>
                         <div class="cardReceita">
-                            <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}"> 
+                            <div class="caixaEtiqueta-receita">
+                                <img class="etiquetaReceita" src="{% static 'img/etiquetaVegano.png' %}">
+                            </div>
+                            <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}">
                             <p>Salpicão de frango simples</p>
                             <div class="avaliacao-receita">
                                 <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
@@ -160,10 +170,13 @@
                                 <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
                                 <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
                                 <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            </div> 
+                            </div>
                         </div>
                         <div class="cardReceita">
-                            <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}"> 
+                            <div class="caixaEtiqueta-receita">
+                                <img class="etiquetaReceita" src="{% static 'img/etiquetaVegano.png' %}">
+                            </div>
+                            <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}">
                             <p>Salpicão de frango simples</p>
                             <div class="avaliacao-receita">
                                 <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
@@ -171,12 +184,15 @@
                                 <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
                                 <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
                                 <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            </div> 
-                        </div>
-                     </div>
-                     <div class="linha-cardReceita">
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="linha-cardReceita">
                         <div class="cardReceita">
-                            <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}"> 
+                            <div class="caixaEtiqueta-receita">
+                                <img class="etiquetaReceita" src="{% static 'img/etiquetaVegano.png' %}">
+                            </div>
+                            <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}">
                             <p>Salpicão de frango simples</p>
                             <div class="avaliacao-receita">
                                 <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
@@ -184,21 +200,13 @@
                                 <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
                                 <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
                                 <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            </div> 
-                        </div>
-                        <div class="cardReceita">
-                            <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}"> 
-                            <p>Salpicão de frango simples</p>
-                            <div class="avaliacao-receita">
-                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            </div> 
+                            </div>
                         </div>
                         <div class="cardReceita">
-                            <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}"> 
+                            <div class="caixaEtiqueta-receita">
+                                <img class="etiquetaReceita" src="{% static 'img/etiquetaVegano.png' %}">
+                            </div>
+                            <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}">
                             <p>Salpicão de frango simples</p>
                             <div class="avaliacao-receita">
                                 <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
@@ -206,23 +214,13 @@
                                 <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
                                 <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
                                 <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            </div> 
-                        </div>
-                     </div>
-                     <div class="linha-cardReceita">
-                        <div class="cardReceita">
-                            <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}"> 
-                            <p>Salpicão de frango simples</p>
-                            <div class="avaliacao-receita">
-                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            </div> 
+                            </div>
                         </div>
                         <div class="cardReceita">
-                            <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}"> 
+                            <div class="caixaEtiqueta-receita">
+                                <img class="etiquetaReceita" src="{% static 'img/etiquetaVegano.png' %}">
+                            </div>
+                            <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}">
                             <p>Salpicão de frango simples</p>
                             <div class="avaliacao-receita">
                                 <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
@@ -230,10 +228,29 @@
                                 <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
                                 <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
                                 <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            </div> 
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="linha-cardReceita">
+                        <div class="cardReceita">
+                            <div class="caixaEtiqueta-receita">
+                                <img class="etiquetaReceita" src="{% static 'img/etiquetaVegano.png' %}">
+                            </div>
+                            <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}">
+                            <p>Salpicão de frango simples</p>
+                            <div class="avaliacao-receita">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                            </div>
                         </div>
                         <div class="cardReceita">
-                            <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}"> 
+                            <div class="caixaEtiqueta-receita">
+                                <img class="etiquetaReceita" src="{% static 'img/etiquetaVegano.png' %}">
+                            </div>
+                            <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}">
                             <p>Salpicão de frango simples</p>
                             <div class="avaliacao-receita">
                                 <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
@@ -241,23 +258,13 @@
                                 <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
                                 <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
                                 <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            </div> 
-                        </div>
-                     </div>
-                     <div class="linha-cardReceita">
-                        <div class="cardReceita">
-                            <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}"> 
-                            <p>Salpicão de frango simples</p>
-                            <div class="avaliacao-receita">
-                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            </div> 
+                            </div>
                         </div>
                         <div class="cardReceita">
-                            <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}"> 
+                            <div class="caixaEtiqueta-receita">
+                                <img class="etiquetaReceita" src="{% static 'img/etiquetaVegano.png' %}">
+                            </div>
+                            <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}">
                             <p>Salpicão de frango simples</p>
                             <div class="avaliacao-receita">
                                 <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
@@ -265,10 +272,29 @@
                                 <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
                                 <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
                                 <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            </div> 
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="linha-cardReceita">
+                        <div class="cardReceita">
+                            <div class="caixaEtiqueta-receita">
+                                <img class="etiquetaReceita" src="{% static 'img/etiquetaVegano.png' %}">
+                            </div>
+                            <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}">
+                            <p>Salpicão de frango simples</p>
+                            <div class="avaliacao-receita">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                            </div>
                         </div>
                         <div class="cardReceita">
-                            <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}"> 
+                            <div class="caixaEtiqueta-receita">
+                                <img class="etiquetaReceita" src="{% static 'img/etiquetaVegano.png' %}">
+                            </div>
+                            <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}">
                             <p>Salpicão de frango simples</p>
                             <div class="avaliacao-receita">
                                 <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
@@ -276,12 +302,26 @@
                                 <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
                                 <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
                                 <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            </div> 
+                            </div>
                         </div>
-                     </div>
-            </div>
+                        <div class="cardReceita">
+                            <div class="caixaEtiqueta-receita">
+                                <img class="etiquetaReceita" src="{% static 'img/etiquetaVegano.png' %}">
+                            </div>
+                            <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}">
+                            <p>Salpicão de frango simples</p>
+                            <div class="avaliacao-receita">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                                <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
+                            </div>
+                        </div> 
+                    </div>
+                </div>
         </section>
-        <div id="banner-anuncio"></div>
+        <img id="banner-anuncio" src="{% static 'img/anuncio3.png' %}">
     </main>
     <div class="blur">
         <div class="sair">
@@ -291,10 +331,10 @@
                 <h1>Deseja realmente sair?</h1>
             </div>
             <div class="form-sair">
-                <form method="post">
-                    {%csrf_token %}
+                <form action="{% url 'logout' %}" method="post">
+                    {% csrf_token %}
                     <button type="submit">
-                        <a href="{% url 'login' %}">Sim, desejo sair!</a>
+                        Sim, desejo sair!
                     </button>
                 </form>
 
@@ -304,16 +344,14 @@
         </div>
     </div>
     <footer class="rodape">
-        <img class="fundo-rodape" src="{% static 'img/fundo-rodape-vegano.png' %}">
         <div class="itens">
             <img class="logo-cabaret" src="{% static 'img/logo-cabaret.png' %}">
-            <img class="logo-cacaReceita" src="{% static 'img/logo-cacaReceita.png' %}">
             <div>
                 <p style="font-weight: 500;">CaçaReceita</p>
                 <p>+55 (81) 9 0000-0000</p>
                 <p>Cabaret_startup@gmail.com</p>
             </div>
-            
+
         </div>
     </footer>
     <script src="{% static 'js/menuPerfil.js' %}"></script>
