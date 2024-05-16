@@ -1,3 +1,4 @@
+{% load socialaccount %}
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -47,7 +48,7 @@
                 <h3>Entre com:</h3>
 
                 <div class="outras-formas-login">
-                    <a href="#" target="_blank">
+                    <a href="{% provider_login_url 'google' %}" target="">
                         <img src="{% static 'img/icon-google.svg' %}" alt="">
                     </a>
                     <a href="#" target="_blank">
@@ -55,6 +56,8 @@
                     </a>
                     <a href="#" target="_blank">
                         <img src="{% static 'img/icon-facebook.svg' %}" alt="">
+                    
+
                     </a>
                 </div>
             </div>
