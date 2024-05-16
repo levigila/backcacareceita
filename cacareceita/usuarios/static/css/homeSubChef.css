@@ -183,7 +183,6 @@ main {
 
 .conteudo-receitas {
     margin-top: 35px;
-    width: 1000px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -264,7 +263,7 @@ main {
  
  .fundo-rodape {
     position: absolute;
-    width: 1200px;
+    width: auto;
     height: 150px;
 }
 

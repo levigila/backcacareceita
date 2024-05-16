@@ -14,11 +14,11 @@
 </head>
 
 <body>
-    
+
     <div class="container">
         <div class="area-login">
             <div class="area-laranja">
-                <img src="{% static 'img/logo.svg' %}" alt="logo">
+                    <img src="{% static 'img/logo.svg' %}" alt="logo">
                 <h1>Bem vindo</h1>
                 <h3>Novo login?</h3>
                 <a href="{% url 'cadastro' %}">Crie sua conta</a>
@@ -42,7 +42,7 @@
 
                     <button id="entrar" type="submit" disabled>Entrar</button>
                 </form>
-                
+
 
                 <h3>Entre com:</h3>
 
@@ -61,21 +61,21 @@
         </div>
     </div>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        document.getElementById('loginForm').addEventListener('input', function() {
-            var username = document.getElementById('user').value;
-            var password = document.getElementById('password').value;
-            var entrarButton = document.getElementById('entrar');
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('loginForm').addEventListener('input', function () {
+                var username = document.getElementById('user').value;
+                var password = document.getElementById('password').value;
+                var entrarButton = document.getElementById('entrar');
 
-            if (username.trim() !== '' && password.trim() !== '') {
-                entrarButton.removeAttribute('disabled');
-            } else {
-                entrarButton.setAttribute('disabled', 'disabled');
-            }
+                if (username.trim() !== '' && password.trim() !== '') {
+                    entrarButton.removeAttribute('disabled');
+                } else {
+                    entrarButton.setAttribute('disabled', 'disabled');
+                }
+            });
         });
-    });
-</script>
+    </script>
 
 </body>
 

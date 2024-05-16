@@ -1,0 +1,19 @@
+@media screen and (min-width: 743px) and (max-width: 1100px) {
+    .rodape {
+        width: auto;
+        height: auto;
+    }
+
+    .logo-cabaret {
+        width: 70px;
+    }
+
+    .itens {
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+
+    .itens p {
+        font-size: 14px
+    }
+}

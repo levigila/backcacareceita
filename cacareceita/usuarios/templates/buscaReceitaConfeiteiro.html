@@ -48,7 +48,7 @@
             </div>
             <div class="menu-perfil-content">
                 <ul>
-                    <li><a href="#">Editar perfil</a></li>
+                    <li><a href="{% url 'editarPerfilConfeiteiro' %}">Editar perfil</a></li>
                     <li><a href="#">Livro de receita</a></li>
                     <li><a href="#">Adicionar receita</a></li>
                     <li><a href="#">Minhas receitas</a></li>
@@ -331,10 +331,10 @@
                 <h1>Deseja realmente sair?</h1>
             </div>
             <div class="form-sair">
-                <form method="post">
-                    {%csrf_token %}
+                <form action="{% url 'logout' %}" method="post">
+                    {% csrf_token %}
                     <button type="submit">
-                        <a href="{% url 'login' %}">Sim, desejo sair!</a>
+                        Sim, desejo sair!
                     </button>
                 </form>
 

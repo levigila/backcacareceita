@@ -41,11 +41,11 @@
                 <img src="{% static 'img/ondas-menu-perfil-top.svg' %}" id="onda-menu-top" alt="">
                 <div class="menu-perfil-header">
                     <img src="{% static 'img/icon-menu-perfil.svg' %}" alt="">
-                    <h1>Ana Luísa</h1>
+                    <h1>{{user.username}}</h1>
                 </div>
                 <div class="menu-perfil-content">
                     <ul>
-                        <li><a href="#">Editar perfil</a></li>
+                        <li><a href="{% url 'editarPerfilChef' %}">Editar perfil</a></li>
                         <li><a href="#">Livro de receita</a></li>
                         <li><a href="#">Adicionar receita</a></li>
                         <li><a href="#">Minhas receitas</a></li>
