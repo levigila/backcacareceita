@@ -149,7 +149,8 @@ def buscaReceitaVegano(request):
 
 
 def homeAprendiz(request):
-    return render(request, 'homeAprendiz.html')
+    cd = 5
+    return render(request, 'homeAprendiz.html', {"cd": cd})
 
 
 def homeMiniChef(request):

@@ -1,0 +1,272 @@
+@media screen and (min-width: 744px) and (max-width: 1100px) { 
+
+    /* Anuncio */
+
+    #anuncio-ifood {
+        width: 90%;
+    }
+
+    /* Receita  */
+
+    .receita-top {
+        gap: 0px;
+    }
+
+    .receita-img-audio {
+        width: 270px;
+    }
+
+    .receita-info {
+        gap: 0;
+        justify-content: center;
+    }
+
+    .receita-info h1 {
+        font-size: 30px;
+        color: #B13D0C;
+    }
+
+    .receita-acoes {
+        margin-top: 15px;
+        display: flex;
+        gap: 20px;
+    }
+
+    .favoritar,
+    .compartilhar,
+    .imprimir,
+    .copiar {
+        width: 36px;
+        height: 36px;
+    }
+
+    .favoritar img,
+    .compartilhar img,
+    .imprimir img,
+    .copiar img {
+        width: 25px;
+    }
+
+    .estrelas {
+        display: flex;
+        margin-top: 15px;
+        gap: 10px;
+    }
+
+    .estrelas img {
+        width: 25px;
+    }
+
+    .receita-info2 {
+        margin-top: 15px;
+        gap: 20px;
+        height: auto;
+    }
+
+    .qtd-pessoas,
+    .tempo-preparo {
+        gap: 0;
+    }
+
+    .qtd-pessoas img,
+    .tempo-preparo img {
+        width: 45px;
+    }
+
+    .qtd-pessoas p,
+    .tempo-preparo p {
+        font-size: 20px;
+    }
+
+    /* Ingredientes / Modo de preparo */
+
+    .receita-main {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        margin: 30px auto;
+    }
+
+    .receita-img-audio img {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .receita-modo-prep,
+    .receita-ing {
+        width: 305px;
+    }
+
+    .receita-main h1 {
+        font-size: 23px;
+        text-align: center;
+    }
+
+    .receita-main h4 {
+        font-weight: bold;
+        font-size: 18px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .receita-ing ul {
+        list-style: inside;
+        font-size: 14px;
+    }
+
+    .receita-modo-prep ol {
+        list-style: decimal;
+        font-size: 14px;
+        line-height: 1.6;
+
+}
+
+    #anuncio-sadia {
+        width: 214px;
+        height: 214px;
+        margin-top: 20px;
+    }
+
+    .receita-modo-prep ol {
+        list-style: decimal;
+        font-size: 14px;
+    }
+
+    #dica {
+        width: 245px;
+        height: 73px;
+        border: 3px solid #8D3F12;
+        border-radius: 50px;
+        background-color: hsla(25, 89%, 35%, 0.333);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0px;
+        margin: 30px 0;
+    }
+
+    #dica h3 {
+        color: #631800;
+        font-size: 18px;
+        margin: 0px;
+    }
+
+    #dica p {
+        font-size: 13px;
+        text-align: center;
+    }
+
+    /* Comentários */
+
+    #comentario {
+        width: 461px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #comentario h1 {
+        margin-top: 40px;
+    }
+
+    #escrever-comentario {
+        width: 367px;
+        height: 30px;
+        border-radius: 15px;
+        border: 3px solid #B13D0C;
+        font-size: 12px;
+        padding: 20px 0;
+        padding-left: 5px;
+    }
+
+    .adicionar-comentario img,
+    .usuario-perfil img {
+        width: 50px;
+        height: 50px;
+    }
+
+    #enviar-comentario {
+        width: 45px;
+        height: 30px;
+        border-radius: 10px;
+        background-color: #496300;
+        border: 1px solid #496300;
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #enviar-comentario img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .comentario-info span {
+        font-size: 18px;
+        margin-left: 21px;
+    }
+
+    .bar {
+        width: 452px;
+        height: 2px;
+        background-color: #D9D9D9;
+        position: relative;
+    }
+
+    .bar2 {
+        width: 143px;
+        height: 2px;
+        background-color: #496300;
+    }
+
+    .adicionar-comentario img,
+    .usuario-perfil img {
+        width: 31px;
+        height: 31px;
+    }
+
+    .comentario p {
+        font-size: 13px;
+    }
+
+    .comentario {
+        width: 452px;
+        border: 1px solid #B13D0C;
+        border-radius: 15px;
+        height: 69px;
+        padding: 5px 10px 0px 10px;
+        margin: 20px 0;
+    }
+
+    .usuario-perfil {
+        display: flex;
+        position: relative;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+
+    .usuario-perfil button {
+        background-color: rgba(177, 62, 12, 0.500);
+        position: absolute;
+        right: 20px;
+        width: 67px;
+        height: 15px;
+        border-radius: 15px;
+        border: 1px solid rgba(177, 62, 12, 0.500);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+    }
+
+    /* Rodapé */
+
+    .rodape{
+        background-image: url("../img/footer-aprendiz744.svg");
+    }
+
+}
