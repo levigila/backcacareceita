@@ -5,17 +5,70 @@
 
     .titulo-pesquiseReceita {
         font-size: 16px;
+        width: 350px;
+        line-height: 1.5em;
     }
 
-    .fundoUtensilio2 {
+    .fundoUtensilio2Aprendiz {
         width: 150px;
        
     }
 
-    .fundoUtensilio1 {
+    .fundoUtensilio1Aprendiz {
         width: 160px;
     }
     
+    .fundoUtensilio2MiniChef {
+        width: 158px;
+        top: 256px;
+       
+    }
+
+    .fundoUtensilio1MiniChef {
+        width: 216px;
+        top: 200px;
+    }
+    
+    .fundoUtensilio2SubChef {
+        width: 137px;
+        top: 270px
+       
+    }
+
+    .fundoUtensilio1SubChef{
+        width: 167px;
+        top: 280px;
+    }
+
+    .fundoUtensilio2Chef {
+        width: 164px;   
+    }
+
+    .fundoUtensilio1Chef{
+        width: 190px;
+        top: 222px;
+    }
+
+    .fundoUtensilio1Confeiteiro{
+        width: 149px;
+        top: 236px;
+    }
+
+    .fundoUtensilio2Confeiteiro {
+        width: 139px;
+        top: 263px;
+    }
+
+    .fundoUtensilio1Vegano {
+        width: 163px;
+        top: 272px;
+    }
+
+    .fundoUtensilio2Vegano {
+        width: 194px;
+        top: 279px;
+    }
+
     #texto-ReceitaIncrivel {
         font-size: 20px;
     }
@@ -59,3 +112,103 @@
         height: 150px;
     }
 } 
+
+@media screen and (min-width: 1600px) {
+    .banner-principal {
+        width: 1290px;
+    }
+
+    .titulo-pesquiseReceita {
+        line-height: 1.5em;
+    }
+
+    .linha-cardReceita {
+        gap: 90px;
+        margin-bottom: 50px;
+    }
+
+    .cardReceita {
+        width: 250px;
+        height: 300px;
+    }
+
+    .foto-receita {
+        width: 200px;
+        margin-bottom: 15px;
+    }
+
+    .cardReceita p {
+        font-size: 20px;
+    }
+
+    .fundoUtensilio2Aprendiz {
+        width: 243px;
+        top: 346px;
+    }
+
+    .fundoUtensilio1Aprendiz{
+        width: 261px;
+        right: -7px;
+        top: 362px;
+    }
+
+    .fundoUtensilio2MiniChef {
+        width: 243px;
+        top: 292px;
+       
+    }
+
+    .fundoUtensilio1MiniChef{
+        width: 326px;
+        top: 240px;
+    }
+
+    .fundoUtensilio2SubChef {
+        top: 309px;
+       
+    }
+
+    .fundoUtensilio1SubChef{
+        top: 331px;
+    }
+
+    .fundoUtensilio2Chef {
+        width: 240px;
+        top: 339px;
+       
+    }
+
+    .fundoUtensilio1Chef{
+        width: 279px;
+        top: 273px;
+    }
+
+    .fundoUtensilio1Confeiteiro{
+        width: 200px;  
+        top: 288px;
+    }
+
+    .fundoUtensilio2Confeiteiro {
+        width: 186px;
+        top: 319px;
+
+    }
+
+    .fundoUtensilio1Vegano {
+        width: 250px;
+        top: 349px;
+    }
+
+    .fundoUtensilio2Vegano {
+        width: 295px;
+        top: 347px;
+    }
+
+    #banner-anuncio {
+        width: 1290px;
+    }
+
+    #anuncio2 {
+        width: 250px;
+    }
+}

@@ -102,8 +102,8 @@ main {
 
 .banner-principal {
     max-width: 1000px;
+    width: 1000px;
     margin-top: 40px;
-    object-fit: cover;
 }
 
 .titulo-pesquiseReceita {
@@ -132,18 +132,18 @@ main {
     cursor: pointer;
 }
 
-.fundoUtensilio2 {
+.fundoUtensilio2Aprendiz {
     position: absolute;
-    width: 200px;
+    width: 232px;
     left: -37px;
-    top: 298px;
+    top: 307px;
 }
 
-.fundoUtensilio1 {
+.fundoUtensilio1Aprendiz {
     position: absolute;
-    width: 200px;
-    right: 0px;
-    top: 323px;
+    width: 261px;
+    right: -1px;
+    top: 336px;
 }
 
 #texto-ReceitaIncrivel {
