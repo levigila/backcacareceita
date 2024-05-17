@@ -152,14 +152,14 @@ main {
     cursor: pointer;
 }
 
-.fundoUtensilio2 {
+.fundoUtensilio2Chef {
     position: absolute;
     width: 220px;
     left: 0px;
     top: 270px;
 }
 
-.fundoUtensilio1 {
+.fundoUtensilio1Chef {
     position: absolute;
     width: 222px;
     right: 0px;

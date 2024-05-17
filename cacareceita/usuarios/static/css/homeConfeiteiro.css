@@ -151,18 +151,18 @@ main {
     cursor: pointer;
 }
 
-.fundoUtensilio2 {
+.fundoUtensilio2Confeiteiro {
     position: absolute;
-    width: 160px;
+    width: 167px;
     left: -5px;
-    top: 311px;
+    top: 285px;
 }
 
-.fundoUtensilio1 {
+.fundoUtensilio1Confeiteiro {
     position: absolute;
-    width: 160px;
+    width: 170px;
     right: 2px;
-    top: 291px;
+    top: 261px;
 }
 
 #texto-ReceitaIncrivel {

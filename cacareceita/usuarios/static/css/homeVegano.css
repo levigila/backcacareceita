@@ -153,16 +153,16 @@ main {
     cursor: pointer;
 }
 
-.fundoUtensilio2 {
+.fundoUtensilio2Vegano {
     position: absolute;
-    width: 220px;
+    width: 253px;
     left: 0px;
-    top: 330px;
+    top: 309px;
 }
 
-.fundoUtensilio1 {
+.fundoUtensilio1Vegano {
     position: absolute;
-    width: 200px;
+    width: 212px;
     right: 0px;
     top: 300px;
 }
