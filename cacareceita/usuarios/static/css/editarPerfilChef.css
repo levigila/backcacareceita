@@ -106,7 +106,7 @@ main {
     width: 1000px;
     height: 400px;
     position: absolute;
-    top: 140px;
+    top: 97px;
     z-index: -1;
     display: flex;
 }
@@ -154,34 +154,42 @@ main {
     margin-bottom: 40px;
 }
 
+.caixaInput-nomeUsuario, .caixaInput-emailUsuario {
+    display: flex;
+    align-items: center;
+}
+
+
 .dadosPerfil-nomeUsuario, .dadosPerfil-emailUsuario {
     background-color: #fff;
     border-radius: 20px;
     width: 500px;
     height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     margin-bottom: 15px;
+    font-family: "Jost", sans-serif;
+    padding-left: 10px;
 }
 
-.dadosPerfil-nomeUsuario p {
+.dadosPerfil-nomeUsuario::placeholder{
     font-family: "Jost", sans-serif;
     text-transform: uppercase;
     cursor: pointer;
+    text-align: center;
 }
 
-.dadosPerfil-emailUsuario p {
+.dadosPerfil-emailUsuario::placeholder {
     text-decoration: underline;
     font-weight: 500;
     cursor: pointer;
+    text-align: center;
 }
 
-.dadosPerfil-nomeUsuario img, .dadosPerfil-emailUsuario img {
+.caixaInput-nomeUsuario img, .caixaInput-emailUsuario img {
     width: 20px;
     position: absolute;
-    margin-left: 430px;
+    margin-left: 470px;
     cursor: pointer;
+    margin-bottom: 15px;
 }
 
 .botao-alterarSenha {
