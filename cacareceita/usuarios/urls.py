@@ -86,7 +86,9 @@ urlpatterns = [
     path('assinaturaVeganoInfo2/', views.assinaturaVeganoInfor2, name='assinatura-vegano-info2'),
     path('assinaturaVeganoFinalizada/', views.assinaturaVeganoFinalizada, name='assinatura-vegano-finalizada'),
 
-
+    #Editar Receita
+    path('editarReceitaAprendiz/', views.editarReceitaAprendiz, name='editarReceitaAprendiz'),
+    
     # Perfil -> Alterar Senha
     path('alterarSenha/', views.alterarSenha, name='alterar-senha'),
     path('novaSenha/', views.novaSenha, name='nova-senha'),

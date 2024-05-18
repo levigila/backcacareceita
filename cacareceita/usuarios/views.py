@@ -325,6 +325,9 @@ def assinaturaVeganoFinalizada(request):
 
 # Fim Assinatura
 
+#Editar receita
+def editarReceitaAprendiz(request):
+    return render(request, 'editarReceitaAprendiz.html')
 
 # Perfil -> Alterar Senha
 def alterarSenha(request):
