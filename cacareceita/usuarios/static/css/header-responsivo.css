@@ -65,3 +65,28 @@
     }
 
 }
+
+@media screen and (min-width: 1600px){
+    
+    .lista-menu {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .lista-menu li a {
+        text-decoration: none;
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 18px;
+        color: #B13D0C;
+        font-weight: 500;
+    }
+
+}
+
+
+.menu-perfil-header img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
