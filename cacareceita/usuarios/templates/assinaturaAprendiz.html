@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{% static 'css/reset.css' %}">
     <link rel="stylesheet" href="{% static 'css/assinaturaAprendiz.css' %}">
     <link rel="stylesheet" href="{% static 'css/header-responsivo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/assinatura-responsivo.css' %}">
     <title>Assinatura Aprendiz</title>
 </head>
 
@@ -47,10 +48,10 @@
                 <div class="menu-perfil-content">
                     <ul>
                         <li><a href="{% url 'editarPerfilAprendiz' %}">Editar perfil</a></li>
-                        <li><a href="#">Livro de receita</a></li>
-                        <li><a href="#">Adicionar receita</a></li>
-                        <li><a href="#">Minhas receitas</a></li>
-                        <li><a href="#">Assinaturas</a></li>
+                        <li><a href="{% url 'livroReceitaAprendiz' %}">Livro de receita</a></li>
+                        <li><a href="{% url 'adicionarReceitaAprendiz' %}">Adicionar receita</a></li>
+                        <li><a href="{% url 'minhasReceitasAprendiz' %}">Minhas receitas</a></li>
+                        <li><a href="{% url 'assinatura-aprendiz' %}">Assinaturas</a></li>
                     </ul>
                 </div>
                 <div class="menu-perfil-logout">
@@ -70,7 +71,7 @@
                 </div>
                 <div class="div-assinatura">
                     <ul>
-                        <li><a href="#">Assinaturas</a></li>
+                        <li><a href="{% url 'assinatura-aprendiz' %}">Assinaturas</a></li>
                     </ul>
                 </div>
                 <img src="{% static 'img/ondas-menu-perfil-footer.svg' %}" id="onda-menu-footer" alt="">
@@ -101,7 +102,7 @@
 
                 <span>A partir de  R$ 9,90</span>
             </div>
-            <a href="#" id="assine-ja">Assine já</a>
+            <a href="{% url 'assinatura-aprendiz-info1' %}" id="assine-ja">Assine já</a>
             <img src="{% static 'img/bola-assinatura-aprendiz.svg' %}" id="bola1" alt="">
             <img src="{% static 'img/bola-assinatura-aprendiz.svg' %}" id="bola2" alt="">
         </main>

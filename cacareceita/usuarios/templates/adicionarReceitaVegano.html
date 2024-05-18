@@ -22,7 +22,7 @@
 <body>
     <header>
         <div class="fundo-barraPesquisa">
-            <a href="{% url 'homeAprendiz' %}" class="logoPrincipal-cacareceita">
+            <a href="{% url 'homeVegano' %}" class="logoPrincipal-cacareceita">
                 <img src="{% static 'img/logoPrincipal-cacareceita3.png' %}">
             </a>
             <div>
@@ -51,13 +51,13 @@
                 <h1>{{user.username}}</h1>
             </div>
             <div class="menu-perfil-content">
-                <ul>
-                    <li><a href="{% url 'editarPerfilVegano' %}">Editar perfil</a></li>
-                    <li><a href="#">Livro de receita</a></li>
-                    <li><a href="#">Adicionar receita</a></li>
-                    <li><a href="#">Minhas receitas</a></li>
-                    <li><a href="#">Assinaturas</a></li>
-                </ul>
+                    <ul>
+                        <li><a href="{% url 'editarPerfilVegano' %}">Editar perfil</a></li>
+                        <li><a href="{% url 'livroReceitaVegano' %}">Livro de receita</a></li>
+                        <li><a href="{% url 'adicionarReceitaVegano' %}">Adicionar receita</a></li>
+                        <li><a href="{% url 'minhasReceitasVegano' %}">Minhas receitas</a></li>
+                        <li><a href="{% url 'assinatura-vegano' %}">Assinaturas</a></li>
+                    </ul>
             </div>
             <div class="menu-perfil-logout">
                 <button id="logout">

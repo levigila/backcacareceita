@@ -47,11 +47,11 @@
                 </div>
                 <div class="menu-perfil-content">
                     <ul>
-                        <li><a href="{% url 'editarPerfilChef' %}">Editar perfil</a></li>
-                        <li><a href="#">Livro de receita</a></li>
-                        <li><a href="#">Adicionar receita</a></li>
-                        <li><a href="#">Minhas receitas</a></li>
-                        <li><a href="#">Assinaturas</a></li>
+                        <li><a href="{% url 'editarPerfilAprendiz' %}">Editar perfil</a></li>
+                        <li><a href="{% url 'livroReceitaAprendiz' %}">Livro de receita</a></li>
+                        <li><a href="{% url 'adicionarReceitaAprendiz' %}">Adicionar receita</a></li>
+                        <li><a href="{% url 'minhasReceitasAprendiz' %}">Minhas receitas</a></li>
+                        <li><a href="{% url 'assinatura-aprendiz' %}">Assinaturas</a></li>
                     </ul>
                 </div>
                 <div class="menu-perfil-logout">
@@ -107,7 +107,7 @@
                 </label>
             </div>
 
-            <a href="#" id="voltar">Voltar</a>
+            <a href="{% url 'assinatura-aprendiz' %}" id="voltar">Voltar</a>
             <button id="continuar">Continuar</button>
 
             <div class="cartao">
@@ -132,7 +132,7 @@
                             placeholder="mm/aaaa">
                     </div>
                 </div>
-                <a href="" id="confirmar">Confirmar</a>
+                <a href="{% url 'assinatura-aprendiz-finalizada' %}" id="confirmar">Confirmar</a>
             </div>
 
             <div class="pix">
@@ -141,7 +141,7 @@
                 </a>
                 <div class="confirm">
                     <a href="" id="copiar">Copiar QRCde</a>
-                    <a href="" id="confirmar1">Confirmar</a>
+                    <a href="{% url 'assinatura-aprendiz-finalizada' %}" id="confirmar1">Confirmar</a>
                 </div>
             </div>
 

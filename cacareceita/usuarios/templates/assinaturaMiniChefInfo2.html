@@ -16,7 +16,7 @@
     <div class="container">
         <header>
             <div class="fundo-barraPesquisa">
-                <a href="{% url 'homeAprendiz' %}" class="logoPrincipal-cacareceita">
+                <a href="{% url 'homeMiniChef' %}" class="logoPrincipal-cacareceita">
                     <img src="{% static 'img/logoPrincipal-cacareceita3.png' %}">
                 </a>
                 <div>
@@ -46,13 +46,13 @@
                     <h1>Ana Luísa</h1>
                 </div>
                 <div class="menu-perfil-content">
-                    <ul>
-                        <li><a href="{% url 'editarPerfilMiniChef' %}">Editar perfil</a></li>
-                        <li><a href="#">Livro de receita</a></li>
-                        <li><a href="#">Adicionar receita</a></li>
-                        <li><a href="#">Minhas receitas</a></li>
-                        <li><a href="#">Assinaturas</a></li>
-                    </ul>
+                <ul>
+                    <li><a href="{% url 'editarPerfilMiniChef' %}">Editar perfil</a></li>
+                    <li><a href="{% url 'livroReceitaMiniChef' %}">Livro de receita</a></li>
+                    <li><a href="{% url 'adicionarReceitaMiniChef' %}">Adicionar receita</a></li>
+                    <li><a href="{% url 'minhasReceitasMiniChef' %}">Minhas receitas</a></li>
+                    <li><a href="{% url 'assinatura-mini-chef' %}">Assinaturas</a></li>
+                </ul>
                 </div>
                 <div class="menu-perfil-logout">
                     <button id="logout">
@@ -107,7 +107,7 @@
                 </label>
             </div>
 
-            <a href="#" id="voltar">Voltar</a>
+            <a href="{% url 'assinatura-mini-chef-info1' %}" id="voltar">Voltar</a>
             <button id="continuar">Continuar</button>
 
             <div class="cartao">
@@ -132,7 +132,7 @@
                             placeholder="mm/aaaa">
                     </div>
                 </div>
-                <a href="" id="confirmar">Confirmar</a>
+                <a href="{% url 'assinatura-mini-chef-finalizada' %}" id="confirmar">Confirmar</a>
             </div>
 
             <div class="pix">
@@ -141,7 +141,7 @@
                 </a>
                 <div class="confirm">
                     <a href="" id="copiar">Copiar QRCde</a>
-                    <a href="" id="confirmar1">Confirmar</a>
+                    <a href="{% url 'assinatura-mini-chef-finalizada' %}" id="confirmar1">Confirmar</a>
                 </div>
             </div>
 

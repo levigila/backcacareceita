@@ -1,0 +1,5 @@
+@media screen and (min-width: 744px) and (max-width: 1100px) {
+    .area-login {
+        transform: translate(-50%, -50%) scale(0.6);
+    }
+}

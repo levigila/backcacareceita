@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/reset.css' %}">
     <link rel="stylesheet" href="{% static 'css/assinaturaSubChefInfo1.css' %}">
+    <link rel="stylesheet" href="{% static 'css/assinatura-info1-responsivo.css' %}">
     <title>Assinatura Aprendiz</title>
 </head>
 
@@ -14,7 +15,7 @@
     <div class="container">
         <header>
             <div class="fundo-barraPesquisa">
-                <a href="{% url 'homeAprendiz' %}" class="logoPrincipal-cacareceita">
+                <a href="{% url 'homeSubChef' %}" class="logoPrincipal-cacareceita">
                     <img src="{% static 'img/logoPrincipal-cacareceita3.png' %}">
                 </a>
                 <div>
@@ -44,13 +45,13 @@
                     <h1>Ana Luísa</h1>
                 </div>
                 <div class="menu-perfil-content">
-                    <ul>
-                        <li><a href="{% url 'editarPerfilSubChef' %}">Editar perfil</a></li>
-                        <li><a href="#">Livro de receita</a></li>
-                        <li><a href="#">Adicionar receita</a></li>
-                        <li><a href="#">Minhas receitas</a></li>
-                        <li><a href="#">Assinaturas</a></li>
-                    </ul>
+                <ul>
+                    <li><a href="{% url 'editarPerfilSubChef' %}">Editar perfil</a></li>
+                    <li><a href="{% url 'livroReceitaSubChef' %}">Livro de receita</a></li>
+                    <li><a href="{% url 'adicionarReceitaSubChef' %}">Adicionar receita</a></li>
+                    <li><a href="{% url 'minhasReceitasSubChef' %}">Minhas receitas</a></li>
+                    <li><a href="{% url 'assinatura-sub-chef' %}">Assinaturas</a></li>
+                </ul>
                 </div>
                 <div class="menu-perfil-logout">
                     <button id="logout">
@@ -129,7 +130,7 @@
                 </div>
             </div>
 
-            <a href="#" id="continuar">Continuar</a>
+            <a href="{% url 'assinatura-sub-chef-info2' %}" id="continuar">Continuar</a>
 
         </main>
         <div class="blur">
