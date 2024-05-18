@@ -91,3 +91,60 @@
     }
 
 }
+
+@media screen and (min-width: 1600px) {
+    .banner-aprendiz {
+        width: 1290px;
+    }
+
+    .area-receitas {
+        width: 1300px;
+        height: auto;
+        justify-content: space-between;
+    }
+
+    .caixa-filtroReceita{
+        height: 1410px;
+    }
+
+    .caixa-filtro {
+        height: 1350px;
+    }
+
+    .receitas-aprendiz {
+        width: 950px;
+        height: auto;
+    }
+
+    #receitasCompativeis {
+        font-size: 24px;
+        margin-right: 10px;
+    }
+    
+    .conteudo-receitas {
+        width: 950px;
+    }
+    
+    .linha-cardReceita {
+        gap: 70px;
+    }
+    .cardReceita {
+        width: 250px;
+        height: 300px;
+    }
+
+    .foto-receita {
+        width: 200px;
+        margin-bottom: 15px;
+    }
+
+    .cardReceita p {
+        font-size: 20px;
+    }
+
+    #banner-anuncio {
+        width: 1000px;
+        height: 250px;
+        margin-top: 130px;
+    }
+}
