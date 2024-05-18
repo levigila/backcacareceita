@@ -465,3 +465,147 @@ main {
     width: 160px;
     z-index: -1;
 }
+
+.notas {
+    font-family: "Josefin Sans", sans-serif;
+    width: 320px;
+    height: 549px;
+    background-color: #fff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #496300;
+    border-radius: 5px;
+    display: none;
+}
+
+.notas h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.notas img {
+    width: 100%;
+}
+
+.notas ul {
+    list-style: inside;
+    padding: 0 15px;
+}
+
+.notas li {
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+#anotacoes {
+    margin-top: 15px;
+    width: 90%;
+    color: #994E0D;
+    margin-left: 15px;
+}
+
+#anotacoes::placeholder{
+    color: #994E0D;
+}
+
+#anotacoes:focus {
+    border: 1px solid #000000;
+}
+
+#salvar {
+    border-radius: 10px;
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    padding: 3px 30px;
+    border: 1px solid #994E0D;
+    font-size: 15px;
+    color: #496300;
+    cursor: pointer;
+}
+
+#x {
+    width: 20px;
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    cursor: pointer;
+}
+
+
+
+.remover-receita {
+    display: none;
+    font-family: "Josefin Sans", sans-serif;
+    width: 257px;
+    height: 200px;
+    background-color: #fff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 40px;
+    overflow: hidden;
+
+}
+
+#onda-remover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+#icon-x-remover {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 21px;
+    top: 7px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.header-remover h1 {
+    margin-top: 30px;
+    color: #B13D0C;
+    text-align: center;
+}
+
+.form-remover {
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-remover button {
+    width: 150px;
+    border-radius: 20px;
+    padding: 3px 15px;
+    margin: 0 auto;
+    background-color: #B13D0C;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.27);
+}
+
+.form-remover form a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#prato-sair {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 160px;
+    z-index: -1;
+}

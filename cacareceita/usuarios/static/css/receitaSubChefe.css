@@ -85,7 +85,7 @@ main {
 
 .lista-menu li a{
     text-decoration: none;
-    font-family: "Josefin Sans", sans-serif;
+
     font-size: 18px;
     color: #7A3B28;
     font-weight: 500;
@@ -374,7 +374,7 @@ main {
 
 .fundo-rodape{
     position: absolute;
-    width: 839px;
+    width: 100%;
     height: 222px;
     left: 0;
    
