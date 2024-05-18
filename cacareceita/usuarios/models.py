@@ -73,6 +73,7 @@ class Receita(models.Model):
     descricao = models.TextField()
     modo_de_preparo = models.TextField()
     avaliacao = models.FloatField(default=0.0)
+    imagem = models.ImageField(upload_to='receitas/', blank=True, null=True)  # Adiciona o campo de imagem
 
     def _str_(self):
         return self.nome_receita

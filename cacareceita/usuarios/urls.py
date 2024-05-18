@@ -90,4 +90,5 @@ urlpatterns = [
     # Perfil -> Alterar Senha
     path('alterarSenha/', views.alterarSenha, name='alterar-senha'),
     path('novaSenha/', views.novaSenha, name='nova-senha'),
+    path('homeAprendiz/', views.homeAprendiz, name='homeAprendiz'),
 ]

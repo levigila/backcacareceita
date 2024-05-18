@@ -23,4 +23,5 @@ urlpatterns = [
     path('auth/', include('usuarios.urls')),
     path('', TemplateView.as_view(template_name='homeAprendiz.html'), name='home'),
     path('accounts/', include('allauth.urls')),
+    
 ]

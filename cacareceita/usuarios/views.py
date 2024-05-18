@@ -6,6 +6,12 @@ from .models import CustomUserManager
 from django.contrib.auth import authenticate, login as login_django, logout
 from django.urls import reverse
 from .forms import RegistroForm, LoginForm  # Importando o novo formulário
+from django.contrib.auth.decorators import login_required
+
+@login_required
+def homeAprendiz(request):
+    return render(request, 'homeAprendiz.html')
+
 
 def cadastro(request):
     if request.method == "GET":
