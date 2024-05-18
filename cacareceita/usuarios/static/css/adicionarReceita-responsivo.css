@@ -1,0 +1,88 @@
+@media screen and (min-width: 744px) and (max-width: 1100px) {
+    .tituloLivroReceita {
+        width: 674px;
+    }
+
+    .tituloLivroReceita p {
+        font-size: 22px;
+        margin-right: 30px;
+    }
+    
+    .secao-adicionarReceita {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .caixaInput-adicionarImagemReceita {
+        margin-bottom: 20px;
+    }
+    
+    .formulario-criacao {
+        margin: auto;
+    }
+
+    #titulo-receitaCriada, #ingredientes_quantidades, #modoPreparoReceita{
+        width: 650px;
+    }
+
+    #categoriaReceita {
+        width: 250px;
+    }
+
+    #tempoReceita {
+        width: 105px;
+    }
+
+    .caixa-botoesSalvar_Publicar {
+        display: flex;
+        margin-left: 250px;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    #customArquivoImagem {
+        width: 250px;
+        height: 190px;
+    }
+
+    #titulo-receitaCriada {
+        width: 800px;
+        height: 40px;
+    }
+
+    #categoriaReceita {
+        height: 40px;
+    }
+    
+    #numeroPessoas, #tempoReceita {
+        height: auto;
+    }
+
+    #ingredientes_quantidades {
+        width: 800px;
+        height: 40px;
+    }
+
+    #customAudioReceita {
+        width: 250px;
+        height: 40px;
+    }
+
+    #adicionarDicas {
+        width: 210px;
+        height: 40px;
+    }
+
+    #modoPreparoReceita {
+        width: 800px;
+        height: 180px;
+    }
+
+    .caixa-botoesSalvar_Publicar {
+        margin-left: 650px;
+    }
+
+    .botao-salvarReceita, .botao-publicarReceita {
+        height: 30px;
+    }
+}
