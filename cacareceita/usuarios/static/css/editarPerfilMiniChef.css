@@ -204,7 +204,23 @@ main {
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+}
+
+.botoesExcluir_Salvar {
+    margin-left: 75px;
+}
+
+.botao-excluirConta {
+    border: none;
+    background-color: #E2A300;
+    border-radius: 20px;
+    width: 200px;
+    height: 30px;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    color: #fff;
 }
 
 .botao-salvarAlteracoes {
@@ -217,7 +233,7 @@ main {
     font-family: "Josefin Sans", sans-serif;
     font-size: 16px;
     cursor: pointer;
-    margin-left: 300px;
+    margin-left: 20px;
 }
 
 /*RODAPÉ*/

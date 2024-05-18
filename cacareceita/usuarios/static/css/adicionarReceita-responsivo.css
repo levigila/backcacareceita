@@ -86,3 +86,12 @@
         height: 30px;
     }
 }
+
+main {
+    height: 740px;
+    justify-content: normal;
+}
+
+.rodape {
+    position: initial;
+}
