@@ -88,6 +88,11 @@ urlpatterns = [
 
     #Editar Receita
     path('editarReceitaAprendiz/', views.editarReceitaAprendiz, name='editarReceitaAprendiz'),
+    path('editarReceitaMiniChef/', views.editarReceitaMiniChef, name='editarReceitaMiniChef'),
+    path('editarReceitaSubChef/', views.editarReceitaSubChef, name='editarReceitaSubChef'),
+    path('editarReceitaChef/', views.editarReceitaChef, name='editarReceitaChef'),
+    path('editarReceitaConfeiteiro/', views.editarReceitaConfeiteiro, name='editarReceitaConfeiteiro'),
+    path('editarReceitaVegano/', views.editarReceitaVegano, name='editarReceitaVegano'),
     
     # Perfil -> Alterar Senha
     path('alterarSenha/', views.alterarSenha, name='alterar-senha'),

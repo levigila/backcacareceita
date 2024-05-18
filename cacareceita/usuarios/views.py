@@ -329,6 +329,21 @@ def assinaturaVeganoFinalizada(request):
 def editarReceitaAprendiz(request):
     return render(request, 'editarReceitaAprendiz.html')
 
+def editarReceitaMiniChef(request):
+    return render(request, 'editarReceitaMiniChef.html')
+
+def editarReceitaSubChef(request):
+    return render(request, 'editarReceitaSubChef.html')
+
+def editarReceitaChef(request):
+    return render(request, 'editarReceitaChef.html')
+
+def editarReceitaConfeiteiro(request):
+    return render(request, 'editarReceitaConfeiteiro.html')
+
+def editarReceitaVegano(request):
+    return render(request, 'editarReceitaVegano.html')
+
 # Perfil -> Alterar Senha
 def alterarSenha(request):
     if request.method == "POST":
