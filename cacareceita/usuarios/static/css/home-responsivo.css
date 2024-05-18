@@ -81,13 +81,13 @@
         gap: 30px;
     }
 
+    .linha-cardReceita a:nth-child(1) {
+        display: none;
+    }
+
     .cardReceita {
         width: 200px;
         height: 240px;
-    }
-
-    .cardReceita:nth-child(1) {
-        display: none;
     }
 
     .caixaEtiqueta-receita {

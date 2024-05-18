@@ -197,6 +197,15 @@ main {
     gap: 43px;
 }
 
+.linkAncora {
+    text-decoration: none !important;
+    color: #000000;
+}
+
+.linkAncora:hover {
+    color: inherit;
+}
+
 .cardReceita {
     background-color: rgb(253,247,170,0.5);
     width: 210px;

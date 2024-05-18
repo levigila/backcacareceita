@@ -64,7 +64,7 @@
         height: 240px;
     }
 
-    .cardReceita:nth-child(1) {
+    .linha-cardReceita a:nth-child(1) {
         display: none;
     }
 
