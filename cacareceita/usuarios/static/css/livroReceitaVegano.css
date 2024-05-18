@@ -123,14 +123,11 @@ main {
     
 }
 
-.secao-livrosReceitas {
-    width: 1200px;
-}
-
 .linhaReceitasFavoritas {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 40px;
+    gap: 40px;
 }
 
 .cardReceita {

@@ -17,3 +17,9 @@
         font-size: 14px
     }
 }
+
+/* Arrumando o footer em todos */
+.rodape {
+    width: auto;
+    background-repeat: no-repeat;
+}

@@ -10,7 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/editarPerfilAprendiz.css' %}">
     <link rel="stylesheet" href="{% static 'css/reset.css' %}">
@@ -52,13 +53,13 @@
                 <h1>{{user.username}}</h1>
             </div>
             <div class="menu-perfil-content">
-                    <ul>
-                        <li><a href="{% url 'editarPerfilAprendiz' %}">Editar perfil</a></li>
-                        <li><a href="{% url 'livroReceitaAprendiz' %}">Livro de receita</a></li>
-                        <li><a href="{% url 'adicionarReceitaAprendiz' %}">Adicionar receita</a></li>
-                        <li><a href="{% url 'minhasReceitasAprendiz' %}">Minhas receitas</a></li>
-                        <li><a href="{% url 'assinatura-aprendiz' %}">Assinaturas</a></li>
-                    </ul>
+                <ul>
+                    <li><a href="{% url 'editarPerfilAprendiz' %}">Editar perfil</a></li>
+                    <li><a href="{% url 'livroReceitaAprendiz' %}">Livro de receita</a></li>
+                    <li><a href="{% url 'adicionarReceitaAprendiz' %}">Adicionar receita</a></li>
+                    <li><a href="{% url 'minhasReceitasAprendiz' %}">Minhas receitas</a></li>
+                    <li><a href="{% url 'assinatura-aprendiz' %}">Assinaturas</a></li>
+                </ul>
             </div>
             <div class="menu-perfil-logout">
                 <button id="logout">
@@ -94,13 +95,14 @@
             </div>
             <div class="caixa-dadosPerfil">
                 <p id="texto-meuPerfil">Meu Perfil</p>
-         
+
                 <div class="caixaInput-nomeUsuario">
                     <input type="text" class="dadosPerfil-nomeUsuario" placeholder="Ana Luísa Silva Ferreira" disabled>
                     <img src="{% static 'img/icon-editarPerfil2.png' %}">
                 </div>
                 <div class="caixaInput-emailUsuario">
-                    <input type="text" class="dadosPerfil-emailUsuario" placeholder="ana.lsferreira@souunit.com.br" disabled>
+                    <input type="text" class="dadosPerfil-emailUsuario" placeholder="ana.lsferreira@souunit.com.br"
+                        disabled>
                     <img src="{% static 'img/icon-editarPerfil2.png' %}">
                 </div>
                 <a href="">
@@ -108,7 +110,7 @@
                 </a>
                 <button class="botao-salvarAlteracoes">Salvar Alterações</button>
             </div>
-            
+
         </section>
     </main>
     <div class="blur">
