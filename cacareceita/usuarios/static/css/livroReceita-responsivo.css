@@ -1,0 +1,45 @@
+@media screen and (min-width: 744px) and (max-width: 1100px) {
+    .linhaTitulo {
+        width: 150px;
+    }
+
+    .tituloLivroReceita p {
+        font-size: 22px;
+    }
+
+    .secao-livrosReceitas {
+        width: 600px;
+    }
+
+    .linhaReceitasFavoritas:nth-child(1) {
+        display: none;
+    }
+
+    .linhaReceitasFavoritas {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .linhaTitulo {
+        width: 450px;
+    }
+
+    .tituloLivroReceita p {
+        font-size: 26px;
+    }
+
+    .secao-livrosReceitas {
+        width: 1400px;
+    }
+
+    .cardReceita {
+        width: 230px;
+        height: 290px;
+    }
+
+    .foto-cardReceita {
+        width: 215px;
+    }
+}

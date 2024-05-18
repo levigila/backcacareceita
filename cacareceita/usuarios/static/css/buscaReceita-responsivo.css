@@ -109,8 +109,13 @@
 
     .caixa-filtro {
         height: 1350px;
+        gap: 30px;
     }
 
+    .secao-titulo {
+        font-size: 18px;
+    }
+    
     .receitas-aprendiz {
         width: 950px;
         height: auto;
