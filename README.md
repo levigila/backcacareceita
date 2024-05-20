@@ -62,7 +62,7 @@ Ferramentas utilizadas no desenvolvimento do projeto:
 - **Desenvolvedora Back-End**-[@JamilleMaria](https://www.linkedin.com/in/jamille-maria-815215249/)
 - **Desenvolvedor Back-End e QA**-[@LeviGila](https://www.linkedin.com/in/levi-gila/)
 - **DBA**-[@MariaEugenia](https://www.linkedin.com/in/maria-eugenia-98a6a91ab/)
-- **DBA**-[@MariaKarolyna](https://www.linkedin.com/in/karolyna-rolim-1bb862237/)
+- **DBA**-[@KarolynaRolim](https://www.linkedin.com/in/karolyna-rolim-1bb862237/)
 - **DBA**-[@MariaAlice](https://www.linkedin.com/in/alice-dantas-343a11219/)
   
 Você também pode ver a lista de [todos os colaboradores](https://github.com/levigila/backcacareceita/graphs/contributors) que participaram deste projeto.
