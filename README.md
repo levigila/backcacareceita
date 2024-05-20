@@ -51,10 +51,6 @@ Ferramentas utilizadas no desenvolvimento do projeto:
 - [SQLite](https://www.sqlite.org/) - Banco de Dados.
 - [Scrum](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwinrvej15yGAxUcmMIIHYzWBucYABABGgJqZg&ase=2&gclid=Cj0KCQjw6auyBhDzARIsALIo6v_1oS74YLYI0_rAoG34b_08EsncSOAxmRVXCbLQ7WKUCEe_mgC2RAgaAscSEALw_wcB&ohost=www.google.com&cid=CAESVuD2E7TzYd3ZhzeukkUAE8AHKsL4C0FSqX5TTPi8STQdd6QkzCUkxNdiIiNNvDm3v585lJL5-NOVgTLTMjLXRIIiyrrt_FwtmEFlw_29thSVY3bxBnD4&sig=AOD64_1i_LYwuAc9y78XJnpCqpmVLZNbzA&q&nis=4&adurl&ved=2ahUKEwjCie2j15yGAxVkqJUCHbaAADwQ0Qx6BAgFEAE) -Metodologia Usada.
 
-## 🖇️ Colaborando
-
-Por favor, leia o [COLABORACAO.md](COLABORACAO.md) para obter detalhes sobre nosso código de conduta e o processo para enviar pedidos de solicitação.
-
 ## ✒️ Autores
 
 - **Gerente do Projeto e Designer**  [@Analuisa](https://www.linkedin.com/in/lu%C3%ADsa-ferreira-3316a0218/)
