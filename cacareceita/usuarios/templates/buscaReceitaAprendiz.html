@@ -7,8 +7,12 @@
     <title>Receitas</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<<<<<<< Updated upstream
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
+=======
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+>>>>>>> Stashed changes
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <!-- Link bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
@@ -16,23 +20,46 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/buscaReceitaAprendiz.css' %}">
     <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+<<<<<<< Updated upstream
     <link rel="stylesheet" href="{% static 'css/header-responsivo.css' %}">
     <link rel="stylesheet" href="{% static 'css/buscaReceita-responsivo.css' %}">
     <link rel="stylesheet" href="{% static 'css/footer-responsivo.css' %}">
+=======
+    <style>
+        /* Estilos básicos para a caixa de sugestões */
+        #suggestions {
+            border: 1px solid #ccc;
+            display: none;
+            max-height: 150px;
+            overflow-y: auto;
+            position: absolute;
+            background: white;
+            width: 100%;
+            z-index: 1000;
+        }
+        .suggestion-item {
+            padding: 10px;
+            cursor: pointer;
+        }
+        .suggestion-item:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+>>>>>>> Stashed changes
 </head>
 
 <body>
     <header>
         <div class="fundo-barraPesquisa">
             <a href="{% url 'homeAprendiz' %}" class="logoPrincipal-cacareceita">
-                <img src="{% static 'img/logoPrincipal-cacareceita3.png' %}">
+                <img src="{% static 'img/logoPrincipal-cacareceita3.png' %}" alt="Logo">
             </a>
             <div>
                 <input class="barra-pesquisa" type="text">
-                <button class="botao-pesquisar"><img src="{% static 'img/icon-pesquisa.png' %}"></button>
+                <button class="botao-pesquisar"><img src="{% static 'img/icon-pesquisa.png' %}" alt="Pesquisar"></button>
             </div>
             <div class="perfil" id="menu-perfil">
-                <img class="icon-perfil" src="{% static 'img/icon-perfil.png' %}">
+                <img class="icon-perfil" src="{% static 'img/icon-perfil.png' %}" alt="Perfil">
             </div>
         </div>
         <nav class="navegacao">
@@ -86,6 +113,7 @@
         {% endif %}
     </header>
     <main>
+<<<<<<< Updated upstream
         <div class="banner-aprendiz" data-interval="6000" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -100,25 +128,36 @@
                 </div>
             </div>
         </div>
+=======
+        <img class="banner-aprendiz" src="{% static 'img/banner-aprendiz.png' %}" alt="Banner Aprendiz">
+>>>>>>> Stashed changes
         <section class="area-receitas">
             <div class="caixa-filtroReceita">
                 <div class="caixa-pesquisaFiltro">
-                    <div class="input-pesquisaFiltro">
-                        <input text="" placeholder="Digite seus ingredientes">
-                        <img src="{% static 'img/icon-pesquisa.png' %}">
-                    </div>
+                    {% csrf_token %}
+                    <form action="{% url 'pesquisarReceita' %}" method="GET" id="searchForm">
+                        <div class="input-pesquisaFiltro">
+                            <input type="text" id="searchInput" name="query" placeholder="Digite seus ingredientes" autocomplete="off">
+                            <div id="suggestions"></div>
+                        </div>
+                    </form>
                 </div>
                 <div class="caixa-filtro">
                     <div id="area-indicador">
                         <p>Selecione os seus ingredientes</p>
+<<<<<<< Updated upstream
                         <div id="circulo">
                         </div>
 
+=======
+                        <div id="circulo"></div>
+>>>>>>> Stashed changes
                     </div>
                     <div class="secao-ingredientes">
                         <p class="secao-titulo">Ingredientes Essenciais</p>
                         <div class="opcoes-ingredientes">
                             <div class="opcoes">
+<<<<<<< Updated upstream
                                 <button>Ovo</button>
                                 <button>Arroz</button>
                                 <button>Feijão</button>
@@ -153,14 +192,20 @@
                         <div class="opcoes-ingredientes">
                             <div class="opcoes">
 
+=======
+                               
+                                <!-- Os botões de ingredientes essenciais aqui são preenchidos dinamicamente pelo JavaScript -->
+>>>>>>> Stashed changes
                             </div>
                         </div>
                     </div>
+                    <!-- As outras seções de ingredientes também são preenchidas dinamicamente -->
                 </div>
             </div>
             <div class="receitas-aprendiz">
                 <p id="receitasCompativeis">Receitas compatíveis com seus ingredientes</p>
                 <div class="conteudo-receitas">
+<<<<<<< Updated upstream
                     <div class="linha-cardReceita">
                         <a href="{% url 'receitaAprendiz' %}" class="linkAncora">
                             <div class="cardReceita">
@@ -406,6 +451,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+=======
+                    <!-- As receitas são preenchidas dinamicamente pelo JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Link para o arquivo JavaScript -->
+    <script src="{% static 'js/script.js' %}"></script>
+>>>>>>> Stashed changes
 </body>
 
 </html>

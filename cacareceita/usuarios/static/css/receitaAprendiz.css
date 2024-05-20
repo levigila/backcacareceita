@@ -13,6 +13,7 @@ main {
     align-items: center;
 }
 
+
 .fundo-barraPesquisa {
     background-color: #B13D0C;
     height: 50px;
@@ -627,9 +628,81 @@ main {
     z-index: -1;
 }
 
+<<<<<<< Updated upstream
 #etiqueta {
     width: 100px;
     position: absolute;
     top: -41px;
     left: -4px;
+=======
+css
+Copiar
+/* Estilos para o fundo do modal */
+.modal {
+    position: fixed; /* Fica fixo na tela, sobrepondo outros conteúdos */
+    z-index: 1; /* Garante que o modal fique acima de outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ocupa toda a largura da tela */
+    height: 100%; /* Ocupa toda a altura da tela */
+    overflow: auto; /* Permite rolagem se o conteúdo do modal for muito grande */
+    background-color: rgba(0,0,0,0.4); /* Cor de fundo semi-transparente */
+}
+
+/* Estilos para o conteúdo do modal */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 10% auto; /* Centraliza o modal verticalmente e horizontalmente */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Define a largura do modal */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); /* Adiciona sombra ao modal */
+}
+
+/* Estilos para o botão de fechar */
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estiliza os links dentro do modal */
+.modal-content a {
+    color: #0044cc;
+    text-decoration: none;
+}
+
+.modal-content a:hover,
+.modal-content a:focus {
+    text-decoration: underline;
+}
+
+/* Centraliza o texto dentro do modal */
+.modal-content p {
+    text-align: center;
+}
+
+/* Adiciona um pouco de estilo aos links para fazer parecer botões */
+.modal-content a {
+    display: inline-block;
+    margin: 10px;
+    padding: 8px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+}
+
+.modal-content a:hover {
+    background-color: #ddd;
+>>>>>>> Stashed changes
 }

@@ -49,7 +49,11 @@
                     <ul>
                         <li><a href="{% url 'editarPerfilAprendiz' %}">Editar perfil</a></li>
                         <li><a href="{% url 'livroReceitaAprendiz' %}">Livro de receita</a></li>
+<<<<<<< Updated upstream
                         <li><a href="{% url 'adicionarReceitaAprendiz' %}">Adicionar receita</a></li>
+=======
+                        <li><a href="{% url 'adicionarReceitaAprendiz' %}">Adicionar Receita</a></li>
+>>>>>>> Stashed changes
                         <li><a href="{% url 'minhasReceitasAprendiz' %}">Minhas receitas</a></li>
                         <li><a href="{% url 'assinatura-aprendiz' %}">Assinaturas</a></li>
                     </ul>
@@ -71,7 +75,7 @@
                 </div>
                 <div class="div-assinatura">
                     <ul>
-                        <li><a href="#">Assinaturas</a></li>
+                        <li><a href="{% url 'assinatura-aprendiz' %}">Assinaturas</a></li>
                     </ul>
                 </div>
                 <img src="{% static 'img/ondas-menu-perfil-footer.svg' %}" id="onda-menu-footer" alt="">
@@ -108,23 +112,40 @@
 
                         <div class="receita-acoes">
 
-                            <button class="favoritar">
-                                <img src="{% static 'img/favoritar.svg' %}" alt="">
-                            </button>
+                            <!-- Se o usuário estiver autenticado -->
+                            {% if user.is_authenticated %}
+<button class="favoritar" data-receita-id="{{ receita.id }}">
+    <img src="{% static 'img/favoritar.svg' %}" alt="Favoritar">
+</button>
+{% else %}
+<!-- Se não estiver autenticado, adicione uma classe para identificação -->
+<button class="favoritar requer-autenticacao">
+    <img src="{% static 'img/favoritar.svg' %}" alt="Favoritar">
+</button>
 
+    <div id="modalLoginCadastro" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Para favoritar receitas, você precisa estar cadastrado e logado.</p>
+            <a href="{% url 'login' %}">Login</a> | <a href="{% url 'cadastro' %}">Cadastro</a>
+        </div>
+    </div>
+    {% endif %}
+                            
+                            <!-- Botões de compartilhar, imprimir e copiar -->
                             <button class="compartilhar">
                                 <img src="{% static 'img/compartilhar.svg' %}" alt="">
                             </button>
-
+                        
                             <button class="imprimir" onclick="imprimirPagina()">
                                 <img src="{% static 'img/imprimir.svg' %}" alt="">
                             </button>
-
+                        
                             <button class="copiar">
                                 <img src="{% static 'img/copiar.svg' %}" alt="">
                             </button>
-
                         </div>
+                        
 
                         <div class="estrelas">
                             <img src="{% static 'img/estrela.svg' %}" alt="">
@@ -156,18 +177,6 @@
                 <div class="receita-main">
                     <div class="receita-ing">
                         <h1>INGREDIENTES</h1>
-
-                        <h4>Massa com crosta de sobras de arroz</h4>
-
-                        <ul>
-                            <li>Meia xícara de arroz branco cozido</li>
-                            <li>1 colher de sopa de queijo parmesão ralado</li>
-                            <li>1 colher de chá de sal</li>
-                            <li>1 ovo</li>
-                        </ul>
-
-                        <h4>Rechei da tortinha de arroz</h4>
-
                         <ul>
                             <li>2 ovos</li>
                             <li>Meia xícaras de chá de cenoura ralada</li>
@@ -180,41 +189,23 @@
                         <aside id="anuncio-sadia">
                             <img src="{% static 'img/anuncio-sadia.svg' %}" alt="">
                         </aside>
-
                     </div>
 
                     <div class="receita-modo-prep">
                         <h1>MODO DE PREPARO</h1>
-
-                        <h4>Massa com crosta de sobras de arroz</h4>
-
-                        <ol>
+                        <ul>
                             <li>Misture todo o arroz com 1 ovo e 1 colher de sopa de parmesão ralado.</li>
                             <li>Adicione 1 pitada de sal e misture bem, amassando o arroz.</li>
-                            <li>Unte as forminhas com 1 fio de azeite e modele a massa de crosta de arroz em cada uma
-                                delas.</li>
+                            <li>Unte as forminhas com 1 fio de azeite e modele a massa de crosta de arroz em cada uma delas.</li>
                             <li>Leve ao forno por 10 minutos a 170 graus Célsius.</li>
                             <li>Retire do forno e reserve.</li>
-                        </ol>
+                        </ul>   
 
                         <aside id="dica">
                             <h3>Dica</h3>
                             <p>Não precisa moldar a massa de crosta de arroz com muita perfeição, pois a ideia é deixar
                                 a tortinha mais rústica.</p>
                         </aside>
-
-                        <h4>Recheio da tortinha de arroz</h4>
-
-                        <ol>
-                            <li>Em um recipiente, coloque todos os ingredientes do recheio nesta ordem: 1 ovo, meia
-                                xícara de cenoura ralada, meia xícara de milho-verde, meia xícara de queijo ralado, 1
-                                colher de queijo parmesão ralado, 2 colheres de creme de leite e mais 1 ovo.</li>
-                            <li>Coloque também 1 pitada de sal e mexa bem.</li>
-                            <li>Recheie as massas de crosta de arroz reservadas.</li>
-                            <li>Leve ao forno a 170 graus por mais 15 minutos.</li>
-                            <li>Sua tortinha de arroz está pronta para servir.</li>
-                        </ol>
-
                     </div>
 
                 </div>
@@ -275,15 +266,19 @@
                     <h1>Deseja realmente sair?</h1>
                 </div>
                 <div class="form-sair">
-                    <form method="post">
-                        {%csrf_token %}
+                    <form action="{% url 'logout' %}" method="post">
+                        {% csrf_token %}
                         <button type="submit">
-                            <a href="{% url 'login' %}">Sim, desejo sair!</a>
+                            Sim, desejo sair!
                         </button>
                     </form>
-    
-                    <button class="voltar">Não, desejo voltar!</button>
+                
+                    
+                        <button type="submit" class="voltar">Não, desejo voltar!</button>
+                    </form>
                 </div>
+                
+                
                 <img src="{% static 'img/prato-img-sair.svg' %}" id="prato-sair" alt="">
             </div>
         </div>
@@ -306,6 +301,36 @@
             window.print();
         }
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var modal = document.getElementById("modalLoginCadastro");
+            var btns = document.querySelectorAll(".requer-autenticacao");
+            var span = document.getElementsByClassName("close")[0];
+        
+            btns.forEach(function(btn) {
+                btn.onclick = function() {
+                    modal.style.display = "block";
+                }
+            });
+        
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+        
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        });
+        </script>
+        <script>
+            const recipeId = "{{ recipe_id }}";
+            if (recipeId) {
+                fetchRecipeDetails(recipeId);
+            }
+        </script>
+        <script src="{% static 'js/receitaaprendiz.js' %}"></script>
 </body>
 
 </html>

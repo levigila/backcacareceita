@@ -37,21 +37,8 @@ class CustomUserManager(BaseUserManager):
 class CustomUser(AbstractUser):
     objects = CustomUserManager()
 
-    groups = models.ManyToManyField(
-        Group,
-        verbose_name=('groups'),
-        blank=True,
-        related_name='customuser_set',  # Adicione este related_name para evitar conflitos
-        related_query_name='user',
-    )
-    user_permissions = models.ManyToManyField(
-        Permission,
-        verbose_name=('user permissions'),
-        blank=True,
-        related_name='customuser_set',  # Adicione este related_name para evitar conflitos
-        related_query_name='user',
-    )   
-
+    # Remova as relações ForeignKey para Receita, Ingredientes, e Pagamento de CustomUser
+    # Mantenha os outros campos e adicione o método pode_favoritar_receita aqui
     USER_TYPES = (
         ('visitor', 'Visitante'),
         ('registered', 'Usuário Cadastrado'),
@@ -61,48 +48,60 @@ class CustomUser(AbstractUser):
     nome_usuario = models.CharField(max_length=100)
     ID_cadastro = models.CharField(max_length=50)
     tipo = models.CharField(max_length=20, choices=USER_TYPES, default='visitor')
+    url_imagem_perfil = models.TextField(null=True, default='')
+    comentario = models.TextField(null=True, blank=True)
 
-    def _str_(self):
-        return self.email
-    
-    
+    @property
+    def receitas_favoritas(self):
+        return self.livro.receitas.count()
+
+    def pode_favoritar_receita(self):
+        if self.tipo == 'visitor':
+            return False
+        elif self.tipo == 'registered':
+            favoritos_count = self.favoritar_set.count()
+            return favoritos_count < 5
+        else:
+            return True
+
+class LivroDeReceitas(models.Model):
+    usuario = models.OneToOneField(CustomUser, on_delete=models.CASCADE, related_name='livro')
+    receitas = models.ManyToManyField('Receita')
+
+    def __str__(self):
+        return f"Livro de Receitas de {self.usuario.email}"
+
+class Favoritar(models.Model):
+    usuario = models.ForeignKey(CustomUser, on_delete=models.CASCADE, null=True)
+    receita = models.ForeignKey('Receita', on_delete=models.CASCADE, null=True)
 
 class Receita(models.Model):
-    id_receita = models.AutoField(primary_key=True)
-    nome_receita = models.CharField(max_length=100)
-    descricao = models.TextField()
-    modo_de_preparo = models.TextField()
-    avaliacao = models.FloatField(default=0.0)
+    id = models.AutoField(primary_key=True)
+    nome_receita = models.TextField(default='')
+    categoria_receita = models.TextField(default='')
+    quantidade_pessoas = models.TextField(default='')
+    quantidade_horas = models.TextField(default='')
+    modo_preparo = models.TextField(default='')
+    dica_receita = models.TextField(default='')
+    url_audio_receita = models.TextField(default='')
+    url_imagem_receita = models.TextField(default='')
+    comentario = models.TextField(null=True, blank=True)
 
-    def _str_(self):
-        return self.nome_receita
 
-class Ingrediente(models.Model):
-    id_ingredientes = models.AutoField(primary_key=True)
-    nome = models.CharField(max_length=100)
-    descricao = models.TextField()
-    CATEGORIA_CHOICES = (
-        ('proteina', 'Proteína'),
-        ('carboidrato', 'Carboidrato'),
-        ('oleos_gorduras', 'Óleos/Gorduras'),
-        ('carnes', 'Carnes'),
-        ('vegetais', 'Vegetais'),
-        ('frutas', 'Frutas'),
-        ('legumes', 'Legumes'),
-    )
-    categoria = models.CharField(max_length=20, choices=CATEGORIA_CHOICES)
-    unidade_de_medida = models.CharField(max_length=20)
+class Ingredientes(models.Model):
+    nome_ingredientes = models.TextField(default='')
+    tipo_ingredientes = models.TextField(default='')
+   
+class Pagamento(models.Model):
+    metodo_pagamento = models.TextField(default='')
+    status_pagamento = models.TextField(default='')
+    data_de_transacao = models.DateTimeField(default=None)
+    valor = models.FloatField(default=None)
 
-    def _str_(self):
-        return self.nome
+class Visitante(models.Model):
+    receita = models.ForeignKey(Receita, on_delete=models.CASCADE, null=True)
+    ingredientes = models.ForeignKey(Ingredientes, on_delete=models.CASCADE, null=True)
 
-# class Alergeno(models.Model):
-#     ingrediente = models.OneToOneField(Ingrediente, on_delete=models.CASCADE, related_name='alergenos')
-#     glúten = models.BooleanField(default=False)
-#     lactose = models.BooleanField(default=False)
-#     nozes = models.BooleanField(default=False)
-#     # Adicione outros alérgenos conforme necessário
-
-#     def _str_(self):
-#         return f"Alergenos de {self.ingrediente.nome}"
-#     #enviando novamente
+class ReceitaHasIngredientes(models.Model):
+    receita = models.ForeignKey(Receita, on_delete=models.CASCADE, null=True)
+    ingredientes = models.ForeignKey(Ingredientes, on_delete=models.CASCADE, null=True)

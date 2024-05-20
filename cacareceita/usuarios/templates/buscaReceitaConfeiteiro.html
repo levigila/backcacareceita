@@ -53,6 +53,7 @@
                 <h1>Ana Luísa</h1>
             </div>
             <div class="menu-perfil-content">
+<<<<<<< Updated upstream
                     <ul>
                         <li><a href="{% url 'editarPerfilConfeiteiro' %}">Editar perfil</a></li>
                         <li><a href="{% url 'livroReceitaConfeiteiro' %}">Livro de receita</a></li>
@@ -60,6 +61,15 @@
                         <li><a href="{% url 'minhasReceitasConfeiteiro' %}">Minhas receitas</a></li>
                         <li><a href="{% url 'assinatura-confeiteiro' %}">Assinaturas</a></li>
                     </ul>
+=======
+                <ul>
+                    <li><a href="{% url 'editarPerfilConfeiteiro' %}">Editar perfil</a></li>
+                    <li><a href="{% url 'livroReceitaConfeiteiro' %}">Livro de receita</a></li>
+                    <li><a href="{% url 'adicionarReceitaConfeiteiro' %}">Adicionar Receita</a></li>
+                    <li><a href="{% url 'minhasReceitasConfeiteiro' %}">Minhas receitas</a></li>
+                    <li><a href="{% url 'assinatura-confeiteiro' %}">Assinaturas</a></li>
+                </ul>
+>>>>>>> Stashed changes
             </div>
             <div class="menu-perfil-logout">
                 <button id="logout">
@@ -78,7 +88,7 @@
             </div>
             <div class="div-assinatura">
                 <ul>
-                    <li><a href="#">Assinaturas</a></li>
+                    <li><a href="{% url 'assinatura-confeiteiro' %}">Assinaturas</a></li>
                 </ul>
             </div>
             <img src="{% static 'img/ondas-menu-perfil-footer.svg' %}" id="onda-menu-footer" alt="">

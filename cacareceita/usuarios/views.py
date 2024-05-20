@@ -6,6 +6,25 @@ from .models import CustomUserManager
 from django.contrib.auth import authenticate, login as login_django, logout
 from django.urls import reverse
 from .forms import RegistroForm, LoginForm  # Importando o novo formulário
+from spoonacular.api import API
+from django.conf import settings
+from .models import Receita
+from django.http import JsonResponse
+from django.views.decorators.http import require_POST
+from django.contrib.auth.decorators import login_required
+from django.views.decorators.csrf import csrf_exempt
+from .utils import translate_text
+from .utils import get_recipes_meals
+from google.cloud import translate_v2 as translate
+import requests
+client = API(api_key='a50e2cf10f3d4ca1b044d66c63dced85')
+
+def home_aprendiz(request):
+    meal_types = ['appetizer', 'salad', 'side dish', 'beverage']
+    recipes = get_recipes_meals(meal_types)
+    return render(request, 'home_aprendiz.html', {'recipes': recipes})
+    
+
 
 def cadastro(request):
     if request.method == "GET":
@@ -86,66 +105,264 @@ def alterarSenha(request, cod):
         pass
     return render(request, 'alterarSenha.html')
 
+@login_required
+@require_POST
+@csrf_exempt
+def favoritar_receita(request):
+    if request.method == 'POST' and request.user.is_authenticated:
+        data = JsonResponse.loads(request.body)
+        receita_id = data.get('receita_id')
+        try:
+            receita = Receita.objects.get(api_id=receita_id)
+            user = request.user
+            user.livro.receitas.add(receita)
+            return JsonResponse({'success': True})
+        except Receita.DoesNotExist:
+            return JsonResponse({'success': False, 'error': 'Receita não encontrada'})
+    return JsonResponse({'success': False, 'error': 'Requisição inválida'})
+
+def pesquisarReceita(request):
+    if request.method == 'GET':
+        query = request.GET.get('query', '')
+        client = API(api_key=settings.SPOOONACULAR_API_KEY)
+        receita = client.search_recipes_by_ingredients(ingredients=query)
+        context = {'receita': receita}
+        return render(request, 'search_results.html', context)
+    
+def search_recipes(request):
+    api_key = 'a50e2cf10f3d4ca1b044d66c63dced85'  # Substitua pela sua chave de API da Spoonacular
+    ingredients = request.GET.get('ingredients', '')
+    url = f'https://api.spoonacular.com/recipes/findByIngredients?ingredients={ingredients}&number=12&apiKey={api_key}'
+    response = requests.get(url)
+    recipes = response.json()
+    translated_recipes = []
+    for recipe in recipes:
+        translated_title = translate_text(recipe['title'], target_language='pt')
+        translated_recipes.append({
+            'id': recipe['id'],
+            'title': translated_title,
+            'image': recipe['image'],
+            'missedIngredientCount': recipe['missedIngredientCount']
+        })
+    
+    # Certifique-se de retornar uma resposta JSON
+    return JsonResponse(translated_recipes, safe=False)
+
+def detalhes_receita(request, id_receita):
+    api_key = 'a50e2cf10f3d4ca1b044d66c63dced85'
+    url = f'https://api.spoonacular.com/recipes/{id_receita}/information?apiKey={api_key}'
+    response = requests.get(url)
+    receita = response.json()
+
+    return render(request, 'receitaAprendiz.html', {'receita': receita})
+
+def traduzir_texto(texto, target_language='pt'):
+    translate_client = translate.Client()
+    resultado = translate_client.translate(texto, target_language=target_language)
+    return resultado['translatedText']
 
 def receitaAprendiz(request):
-    if request.method == "GET":
-        return render(request, 'ReceitaAprendiz.html')
+    recipe_id = request.GET.get('id', '')  # Obtém o ID da receita a partir da URL
+    return render(request, 'receitaAprendiz.html', {'recipe_id': recipe_id})
 
 
-def receitaSubChef(request):
-    if request.method == "GET":
-        return render(request, 'ReceitaSubChef.html')
+def receitaSubChef(request, receita_id):
+    if request.method == 'GET':
+        # Use Spoonacular to get recipe details
+        receita = client.get_recipe_by_id(id=receita_id)
+
+        # Check if recipe exists and belongs to the Sub Chef cuisine category
+        if receita and receita['cuisine'] == "Sub Chef":
+            # Process and format recipe data
+            context = {'receita': receita}
+            return render(request, 'receitaSubChef.html', context)
+        else:
+            return render(request, 'receitaSubChef.html', {'erro': 'Receita não encontrada ou não pertence à categoria Sub Chef'})
+    else:
+        return render(request, 'receitaSubChef.html')
 
 
-def plataforma():
-    pass
+def receitaMiniChef(request, receita_id):
+    if request.method == 'GET':
+        # Use Spoonacular to get recipe details
+        receita = client.get_recipe_by_id(id=receita_id)
+
+        # Check if recipe exists and belongs to the Mini Chef cuisine category
+        if receita and receita['cuisine'] == "Mini Chef":
+            # Process and format recipe data
+            context = {'receita': receita}
+            return render(request, 'receitaMiniChef.html', context)
+        else:
+            return render(request, 'receitaMiniChef.html', {'erro': 'Receita não encontrada ou não pertence à categoria Mini Chef'})
+    else:
+        return render(request, 'receitaMiniChef.html')
 
 
-def receitaMiniChef(request):
-    if request.method == "GET":
-        return render(request, 'ReceitaMiniChef.html')
+def receitaConfeiteiro(request, receita_id):
+    if request.method == 'GET':
+        # Use Spoonacular to get recipe details
+        receita = client.get_recipe_by_id(id=receita_id)
+
+        # Check if recipe exists and belongs to the Confeiteiro cuisine category
+        if receita and receita['cuisine'] == "Confeiteiro":
+            # Process and format recipe data
+            context = {'receita': receita}
+            return render(request, 'receitaConfeiteiro.html', context)
+        else:
+            return render(request, 'receitaConfeiteiro.html', {'erro': 'Receita não encontrada ou não pertence à categoria Confeiteiro'})
+    else:
+        return render(request, 'receitaConfeiteiro.html')
 
 
-def receitaConfeiteiro(request):
-    if request.method == "GET":
-        return render(request, 'ReceitaConfeiteiro.html')
+
+def receitaVegano(request, receita_id):
+    if request.method == 'GET':
+        # Use Spoonacular to get recipe details
+        receita = client.get_recipe_by_id(id=receita_id)
+
+        # Check if recipe exists and belongs to the Vegano diet category
+        if receita and receita['diets'] == ["Vegan"]:
+            # Process and format recipe data
+            context = {'receita': receita}
+            return render(request, 'receitaVegano.html', context)
+        else:
+            return render(request, 'receitaVegano.html', {'erro': 'Receita não encontrada ou não pertence à categoria Vegano'})
+    else:
+        return render(request, 'receitaVegano.html')
 
 
-def receitaVegano(request):
-    if request.method == "GET":
-        return render(request, 'ReceitaVegano.html')
 
+def receitaChef(request, receita_id):
+    if request.method == 'GET':
+        # Use Spoonacular to get recipe details
+        receita = client.get_recipe_by_id(id=receita_id)
 
-def receitaChef(request):
-    if request.method == "GET":
-        return render(request, 'ReceitaChef.html')
+        # Check if recipe exists and belongs to the Chef cuisine category
+        if receita and receita['cuisine'] == "Chef":
+            # Process and format recipe data
+            context = {'receita': receita}
+            return render(request, 'receitaChef.html', context)
+        else:
+            return render(request, 'receitaChef.html', {'erro': 'Receita não encontrada ou não pertence à categoria Chef'})
+    else:
+        return render(request, 'receitaChef.html')
+
 
 
 def login_error(request):
     return render(request, 'loginerror.html')
+
 
 def buscaReceitaAprendiz(request):
     return render(request, 'buscaReceitaAprendiz.html')
 
 
 def buscaReceitaMiniChef(request):
-    return render(request, 'buscaReceitaMiniChef.html')
+    if request.method == 'GET':
+        termo_busca = request.GET.get('termo_busca')
+        if termo_busca:
+            # Use Spoonacular to search for recipes
+            receitas = client.search_recipes(query=termo_busca)
+
+            # Filter results to exclude Mini Chef recipes
+            mini_chef_excluidas = []
+            for receita in receitas:
+                if receita['cuisine'] != "Mini Chef":
+                    mini_chef_excluidas.append(receita)
+
+            context = {'receitas': mini_chef_excluidas}
+            return render(request, 'buscaReceitaMiniChef.html', context)
+        else:
+            return render(request, 'buscaReceitaMiniChef.html')
+    else:
+        return render(request, 'buscaReceitaMiniChef.html') 
 
 
 def buscaReceitaSubChef(request):
-    return render(request, 'buscaReceitaSubChef.html')
+    if request.method == 'GET':
+        termo_busca = request.GET.get('termo_busca')
+        if termo_busca:
+            # Use Spoonacular to search for recipes
+            receitas = client.search_recipes(query=termo_busca)
+
+            # Filter results to include Sub Chef recipes
+            subchef_receitas = []
+            for receita in receitas:
+                if receita['cuisine'] == "Sub Chef":
+                    subchef_receitas.append(receita)
+
+            context = {'receitas': subchef_receitas}
+            return render(request, 'buscaReceitaSubChef.html', context)
+        else:
+            return render(request, 'buscaReceitaSubChef.html')
+    else:
+        return render(request, 'buscaReceitaSubChef.html')
 
 
 def buscaReceitaChef(request):
-    return render(request, 'buscaReceitaChef.html')
+    if request.method == 'GET':
+        termo_busca = request.GET.get('termo_busca')
+        if termo_busca:
+            # Use Spoonacular to search for recipes
+            receitas = client.search_recipes(query=termo_busca, cuisine=["Chef"])
+
+            # Filter results to only include Chef recipes
+            chef_receitas = []
+            for receita in receitas:
+                if receita['cuisine'] == "Chef":
+                    chef_receitas.append(receita)
+
+            context = {'receitas': chef_receitas}
+            return render(request, 'buscaReceitaChef.html', context)
+        else:
+            return render(request, 'buscaReceitaChef.html')
+    else:
+        return render(request, 'buscaReceitaChef.html')
+
 
 
 def buscaReceitaConfeiteiro(request):
-    return render(request, 'buscaReceitaConfeiteiro.html')
+    if request.method == 'GET':
+        termo_busca = request.GET.get('termo_busca')
+        if termo_busca:
+            # Use Spoonacular to search for recipes
+            receitas = client.search_recipes(query=termo_busca)
+
+            # Filter results to include Confeiteiro recipes
+            confeiteiro_receitas = []
+            for receita in receitas:
+                if receita['cuisine'] == "Confeiteiro":
+                    confeiteiro_receitas.append(receita)
+
+            context = {'receitas': confeiteiro_receitas}
+            return render(request, 'buscaReceitaConfeiteiro.html', context)
+        else:
+            return render(request, 'buscaReceitaConfeiteiro.html')
+    else:
+        return render(request, 'buscaReceitaConfeiteiro.html')
+
 
 
 def buscaReceitaVegano(request):
-    return render(request, 'buscaReceitaVegano.html')
+    if request.method == 'GET':
+        termo_busca = request.GET.get('termo_busca')
+        if termo_busca:
+            # Use Spoonacular to search for recipes
+            receitas = client.search_recipes(query=termo_busca)
+
+            # Filter results to include Vegano recipes
+            vegano_receitas = []
+            for receita in receitas:
+                if receita['diets'] == ["Vegan"]:
+                    vegano_receitas.append(receita)
+
+            context = {'receitas': vegano_receitas}
+            return render(request, 'buscaReceitaVegano.html', context)
+        else:
+            return render(request, 'buscaReceitaVegano.html')
+    else:
+        return render(request, 'buscaReceitaVegano.html')
+
 
 
 def homeAprendiz(request):

@@ -47,6 +47,7 @@
                     <h1>Ana Luísa</h1>
                 </div>
                 <div class="menu-perfil-content">
+<<<<<<< Updated upstream
                 <ul>
                     <li><a href="{% url 'editarPerfilMiniChef' %}">Editar perfil</a></li>
                     <li><a href="{% url 'livroReceitaMiniChef' %}">Livro de receita</a></li>
@@ -54,6 +55,15 @@
                     <li><a href="{% url 'minhasReceitasMiniChef' %}">Minhas receitas</a></li>
                     <li><a href="{% url 'assinatura-mini-chef' %}">Assinaturas</a></li>
                 </ul>
+=======
+                    <ul>
+                        <li><a href="{% url 'editarPerfilMiniChef' %}">Editar perfil</a></li>
+                        <li><a href="{% url 'livroReceitaMiniChef' %}">Livro de receita</a></li>
+                        <li><a href="{% url 'adicionarReceitaMiniChef' %}">Adicionar Receita</a></li>
+                        <li><a href="{% url 'minhasReceitasMiniChef' %}">Minhas receitas</a></li>
+                        <li><a href="{% url 'assinatura-mini-chef-info1' %}">Assinaturas</a></li>
+                    </ul>
+>>>>>>> Stashed changes
                 </div>
                 <div class="menu-perfil-logout">
                     <button id="logout">
@@ -72,7 +82,7 @@
                 </div>
                 <div class="div-assinatura">
                     <ul>
-                        <li><a href="#">Assinaturas</a></li>
+                        <li><a href="{% url 'AssinaturaMiniChef' %}">Assinaturas</a></li>
                     </ul>
                 </div>
                 <img src="{% static 'img/ondas-menu-perfil-footer.svg' %}" id="onda-menu-footer" alt="">

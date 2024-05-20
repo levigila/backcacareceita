@@ -1,6 +1,6 @@
 from django.urls import path
 from.import views
-
+from .views import search_recipes
 
 urlpatterns = [
     path('cadastro/', views.cadastro, name='cadastro'),
@@ -97,4 +97,9 @@ urlpatterns = [
     # Perfil -> Alterar Senha
     path('alterarSenha/', views.alterarSenha, name='alterar-senha'),
     path('novaSenha/', views.novaSenha, name='nova-senha'),
+
+    #receitas
+    path('pesquisarReceita/', views.pesquisarReceita, name='pesquisarReceita'),
+    path('favoritar/', views.favoritar_receita, name='favoritar_receita'),
+    path('search_recipes/', search_recipes, name='search_recipes'),
 ]

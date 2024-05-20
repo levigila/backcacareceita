@@ -51,6 +51,7 @@
                 <h1>{{user.username}}</h1>
             </div>
             <div class="menu-perfil-content">
+<<<<<<< Updated upstream
                     <ul>
                         <li><a href="{% url 'editarPerfilAprendiz' %}">Editar perfil</a></li>
                         <li><a href="{% url 'livroReceitaAprendiz' %}">Livro de receita</a></li>
@@ -58,6 +59,15 @@
                         <li><a href="{% url 'minhasReceitasAprendiz' %}">Minhas receitas</a></li>
                         <li><a href="{% url 'assinatura-aprendiz' %}">Assinaturas</a></li>
                     </ul>
+=======
+                <ul>
+                    <li><a href="{% url 'editarPerfilAprendiz' %}">Editar perfil</a></li>
+                    <li><a href="{% url 'livroReceitaAprendiz' %}">Livro de receita</a></li>
+                    <li><a href="{% url 'adicionarReceitaAprendiz' %}">Adicionar Receita</a></li>
+                    <li><a href="{% url 'minhasReceitasAprendiz' %}">Minhas receitas</a></li>
+                    <li><a href="{% url 'assinatura-aprendiz' %}">Assinaturas</a></li>
+                </ul>
+>>>>>>> Stashed changes
             </div>
             <div class="menu-perfil-logout">
                 <button id="logout">
@@ -76,7 +86,7 @@
             </div>
             <div class="div-assinatura">
                 <ul>
-                    <li><a href="#">Assinaturas</a></li>
+                    <li><a href="{% url 'assinatura-aprendiz' %}">Assinaturas</a></li>
                 </ul>
             </div>
             <img src="{% static 'img/ondas-menu-perfil-footer.svg' %}" id="onda-menu-footer" alt="">

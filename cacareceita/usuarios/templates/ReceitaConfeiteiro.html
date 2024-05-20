@@ -50,7 +50,11 @@
                     <ul>
                         <li><a href="{% url 'editarPerfilConfeiteiro' %}">Editar perfil</a></li>
                         <li><a href="{% url 'livroReceitaConfeiteiro' %}">Livro de receita</a></li>
+<<<<<<< Updated upstream
                         <li><a href="{% url 'adicionarReceitaConfeiteiro' %}">Adicionar receita</a></li>
+=======
+                        <li><a href="{% url 'adicionarReceitaConfeiteiro' %}">Adicionar Receita</a></li>
+>>>>>>> Stashed changes
                         <li><a href="{% url 'minhasReceitasConfeiteiro' %}">Minhas receitas</a></li>
                         <li><a href="{% url 'assinatura-confeiteiro' %}">Assinaturas</a></li>
                     </ul>
@@ -72,7 +76,7 @@
                 </div>
                 <div class="div-assinatura">
                     <ul>
-                        <li><a href="#">Assinaturas</a></li>
+                        <li><a href="{% url 'assinatura-confeiteiro' %}">Assinaturas</a></li>
                     </ul>
                 </div>
                 <img src="{% static 'img/ondas-menu-perfil-footer.svg' %}" id="onda-menu-footer" alt="">
@@ -274,15 +278,19 @@
                     <h1>Deseja realmente sair?</h1>
                 </div>
                 <div class="form-sair">
-                    <form method="post">
-                        {%csrf_token %}
+                    <form action="{% url 'logout' %}" method="post">
+                        {% csrf_token %}
                         <button type="submit">
-                            <a href="{% url 'login' %}">Sim, desejo sair!</a>
+                            Sim, desejo sair!
                         </button>
                     </form>
-    
-                    <button class="voltar">Não, desejo voltar!</button>
+                
+                    
+                        <button type="submit" class="voltar">Não, desejo voltar!</button>
+                    </form>
                 </div>
+                
+                
                 <img src="{% static 'img/prato-img-sair.svg' %}" id="prato-sair" alt="">
             </div>
         </div>

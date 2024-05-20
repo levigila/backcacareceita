@@ -1,7 +1,7 @@
 
 import os
 from pathlib import Path
-
+from spoonacular.api import API
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -28,11 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'usuarios',
-    'django.contrib.sites',
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
-    'allauth.socialaccount.providers.google',
+    'spoonacular',
 ]
 
 MIDDLEWARE = [
@@ -43,7 +39,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'allauth.account.middleware.AccountMiddleware',
 ]
 
 ROOT_URLCONF = 'cacareceita.urls'
@@ -126,17 +121,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'usuarios.CustomUser'
 
-SOCIALACCOUNT_PROVIDERS = {
-    'google': {
-        'SCOPE': ['profile', 'email'],
-        'AUTH_PARAMS': {'access_type': 'online'},
-        'METHOD': 'oauth2',
-        'CLIENT_ID': '885179987570-6fkniv03p3ccqfskpg82ofvu08bh5up0.apps.googleusercontent.com',
-        'SECRET': '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',
-    }
-}
-AUTHENTICATION_BACKENDS = [
-    'django.contrib.auth.backends.ModelBackend',
-    'allauth.account.auth_backends.AuthenticationBackend',
-]
 
+SPOOONACULAR_API_KEY = 'a50e2cf10f3d4ca1b044d66c63dced85'  # Substitua por sua chave API
+SPOOONACULAR_BASE_URL = 'https://api.spoonacular.com'  # URL da API Spoonacular (opcional)
+client = API(api_key=SPOOONACULAR_API_KEY)
+
+# settings.py
+SITE_ID = 1

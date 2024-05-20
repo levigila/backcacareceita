@@ -48,8 +48,13 @@
                 <div class="menu-perfil-content">
                     <ul>
                         <li><a href="{% url 'editarPerfilVegano' %}">Editar perfil</a></li>
+<<<<<<< Updated upstream
                         <li><a href="{% url 'livroReceitaVegano' %}">Livro de receita</a></li>
                         <li><a href="{% url 'adicionarReceitaVegano' %}">Adicionar receita</a></li>
+=======
+                        <li><a href="livroReceitaAprendiz{% url 'livroReceitaVegano' %}">Livro de receita</a></li>
+                        <li><a href="{% url 'adicionarReceitaVegano' %}">Adicionar Receita</a></li>
+>>>>>>> Stashed changes
                         <li><a href="{% url 'minhasReceitasVegano' %}">Minhas receitas</a></li>
                         <li><a href="{% url 'assinatura-vegano' %}">Assinaturas</a></li>
                     </ul>
@@ -71,7 +76,7 @@
                 </div>
                 <div class="div-assinatura">
                     <ul>
-                        <li><a href="#">Assinaturas</a></li>
+                        <li><a href="{% url 'assinatura-vegano' %}">Assinaturas</a></li>
                     </ul>
                 </div>
                 <img src="{% static 'img/ondas-menu-perfil-footer.svg' %}" id="onda-menu-footer" alt="">
@@ -273,15 +278,19 @@
                     <h1>Deseja realmente sair?</h1>
                 </div>
                 <div class="form-sair">
-                    <form method="post">
-                        {%csrf_token %}
+                    <form action="{% url 'logout' %}" method="post">
+                        {% csrf_token %}
                         <button type="submit">
-                            <a href="{% url 'login' %}">Sim, desejo sair!</a>
+                            Sim, desejo sair!
                         </button>
                     </form>
-
-                    <button class="voltar">Não, desejo voltar!</button>
+                
+                    
+                        <button type="submit" class="voltar">Não, desejo voltar!</button>
+                    </form>
                 </div>
+                
+                
                 <img src="{% static 'img/prato-img-sair.svg' %}" id="prato-sair" alt="">
             </div>
         </div>

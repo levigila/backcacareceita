@@ -56,7 +56,11 @@
                 <ul>
                     <li><a href="{% url 'editarPerfilMiniChef' %}">Editar perfil</a></li>
                     <li><a href="{% url 'livroReceitaMiniChef' %}">Livro de receita</a></li>
+<<<<<<< Updated upstream
                     <li><a href="{% url 'adicionarReceitaMiniChef' %}">Adicionar receita</a></li>
+=======
+                    <li><a href="{% url 'adicionarReceitaMiniChef' %}">Adicionar Receita</a></li>
+>>>>>>> Stashed changes
                     <li><a href="{% url 'minhasReceitasMiniChef' %}">Minhas receitas</a></li>
                     <li><a href="{% url 'assinatura-mini-chef' %}">Assinaturas</a></li>
                 </ul>
@@ -78,7 +82,7 @@
             </div>
             <div class="div-assinatura">
                 <ul>
-                    <li><a href="#">Assinaturas</a></li>
+                    <li><a href="{% url 'assinatura-mini-chef' %}">Assinaturas</a></li>
                 </ul>
             </div>
             <img src="{% static 'img/ondas-menu-perfil-footer.svg' %}" id="onda-menu-footer" alt="">
@@ -110,6 +114,7 @@
         <div id="linha-ReceitaIncrivel"></div>
         <div class="conteudo-receitas">
             <div class="linha-cardReceita">
+<<<<<<< Updated upstream
                 <a href="{% url 'receitaMiniChef' %}" class="linkAncora">
                     <div class="cardReceita">
                         <div class="caixaEtiqueta-receita">
@@ -144,6 +149,9 @@
                 </a>
                 <a href="{% url 'receitaMiniChef' %}" class="linkAncora">
                     <div class="cardReceita">
+=======
+                    <a href="{% url 'receitaMiniChef' %}" class="cardReceita">
+>>>>>>> Stashed changes
                         <div class="caixaEtiqueta-receita">
                             <img class="etiquetaReceita" src="{% static 'img/etiquetaMiniChef.png' %}">
                         </div>
@@ -156,6 +164,14 @@
                             <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
                             <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
                         </div>
+<<<<<<< Updated upstream
+=======
+                    </a>
+                
+                <div class="cardReceita">
+                    <div class="caixaEtiqueta-receita">
+                        <img class="etiquetaReceita" src="{% static 'img/etiquetaMiniChef.png' %}">
+>>>>>>> Stashed changes
                     </div>
                 </a>
                 <a href="{% url 'receitaMiniChef' %}" class="linkAncora">
