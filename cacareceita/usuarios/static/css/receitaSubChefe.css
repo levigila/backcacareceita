@@ -368,9 +368,17 @@ main {
 
 /** Footer  */
 
+
 .rodape{
     margin-top: 50px;
 }
+
+.rodape{
+    background-image: url("../img/fundo-rodape-subchef.png");
+    width: auto;
+    height: 150px;
+ }
+
 
 .fundo-rodape{
     position: absolute;
@@ -385,7 +393,6 @@ main {
     display: flex;
     margin-left: 20px;
     align-items: center;
-    height: 222px;
     align-content: center;
  
 }
