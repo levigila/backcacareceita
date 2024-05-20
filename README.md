@@ -48,6 +48,7 @@ python manege.py runserver
 Ferramentas utilizadas no desenvolvimento do projeto:
 
 - [Django](https://www.djangoproject.com/) - O framework web usado.
+- [BootStrap](https://www.hostinger.com.br/tutoriais/o-que-e-bootstrap) - O framework web usado.
 - [HTML/CSS](https://www.w3schools.com/) - Linguagem de Marcação e de Estilo.
 - [JavaScript](https://nodejs.org/en) - Linguagem de Programação usada.
 - [SQLite](https://www.sqlite.org/) - Banco de Dados.
