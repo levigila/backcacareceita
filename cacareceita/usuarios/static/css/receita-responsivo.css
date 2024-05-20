@@ -8,6 +8,13 @@
 
     /* Receita  */
 
+    #etiqueta {
+        width: 85px;
+        position: absolute;
+        top: -27px;
+        left: -4px;
+    }
+
     .receita-top {
         gap: 0px;
     }
@@ -261,5 +268,24 @@
         align-items: center;
         justify-content: center;
         color: #fff;
+    }
+}
+
+
+@media screen and (min-width: 1660px){
+
+    .receita-main {
+        gap: 425px;
+    }
+
+    .receita-top {
+        gap: 425px;
+    }
+
+    #etiqueta {
+        width: 130px;
+        position: absolute;
+        top: -48px;
+        left: -6px;
     }
 }

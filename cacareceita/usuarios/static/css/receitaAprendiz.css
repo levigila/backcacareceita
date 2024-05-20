@@ -119,6 +119,7 @@ main {
 }
 
 .receita-img-audio {
+    position: relative;
     width: 500px;
 }
 
@@ -624,4 +625,11 @@ main {
     left: 0;
     width: 160px;
     z-index: -1;
+}
+
+#etiqueta {
+    width: 100px;
+    position: absolute;
+    top: -41px;
+    left: -4px;
 }
