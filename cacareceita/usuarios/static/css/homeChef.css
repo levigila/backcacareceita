@@ -152,14 +152,14 @@ main {
     cursor: pointer;
 }
 
-.fundoUtensilio2 {
+.fundoUtensilio2Chef {
     position: absolute;
     width: 220px;
     left: 0px;
     top: 270px;
 }
 
-.fundoUtensilio1 {
+.fundoUtensilio1Chef {
     position: absolute;
     width: 222px;
     right: 0px;
@@ -195,6 +195,16 @@ main {
     justify-content: space-between;
     gap: 43px;
 }
+
+.linkAncora {
+    text-decoration: none !important;
+    color: #000000;
+}
+
+.linkAncora:hover {
+    color: inherit;
+}
+
 .cardReceita {
     background-color: #FFF9F0;
     width: 210px;

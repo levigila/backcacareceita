@@ -14,6 +14,9 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/adicionarReceitaAprendiz.css' %}">
     <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header-responsivo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/adicionarReceita-responsivo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer-responsivo.css' %}">
 </head>
 
 <body>
@@ -49,12 +52,13 @@
             </div>
             <div class="menu-perfil-content">
                 <ul>
-                    <li><a href="{% url 'editarPerfilAprendiz' %}">Editar perfil</a></li>
-                    <li><a href="#">Livro de receita</a></li>
-                    <li><a href="#">Adicionar receita</a></li>
-                    <li><a href="#">Minhas receitas</a></li>
-                    <li><a href="#">Assinaturas</a></li>
-                </ul>
+                    <ul>
+                        <li><a href="{% url 'editarPerfilAprendiz' %}">Editar perfil</a></li>
+                        <li><a href="{% url 'livroReceitaAprendiz' %}">Livro de receita</a></li>
+                        <li><a href="{% url 'adicionarReceitaAprendiz' %}">Adicionar receita</a></li>
+                        <li><a href="{% url 'minhasReceitasAprendiz' %}">Minhas receitas</a></li>
+                        <li><a href="{% url 'assinatura-aprendiz' %}">Assinaturas</a></li>
+                    </ul>
             </div>
             <div class="menu-perfil-logout">
                 <button id="logout">
@@ -127,6 +131,7 @@
             <button class="botao-salvarReceita">Salvar Receita</button>
             <button class="botao-publicarReceita">Publicar Receita</button>
         </div>
+        
     </main>
     <div class="blur">
         <div class="sair">

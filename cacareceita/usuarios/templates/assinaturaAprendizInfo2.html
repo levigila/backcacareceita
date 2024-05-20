@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/reset.css' %}">
     <link rel="stylesheet" href="{% static 'css/assinaturaAprendizInfo2.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header-responsivo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/assinatura-info2-responsivo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer-responsivo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer-responsivo.css' %}">
     <title>Assinatura Aprendiz</title>
 </head>
 
@@ -41,15 +45,15 @@
                 <img src="{% static 'img/ondas-menu-perfil-top.svg' %}" id="onda-menu-top" alt="">
                 <div class="menu-perfil-header">
                     <img src="{% static 'img/icon-menu-perfil.svg' %}" alt="">
-                    <h1>{{user.username}}</h1>
+                    <h1>Ana Luísa</h1>
                 </div>
                 <div class="menu-perfil-content">
                     <ul>
                         <li><a href="{% url 'editarPerfilAprendiz' %}">Editar perfil</a></li>
-                        <li><a href="#">Livro de receita</a></li>
-                        <li><a href="#">Adicionar receita</a></li>
-                        <li><a href="#">Minhas receitas</a></li>
-                        <li><a href="#">Assinaturas</a></li>
+                        <li><a href="{% url 'livroReceitaAprendiz' %}">Livro de receita</a></li>
+                        <li><a href="{% url 'adicionarReceitaAprendiz' %}">Adicionar receita</a></li>
+                        <li><a href="{% url 'minhasReceitasAprendiz' %}">Minhas receitas</a></li>
+                        <li><a href="{% url 'assinatura-aprendiz' %}">Assinaturas</a></li>
                     </ul>
                 </div>
                 <div class="menu-perfil-logout">
@@ -77,6 +81,7 @@
             {% endif %}
         </header>
         <main>
+
             <div class="etapas">
                 <div class="etapa1"></div>
                 <div class="barra"></div>
@@ -84,10 +89,63 @@
                 <div class="barra"></div>
                 <div class="etapa3"></div>
             </div>
-            
+
             <h1 id="text-h1">Escolha o plano perfeito para você!</h1>
 
-            <input type="checkbox" name="" id="">
+            <div class="pagamento">
+                <label class="label-pagamento">
+                    <input type="checkbox" name="pix" id="pix">
+                    <span class="label-checkbox">Pix</span>
+                </label>
+
+                <label class="label-pagamento">
+                    <input type="checkbox" name="cartao" id="cartao">
+                    <span class="label-checkbox">Cartão</span>
+                </label>
+
+                <label class="label-pagamento">
+                    <input type="checkbox" name="boleto" id="boleto">
+                    <span class="label-checkbox">Boleto</span>
+                </label>
+            </div>
+
+            <a href="{% url 'assinatura-aprendiz' %}" id="voltar">Voltar</a>
+            <button id="continuar">Continuar</button>
+
+            <div class="cartao">
+
+                <div class="tipo-cartao">
+                    <label class="label-pagamento">
+                        <input type="checkbox" name="credito" id="credito">
+                        <span class="label-checkbox">Crédito</span>
+                    </label>
+                    <label class="label-pagamento">
+                        <input type="checkbox" name="debito" id="debito">
+                        <span class="label-checkbox">Débito</span>
+                    </label>
+                </div>
+                <div class="cartao-dados">
+                    <img src="{% static 'img/cartao.svg' %}" alt="">
+                    <div class="dados-cartao">
+                        <input type="text" name="numero-cartao" id="numero-cartao" placeholder="Cartao">
+                        <input type="text" name="nome-cartao" id="nome-cartao" placeholder="Cartao">
+                        <input type="text" name="cvv-cartao" maxlength="3" id="cvv-cartao" placeholder="CVV">
+                        <input type="text" name="validade-cartao" maxlength="7" id="validade-cartao"
+                            placeholder="mm/aaaa">
+                    </div>
+                </div>
+                <a href="{% url 'assinatura-aprendiz-finalizada' %}" id="confirmar">Confirmar</a>
+            </div>
+
+            <div class="pix">
+                <a href="#" id="qrcode">
+                    <img src="{% static 'img/qrcode.svg' %}" alt="">
+                </a>
+                <div class="confirm">
+                    <a href="" id="copiar">Copiar QRCde</a>
+                    <a href="{% url 'assinatura-aprendiz-finalizada' %}" id="confirmar1">Confirmar</a>
+                </div>
+            </div>
 
         </main>
         <div class="blur">
@@ -123,7 +181,9 @@
         </footer>
     </div>
     <script src="{% static 'js/menuPerfil.js' %}"></script>
+    <script src="{% static 'js/pagamento.js' %}"></script>
 
+</body>
 </body>
 
 </html>

@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/reset.css' %}">
     <link rel="stylesheet" href="{% static 'css/assinaturaConfeiteiroInfo2.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header-responsivo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/assinatura-info2-responsivo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer-responsivo.css' %}">
     <title>Assinatura Aprendiz</title>
 </head>
 
@@ -14,7 +17,7 @@
     <div class="container">
         <header>
             <div class="fundo-barraPesquisa">
-                <a href="{% url 'homeAprendiz' %}" class="logoPrincipal-cacareceita">
+                <a href="{% url 'homeConfeiteiro' %}" class="logoPrincipal-cacareceita">
                     <img src="{% static 'img/logoPrincipal-cacareceita3.png' %}">
                 </a>
                 <div>
@@ -46,10 +49,10 @@
                 <div class="menu-perfil-content">
                     <ul>
                         <li><a href="{% url 'editarPerfilConfeiteiro' %}">Editar perfil</a></li>
-                        <li><a href="#">Livro de receita</a></li>
-                        <li><a href="#">Adicionar receita</a></li>
-                        <li><a href="#">Minhas receitas</a></li>
-                        <li><a href="#">Assinaturas</a></li>
+                        <li><a href="{% url 'livroReceitaConfeiteiro' %}">Livro de receita</a></li>
+                        <li><a href="{% url 'adicionarReceitaConfeiteiro' %}">Adicionar receita</a></li>
+                        <li><a href="{% url 'minhasReceitasConfeiteiro' %}">Minhas receitas</a></li>
+                        <li><a href="{% url 'assinatura-confeiteiro' %}">Assinaturas</a></li>
                     </ul>
                 </div>
                 <div class="menu-perfil-logout">
@@ -105,7 +108,7 @@
                 </label>
             </div>
 
-            <a href="#" id="voltar">Voltar</a>
+            <a href="{% url 'assinatura-confeiteiro-info1' %}" id="voltar">Voltar</a>
             <button id="continuar">Continuar</button>
 
             <div class="cartao">
@@ -130,7 +133,7 @@
                             placeholder="mm/aaaa">
                     </div>
                 </div>
-                <a href="" id="confirmar">Confirmar</a>
+                <a href="{% url 'assinatura-confeiteiro-finalizada' %}" id="confirmar">Confirmar</a>
             </div>
 
             <div class="pix">
@@ -139,7 +142,7 @@
                 </a>
                 <div class="confirm">
                     <a href="" id="copiar">Copiar QRCde</a>
-                    <a href="" id="confirmar1">Confirmar</a>
+                    <a href="{% url 'assinatura-confeiteiro-finalizada' %}" id="confirmar1">Confirmar</a>
                 </div>
             </div>
 

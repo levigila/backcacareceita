@@ -1,0 +1,59 @@
+@media screen and (min-width: 744px) and (max-width: 1100px) {
+    
+    body {
+        overflow-x: hidden;
+    }
+
+    main h3 {
+        color: #496300;
+        font-size: 26px;
+        width: 473px;
+        line-height: 1.5;
+        text-align: right;
+        margin-left: 70px;
+    }
+
+    #imgOndasNav {
+        z-index: 1;
+    }
+
+    .vantagens {
+        border: 3px dashed #B13D0C;
+        border-radius: 20px;
+        width: 500px;
+        height: 350px;
+        padding: 0 40px;
+        margin-top: 131px;
+    }
+
+    #icon-prato {
+        position: absolute;
+        width: 160px;
+        left: 0;
+        top: 120px;
+    }
+
+    #bola1 {
+        width: 200px;
+        position: absolute;
+        top: 668px;
+        left: -10px;
+    }
+    
+    #bola2 {
+        width: 300px;
+        position: absolute;
+        top: 140px;
+        left: 580px;
+    }
+
+    main #assine-ja {
+        text-decoration: none;
+        background-color: #496300;
+        border-radius: 20px;
+        color: #fff;
+        padding: 8px 35px;
+        margin-top: 50px;
+        font-size: 20px;
+    }
+}

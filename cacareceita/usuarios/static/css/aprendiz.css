@@ -101,9 +101,8 @@ main {
 }
 
 .banner-principal {
-    max-width: 1000px;
+    width: 1000px;
     margin-top: 40px;
-    object-fit: cover;
 }
 
 .titulo-pesquiseReceita {
@@ -132,18 +131,18 @@ main {
     cursor: pointer;
 }
 
-.fundoUtensilio2 {
+.fundoUtensilio2Aprendiz {
     position: absolute;
-    width: 200px;
+    width: 232px;
     left: -37px;
-    top: 298px;
+    top: 307px;
 }
 
-.fundoUtensilio1 {
+.fundoUtensilio1Aprendiz {
     position: absolute;
-    width: 200px;
+    width: 261px;
     right: 0px;
-    top: 323px;
+    top: 336px;
 }
 
 #texto-ReceitaIncrivel {
@@ -174,6 +173,15 @@ main {
     margin-bottom: 30px;
     justify-content: space-between;
     gap: 43px;
+}
+
+.linkAncora {
+    text-decoration: none !important;
+    color: #000000;
+}
+
+.linkAncora:hover {
+    color: inherit;
 }
 
 .cardReceita {

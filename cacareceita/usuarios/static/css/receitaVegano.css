@@ -374,20 +374,17 @@ main {
     margin-top: 50px;
 }
 
-.fundo-rodape{
-    position: absolute;
-    width: 839px;
-    height: 222px;
-    left: 0;
-   
-}
+.rodape{
+    background-image: url("../img/fundo-rodape-vegano.png");
+    width: auto;
+    height: 150px;
+ }
 
 .itens {
     position: absolute;
     display: flex;
     margin-left: 20px;
     align-items: center;
-    height: 222px;
     align-content: center;
  
 }

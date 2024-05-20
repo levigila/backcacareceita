@@ -14,12 +14,15 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/editarPerfilVegano.css' %}">
     <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header-responsivo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/editarPerfil-responsivo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer-responsivo.css' %}">
 </head>
 
 <body>
     <header>
         <div class="fundo-barraPesquisa">
-            <a href="{% url 'homeAprendiz' %}" class="logoPrincipal-cacareceita">
+            <a href="{% url 'homeVegano' %}" class="logoPrincipal-cacareceita">
                 <img src="{% static 'img/logoPrincipal-cacareceita3.png' %}">
             </a>
             <div>
@@ -49,13 +52,13 @@
                 <h1>{{user.username}}</h1>
             </div>
             <div class="menu-perfil-content">
-                <ul>
-                    <li><a href="{% url 'editarPerfilVegano' %}">Editar perfil</a></li>
-                    <li><a href="#">Livro de receita</a></li>
-                    <li><a href="#">Adicionar receita</a></li>
-                    <li><a href="#">Minhas receitas</a></li>
-                    <li><a href="#">Assinaturas</a></li>
-                </ul>
+                    <ul>
+                        <li><a href="{% url 'editarPerfilVegano' %}">Editar perfil</a></li>
+                        <li><a href="{% url 'livroReceitaVegano' %}">Livro de receita</a></li>
+                        <li><a href="{% url 'adicionarReceitaVegano' %}">Adicionar receita</a></li>
+                        <li><a href="{% url 'minhasReceitasVegano' %}">Minhas receitas</a></li>
+                        <li><a href="{% url 'assinatura-vegano' %}">Assinaturas</a></li>
+                    </ul>
             </div>
             <div class="menu-perfil-logout">
                 <button id="logout">
@@ -91,18 +94,21 @@
             </div>
             <div class="caixa-dadosPerfil">
                 <p id="texto-meuPerfil">Meu Perfil</p>
-                <div class="dadosPerfil-nomeUsuario">
-                    <p>Ana Luísa Silva Ferreira</p>
+                <div class="caixaInput-nomeUsuario">
+                    <input type="text" class="dadosPerfil-nomeUsuario" placeholder="Ana Luísa Silva Ferreira" disabled>
                     <img src="{% static 'img/icon-editarPerfil2.png' %}">
                 </div>
-                <div class="dadosPerfil-emailUsuario">
-                    <p>ana.lsferreira@souunit.com.br</p>
+                <div class="caixaInput-emailUsuario">
+                    <input type="text" class="dadosPerfil-emailUsuario" placeholder="ana.lsferreira@souunit.com.br" disabled>
                     <img src="{% static 'img/icon-editarPerfil2.png' %}">
                 </div>
                 <a href="">
                     <button class="botao-alterarSenha">Alterar Senha</button>
                 </a>
-                <button class="botao-salvarAlteracoes">Salvar Alterações</button>
+                <div class="botoesExcluir_Salvar">
+                    <button class="botao-excluirConta">Excluir Conta</button>
+                    <button class="botao-salvarAlteracoes">Salvar Alterações</button>
+                </div>
             </div>
             
         </section>

@@ -152,14 +152,14 @@ main {
     cursor: pointer;
 }
 
-.fundoUtensilio2 {
+.fundoUtensilio2MiniChef {
     position: absolute;
     width: 210px;
     left: 0px;
     top: 250px;
 }
 
-.fundoUtensilio1 {
+.fundoUtensilio1MiniChef {
     position: absolute;
     width: 270px;
     right: 0px;
@@ -194,6 +194,15 @@ main {
     margin-bottom: 30px;
     justify-content: space-between;
     gap: 43px;
+}
+
+.linkAncora {
+    text-decoration: none !important;
+    color: #000000;
+}
+
+.linkAncora:hover {
+    color: inherit;
 }
 
 .cardReceita {

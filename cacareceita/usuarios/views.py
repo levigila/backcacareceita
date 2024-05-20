@@ -149,7 +149,8 @@ def buscaReceitaVegano(request):
 
 
 def homeAprendiz(request):
-    return render(request, 'homeAprendiz.html')
+    cd = 5
+    return render(request, 'homeAprendiz.html', {"cd": cd})
 
 
 def homeMiniChef(request):
@@ -324,6 +325,24 @@ def assinaturaVeganoFinalizada(request):
 
 # Fim Assinatura
 
+#Editar receita
+def editarReceitaAprendiz(request):
+    return render(request, 'editarReceitaAprendiz.html')
+
+def editarReceitaMiniChef(request):
+    return render(request, 'editarReceitaMiniChef.html')
+
+def editarReceitaSubChef(request):
+    return render(request, 'editarReceitaSubChef.html')
+
+def editarReceitaChef(request):
+    return render(request, 'editarReceitaChef.html')
+
+def editarReceitaConfeiteiro(request):
+    return render(request, 'editarReceitaConfeiteiro.html')
+
+def editarReceitaVegano(request):
+    return render(request, 'editarReceitaVegano.html')
 
 # Perfil -> Alterar Senha
 def alterarSenha(request):

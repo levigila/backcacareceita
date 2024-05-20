@@ -7,6 +7,9 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/receitaSubChefe.css' %}">
     <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header-responsivo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/receita-responsivo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer-responsivo.css' %}">
     <title>Receita</title>
 </head>
 
@@ -14,7 +17,7 @@
     <div class="container">
         <header>
             <div class="fundo-barraPesquisa">
-                <a href="{% url 'homeAprendiz' %}" class="logoPrincipal-cacareceita">
+                <a href="{% url 'homeSubChef' %}" class="logoPrincipal-cacareceita">
                     <img src="{% static 'img/logoPrincipal-cacareceita3.png' %}">
                 </a>
                 <div>
@@ -43,13 +46,13 @@
                     <h1>{{user.username}}</h1>
                 </div>
                 <div class="menu-perfil-content">
-                    <ul>
-                        <li><a href="{% url 'editarPerfilSubChef' %}">Editar perfil</a></li>
-                        <li><a href="#">Livro de receita</a></li>
-                        <li><a href="#">Adicionar receita</a></li>
-                        <li><a href="#">Minhas receitas</a></li>
-                        <li><a href="#">Assinaturas</a></li>
-                    </ul>
+                <ul>
+                    <li><a href="{% url 'editarPerfilSubChef' %}">Editar perfil</a></li>
+                    <li><a href="{% url 'livroReceitaSubChef' %}">Livro de receita</a></li>
+                    <li><a href="{% url 'adicionarReceitaSubChef' %}">Adicionar receita</a></li>
+                    <li><a href="{% url 'minhasReceitasSubChef' %}">Minhas receitas</a></li>
+                    <li><a href="{% url 'assinatura-sub-chef' %}">Assinaturas</a></li>
+                </ul>
                 </div>
                 <div class="menu-perfil-logout">
                     <button id="logout">
@@ -276,14 +279,13 @@
                             <a href="{% url 'login' %}">Sim, desejo sair!</a>
                         </button>
                     </form>
-    
+
                     <button class="voltar">Não, desejo voltar!</button>
                 </div>
                 <img src="{% static 'img/prato-img-sair.svg' %}" id="prato-sair" alt="">
             </div>
         </div>
         <footer class="rodape">
-            <img class="fundo-rodape" src="{% static 'img/footer-sub-chefe.svg' %}">
             <div class="itens">
                 <img class="logo-cabaret" src="{% static 'img/logo-cabaret.png' %}">
                 <div>
@@ -299,9 +301,9 @@
 
     <script>
         function imprimirPagina() {
-          window.print();
+            window.print();
         }
-      </script>
+    </script>
 </body>
 
 </html>

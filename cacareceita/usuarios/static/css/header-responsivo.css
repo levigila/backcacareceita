@@ -1,4 +1,4 @@
-@media screen and (min-width: 744px) and (max-width: 1100px) { 
+@media screen and (min-width: 744px) and (max-width: 1100px) {
     .logoPrincipal-cacareceita {
         position: initial;
         left: 74px;
@@ -15,6 +15,10 @@
         padding: 0 15px;
     }
 
+    .barra-pesquisa {
+        margin-right: 70px;
+    }
+
     .lista-menu {
         width: 100%;
         justify-content: space-between;
@@ -24,5 +28,57 @@
     .lista-menu li a {
         margin-right: 0;
     }
+
+    /* menu */
+
+    .menu-perfil-header {
+        height: 190px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-size: 24px;
+        color: #B13D0C;
+        margin-top: 20px;
+    }
+
+    .menu-perfil-logout button {
+        margin: 30px auto 0;
+        width: 140px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        border: none;
+        background-color: #B13D0C;
+        font-size: 20px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .menu-perfil-content {
+        width: 100%;
+        margin-top: 0;
+    }
+
+}
+
+@media screen and (min-width: 1600px){
     
+    .lista-menu {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .lista-menu li a {
+        text-decoration: none;
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+    }
+
 }

@@ -8,6 +8,8 @@
 
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/cadastro.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cadastro-responsivo.css' %}">
+
     <script src="{% static 'js/cadastro.js' %}"></script>
     <title>Caça Receita</title>
 </head>
@@ -23,18 +25,6 @@
             </div>
             <div class="area-transparente">
                 <h1>Cadastro</h1>
-                <h3>Entre com: </h3>
-                <div class="outras-formas-cadastro">
-                    <a href="#" target="_blank">
-                        <img src="{% static 'img/icon-google.svg' %}" alt="">
-                    </a>
-                    <a href="#" target="_blank">
-                        <img src="{% static 'img/icon-apple.svg' %}" alt="">
-                    </a>
-                    <a href="#" target="_blank">
-                        <img src="{% static 'img/icon-facebook.svg' %}" alt="">
-                    </a>
-                </div>
             
                 <form id="cadastroForm" action="{% url 'cadastro' %}" method="POST">
                     {%csrf_token %}

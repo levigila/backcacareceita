@@ -85,7 +85,7 @@ main {
 
 .lista-menu li a{
     text-decoration: none;
-    font-family: "Josefin Sans", sans-serif;
+
     font-size: 18px;
     color: #7A3B28;
     font-weight: 500;
@@ -368,13 +368,21 @@ main {
 
 /** Footer  */
 
+
 .rodape{
     margin-top: 50px;
 }
 
+.rodape{
+    background-image: url("../img/fundo-rodape-subchef.png");
+    width: auto;
+    height: 150px;
+ }
+
+
 .fundo-rodape{
     position: absolute;
-    width: 839px;
+    width: 100%;
     height: 222px;
     left: 0;
    
@@ -385,7 +393,6 @@ main {
     display: flex;
     margin-left: 20px;
     align-items: center;
-    height: 222px;
     align-content: center;
  
 }
