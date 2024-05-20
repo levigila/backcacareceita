@@ -53,9 +53,13 @@ Ferramentas utilizadas no desenvolvimento do projeto:
 - [SQLite](https://www.sqlite.org/) - Banco de Dados.
 - [Scrum](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwinrvej15yGAxUcmMIIHYzWBucYABABGgJqZg&ase=2&gclid=Cj0KCQjw6auyBhDzARIsALIo6v_1oS74YLYI0_rAoG34b_08EsncSOAxmRVXCbLQ7WKUCEe_mgC2RAgaAscSEALw_wcB&ohost=www.google.com&cid=CAESVuD2E7TzYd3ZhzeukkUAE8AHKsL4C0FSqX5TTPi8STQdd6QkzCUkxNdiIiNNvDm3v585lJL5-NOVgTLTMjLXRIIiyrrt_FwtmEFlw_29thSVY3bxBnD4&sig=AOD64_1i_LYwuAc9y78XJnpCqpmVLZNbzA&q&nis=4&adurl&ved=2ahUKEwjCie2j15yGAxVkqJUCHbaAADwQ0Qx6BAgFEAE) -Metodologia Usada.
 
+## API Usada 🛠️
+
+Este projeto utiliza a API [Spoonacular API](https://platform.fatsecret.com/platform-api?keyword=spoonacular%20api&device=c&network=g&gad_source=1&gclid=Cj0KCQjw6auyBhDzARIsALIo6v8NE7vqE3SsIQS4ja1g8L6_RNHzmvaM1sMdl7znFD4H6Sw3tR_0MFgaAufrEALw_wcBi)
+
 ## ✒️ Autores
 
-- **Gerente do Projeto e Designer**-[@Analuisa](https://www.linkedin.com/in/lu%C3%ADsa-ferreira-3316a0218/)
+- **Gerente do Projeto e Designer**-[@LuisaFerreira](https://www.linkedin.com/in/lu%C3%ADsa-ferreira-3316a0218/)
 - **Designer**-[@ThaylannyFernanda](https://www.linkedin.com/in/thaylanny-fernanda-742b7a251/)
 - **Desenvolvedora Front-End**-[@IsabelaSantos](https://www.linkedin.com/in/isabeladsilvati/)
 - **Desenvolvedor Front-End**-[@VitorPaz](https://www.linkedin.com/in/viipaxx/)
