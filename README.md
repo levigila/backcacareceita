@@ -48,20 +48,22 @@ python manege.py runserver
 Ferramentas utilizadas no desenvolvimento do projeto:
 
 - [Django](https://www.djangoproject.com/) - O framework web usado.
+- [HTML/CSS](https://www.w3schools.com/) - Linguagem de Marcação e de Estilo.
+- [JavaScript](https://nodejs.org/en) - Linguagem de Programação usada.
 - [SQLite](https://www.sqlite.org/) - Banco de Dados.
 - [Scrum](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwinrvej15yGAxUcmMIIHYzWBucYABABGgJqZg&ase=2&gclid=Cj0KCQjw6auyBhDzARIsALIo6v_1oS74YLYI0_rAoG34b_08EsncSOAxmRVXCbLQ7WKUCEe_mgC2RAgaAscSEALw_wcB&ohost=www.google.com&cid=CAESVuD2E7TzYd3ZhzeukkUAE8AHKsL4C0FSqX5TTPi8STQdd6QkzCUkxNdiIiNNvDm3v585lJL5-NOVgTLTMjLXRIIiyrrt_FwtmEFlw_29thSVY3bxBnD4&sig=AOD64_1i_LYwuAc9y78XJnpCqpmVLZNbzA&q&nis=4&adurl&ved=2ahUKEwjCie2j15yGAxVkqJUCHbaAADwQ0Qx6BAgFEAE) -Metodologia Usada.
 
 ## ✒️ Autores
 
-- **Gerente do Projeto e Designer**  [@Analuisa](https://www.linkedin.com/in/lu%C3%ADsa-ferreira-3316a0218/)
-- **Designer**  [@ThaylannyFernanda](https://www.linkedin.com/in/thaylanny-fernanda-742b7a251/)
-- **Desenvolvedora Front-End**  [@IsabelaSantos](https://www.linkedin.com/in/isabeladsilvati/)
-- **Desenvolvedor Front-End**  [@VitorPaz](https://www.linkedin.com/in/viipaxx/)
-- **Desenvolvedora Back-End**  [@JamilleMaria](https://www.linkedin.com/in/jamille-maria-815215249/)
-- **Desenvolvedor Back-End e QA**  [@LeviGila](https://www.linkedin.com/in/levi-gila/)
-- **DBA**  [@MariaEugenia](https://www.linkedin.com/in/maria-eugenia-98a6a91ab/)
-- **DBA**  [@MariaKarolyna](https://www.linkedin.com/in/karolyna-rolim-1bb862237/)
-- **DBA**  [@MariaAlice](https://www.linkedin.com/in/alice-dantas-343a11219/)
+- **Gerente do Projeto e Designer**-[@Analuisa](https://www.linkedin.com/in/lu%C3%ADsa-ferreira-3316a0218/)
+- **Designer**-[@ThaylannyFernanda](https://www.linkedin.com/in/thaylanny-fernanda-742b7a251/)
+- **Desenvolvedora Front-End**-[@IsabelaSantos](https://www.linkedin.com/in/isabeladsilvati/)
+- **Desenvolvedor Front-End**-[@VitorPaz](https://www.linkedin.com/in/viipaxx/)
+- **Desenvolvedora Back-End**-[@JamilleMaria](https://www.linkedin.com/in/jamille-maria-815215249/)
+- **Desenvolvedor Back-End e QA**-[@LeviGila](https://www.linkedin.com/in/levi-gila/)
+- **DBA**-[@MariaEugenia](https://www.linkedin.com/in/maria-eugenia-98a6a91ab/)
+- **DBA**-[@MariaKarolyna](https://www.linkedin.com/in/karolyna-rolim-1bb862237/)
+- **DBA**-[@MariaAlice](https://www.linkedin.com/in/alice-dantas-343a11219/)
   
 Você também pode ver a lista de [todos os colaboradores](https://github.com/levigila/backcacareceita/graphs/contributors) que participaram deste projeto.
 
