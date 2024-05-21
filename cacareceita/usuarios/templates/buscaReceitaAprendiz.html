@@ -7,12 +7,8 @@
     <title>Receitas</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<<<<<<< Updated upstream
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
-=======
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
->>>>>>> Stashed changes
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <!-- Link bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
@@ -20,11 +16,9 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/buscaReceitaAprendiz.css' %}">
     <link rel="stylesheet" href="{% static 'css/reset.css' %}">
-<<<<<<< Updated upstream
     <link rel="stylesheet" href="{% static 'css/header-responsivo.css' %}">
     <link rel="stylesheet" href="{% static 'css/buscaReceita-responsivo.css' %}">
     <link rel="stylesheet" href="{% static 'css/footer-responsivo.css' %}">
-=======
     <style>
         /* Estilos básicos para a caixa de sugestões */
         #suggestions {
@@ -45,7 +39,6 @@
             background-color: #f0f0f0;
         }
     </style>
->>>>>>> Stashed changes
 </head>
 
 <body>
@@ -113,7 +106,6 @@
         {% endif %}
     </header>
     <main>
-<<<<<<< Updated upstream
         <div class="banner-aprendiz" data-interval="6000" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -128,9 +120,6 @@
                 </div>
             </div>
         </div>
-=======
-        <img class="banner-aprendiz" src="{% static 'img/banner-aprendiz.png' %}" alt="Banner Aprendiz">
->>>>>>> Stashed changes
         <section class="area-receitas">
             <div class="caixa-filtroReceita">
                 <div class="caixa-pesquisaFiltro">
@@ -145,29 +134,15 @@
                 <div class="caixa-filtro">
                     <div id="area-indicador">
                         <p>Selecione os seus ingredientes</p>
-<<<<<<< Updated upstream
                         <div id="circulo">
                         </div>
 
-=======
-                        <div id="circulo"></div>
->>>>>>> Stashed changes
                     </div>
                     <div class="secao-ingredientes">
-                        <p class="secao-titulo">Ingredientes Essenciais</p>
+                        <p class="secao-titulo">Ingredientes Selecionados</p>
                         <div class="opcoes-ingredientes">
                             <div class="opcoes">
-<<<<<<< Updated upstream
-                                <button>Ovo</button>
-                                <button>Arroz</button>
-                                <button>Feijão</button>
-                                <button>Macarrão</button>
-                                <button>Leite</button>
-                                <button>Açúcar</button>
-                                <button>Manteiga</button>
-                                <button>Fermento em pó</button>
-                                <button>Molho de tomate</button>
-                                <button>+10 ingredientes</button>
+                                
                             </div>
                         </div>
                     </div>
@@ -192,10 +167,8 @@
                         <div class="opcoes-ingredientes">
                             <div class="opcoes">
 
-=======
                                
                                 <!-- Os botões de ingredientes essenciais aqui são preenchidos dinamicamente pelo JavaScript -->
->>>>>>> Stashed changes
                             </div>
                         </div>
                     </div>
@@ -206,7 +179,7 @@
                 <p id="receitasCompativeis">Receitas compatíveis com seus ingredientes</p>
                 <div class="conteudo-receitas">
 <<<<<<< Updated upstream
-                    <div class="linha-cardReceita">
+                    <!-- <div class="linha-cardReceita">
                         <a href="{% url 'receitaAprendiz' %}" class="linkAncora">
                             <div class="cardReceita">
                                 <div class="caixaEtiqueta-receita">
@@ -407,7 +380,7 @@
                         </a>
                     </div>
                 </div>
-        </section>
+        </section> -->
         <img id="banner-anuncio" src="{% static 'img/anuncio3.png' %}">
         <div class="blur">
             <div class="sair">
@@ -460,6 +433,7 @@
     <!-- Link para o arquivo JavaScript -->
     <script src="{% static 'js/script.js' %}"></script>
 >>>>>>> Stashed changes
+<div id="estrelinha" data-url="{% static 'img/icon-estrelaAvaliacao.png' %}"></div>
 </body>
 
 </html>

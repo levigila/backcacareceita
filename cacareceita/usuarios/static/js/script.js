@@ -69,13 +69,13 @@ document.addEventListener('DOMContentLoaded', function () {
                     cardReceita.classList.add('cardReceita');
 
                     // Conteúdo da cardReceita
-                    const caixaEtiqueta = document.createElement('div');
-                    caixaEtiqueta.classList.add('caixaEtiqueta-receita');
-                    const etiqueta = document.createElement('img');
-                    etiqueta.classList.add('etiquetaReceita');
-                    etiqueta.src = recipe.image;
-                    caixaEtiqueta.appendChild(etiqueta);
-                    cardReceita.appendChild(caixaEtiqueta);
+                    // const caixaEtiqueta = document.createElement('div');
+                    // caixaEtiqueta.classList.add('caixaEtiqueta-receita');
+                    // const etiqueta = document.createElement('img');
+                    // etiqueta.classList.add('etiquetaReceita');
+                    // etiqueta.src = recipe.image;
+                    // caixaEtiqueta.appendChild(etiqueta);
+                    // cardReceita.appendChild(caixaEtiqueta);
 
                     const imagemReceita = document.createElement('img');
                     imagemReceita.classList.add('foto-receita');
@@ -86,15 +86,15 @@ document.addEventListener('DOMContentLoaded', function () {
                     tituloReceita.textContent = recipe.title;
                     cardReceita.appendChild(tituloReceita);
 
-                    const avaliacaoReceita = document.createElement('div');
-                    avaliacaoReceita.classList.add('avaliacao-receita');
-                    for (let i = 0; i < 5; i++) {
-                        const estrela = document.createElement('img');
-                        estrela.classList.add('estrela-avaliacao');
-                        estrela.src = 'img/icon-estrelaAvaliacao.png';
-                        avaliacaoReceita.appendChild(estrela);
-                    }
-                    cardReceita.appendChild(avaliacaoReceita);
+                    // const avaliacaoReceita = document.createElement('div');
+                    // avaliacaoReceita.classList.add('avaliacao-receita');
+                    // for (let i = 0; i < 5; i++) {
+                    //     const estrela = document.createElement('img');
+                    //     estrela.classList.add('estrelinha');
+                    //     estrela.src = 'estrelinha';
+                    //     avaliacaoReceita.appendChild(estrela);
+                    // }
+                    // cardReceita.appendChild(avaliacaoReceita);
 
                     // Adiciona a cardReceita à linha atual
                     currentRow.appendChild(cardReceita);

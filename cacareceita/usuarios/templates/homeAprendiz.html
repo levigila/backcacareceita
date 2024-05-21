@@ -53,7 +53,6 @@
                 <h1>{{user.username}}</h1>
             </div>
             <div class="menu-perfil-content">
-<<<<<<< Updated upstream
                     <ul>
                         <li><a href="{% url 'editarPerfilAprendiz' %}">Editar perfil</a></li>
                         <li><a href="{% url 'livroReceitaAprendiz' %}">Livro de receita</a></li>
@@ -61,15 +60,7 @@
                         <li><a href="{% url 'minhasReceitasAprendiz' %}">Minhas receitas</a></li>
                         <li><a href="{% url 'assinatura-aprendiz' %}">Assinaturas</a></li>
                     </ul>
-=======
-                <ul>
-                    <li><a href="{% url 'editarPerfilAprendiz' %}">Editar perfil</a></li>
-                    <li><a href="{% url 'livroReceitaAprendiz' %}">Livro de receita</a></li>
-                    <li><a href="{% url 'adicionarReceitaAprendiz' %}">Adicionar Receita</a></li>
-                    <li><a href="{% url 'minhasReceitasAprendiz' %}">Minhas receitas</a></li>
-                    <li><a href="{% url 'assinatura-aprendiz' %}">Assinaturas</a></li>
-                </ul>
->>>>>>> Stashed changes
+
             </div>
             <div class="menu-perfil-logout">
                 <button id="logout">
@@ -120,26 +111,11 @@
         <div id="linha-ReceitaIncrivel"></div>
         <div class="conteudo-receitas">
             <div class="linha-cardReceita">
-<<<<<<< Updated upstream
-                <a href="{% url 'receitaAprendiz' %}" class="linkAncora">
-                    <div class="cardReceita">
-                        <div class="caixaEtiqueta-receita">
-                            <img class="etiquetaReceita" src="{% static 'img/etiquetaReceita.png' %}">
-                        </div>
-                        <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}">
-                        <p>Salpicão de frango simples</p>
-                        <div class="avaliacao-receita">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                        </div>
-=======
-                <a href="{% url 'receitaAprendiz' %}" class="cardReceita" id="receita1">
+
+                <a href="{% url 'receitaAprendiz' %}" class="cardReceita" id="receita1" class="linkAncora">
                     <div class="caixaEtiqueta-receita">
                         <img class="etiquetaReceita" src="{% static 'img/etiquetaReceita.png' %}">
->>>>>>> Stashed changes
+
                     </div>
                 </a>
                 <a href="{% url 'receitaAprendiz' %}" class="linkAncora">
@@ -158,26 +134,9 @@
                         </div>
                     </div>
                 </a>
-<<<<<<< Updated upstream
-                <a href="{% url 'receitaAprendiz' %}" class="linkAncora">
-                    <div class="cardReceita">
-                        <div class="caixaEtiqueta-receita">
-                            <img class="etiquetaReceita" src="{% static 'img/etiquetaReceita.png' %}">
-                        </div>
-                        <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}">
-                        <p>Salpicão de frango simples</p>
-                        <div class="avaliacao-receita">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                        </div>
-=======
-                <a href="{% url 'receitaAprendiz' %}" class="cardReceita" id="receita2">
+                <a href="{% url 'receitaAprendiz' %}" class="cardReceita" id="receita2" class="linkAncora">
                     <div class="caixaEtiqueta-receita">
                         <img class="etiquetaReceita" src="{% static 'img/etiquetaReceita.png' %}">
->>>>>>> Stashed changes
                     </div>
                 </a>
                 <a href="{% url 'receitaAprendiz' %}" class="linkAncora">
@@ -196,25 +155,7 @@
                         </div>
                     </div>
                 </a>
-<<<<<<< Updated upstream
-            </div>
-            <div class="linha-cardReceita">
-                <a href="{% url 'receitaAprendiz' %}" class="linkAncora">
-                    <div class="cardReceita">
-                        <div class="caixaEtiqueta-receita">
-                            <img class="etiquetaReceita" src="{% static 'img/etiquetaReceita.png' %}">
-                        </div>
-                        <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}">
-                        <p>Salpicão de frango simples</p>
-                        <div class="avaliacao-receita">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                        </div>
-=======
-                <a href="{% url 'receitaAprendiz' %}" class="cardReceita" id="receita3">
+                <a href="{% url 'receitaAprendiz' %}" class="cardReceita" id="receita3" class="linkAncora">
                     <div class="caixaEtiqueta-receita">
                         <img class="etiquetaReceita" src="{% static 'img/etiquetaReceita.png' %}">
                     </div>
@@ -247,7 +188,6 @@
                 <a href="{% url 'receitaAprendiz' %}" class="cardReceita" id="receita5">
                     <div class="caixaEtiqueta-receita">
                         <img class="etiquetaReceita" src="{% static 'img/etiquetaReceita.png' %}">
->>>>>>> Stashed changes
                     </div>
                 </a>
                 <a href="{% url 'receitaAprendiz' %}" class="linkAncora">
@@ -266,26 +206,9 @@
                         </div>
                     </div>
                 </a>
-<<<<<<< Updated upstream
-                <a href="{% url 'receitaAprendiz' %}" class="linkAncora">
-                    <div class="cardReceita">
-                        <div class="caixaEtiqueta-receita">
-                            <img class="etiquetaReceita" src="{% static 'img/etiquetaReceita.png' %}">
-                        </div>
-                        <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}">
-                        <p>Salpicão de frango simples</p>
-                        <div class="avaliacao-receita">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                        </div>
-=======
-                <a href="{% url 'receitaAprendiz' %}" class="cardReceita" id="receita6">
+                <a href="{% url 'receitaAprendiz' %}" class="cardReceita" id="receita6" class="linkAncora">
                     <div class="caixaEtiqueta-receita">
                         <img class="etiquetaReceita" src="{% static 'img/etiquetaReceita.png' %}">
->>>>>>> Stashed changes
                     </div>
                 </a>
                 <a href="{% url 'receitaAprendiz' %}" class="linkAncora">
@@ -304,25 +227,7 @@
                         </div>
                     </div>
                 </a>
-<<<<<<< Updated upstream
-            </div>
-            <div class="linha-cardReceita">
-                <a href="{% url 'receitaAprendiz' %}" class="linkAncora">
-                    <div class="cardReceita">
-                        <div class="caixaEtiqueta-receita">
-                            <img class="etiquetaReceita" src="{% static 'img/etiquetaReceita.png' %}">
-                        </div>
-                        <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}">
-                        <p>Salpicão de frango simples</p>
-                        <div class="avaliacao-receita">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                        </div>
-=======
-                <a href="{% url 'receitaAprendiz' %}" class="cardReceita" id="receita7">
+                <a href="{% url 'receitaAprendiz' %}" class="cardReceita" id="receita7" class="linkAncora">
                     <div class="caixaEtiqueta-receita">
                         <img class="etiquetaReceita" src="{% static 'img/etiquetaReceita.png' %}">
                     </div>
@@ -355,7 +260,6 @@
                 <a href="{% url 'receitaAprendiz' %}" class="cardReceita" id="receita9">
                     <div class="caixaEtiqueta-receita">
                         <img class="etiquetaReceita" src="{% static 'img/etiquetaReceita.png' %}">
->>>>>>> Stashed changes
                     </div>
                 </a>
                 <a href="{% url 'receitaAprendiz' %}" class="linkAncora">
@@ -374,26 +278,9 @@
                         </div>
                     </div>
                 </a>
-<<<<<<< Updated upstream
-                <a href="{% url 'receitaAprendiz' %}" class="linkAncora">
-                    <div class="cardReceita">
-                        <div class="caixaEtiqueta-receita">
-                            <img class="etiquetaReceita" src="{% static 'img/etiquetaReceita.png' %}">
-                        </div>
-                        <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}">
-                        <p>Salpicão de frango simples</p>
-                        <div class="avaliacao-receita">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                        </div>
-=======
-                <a href="{% url 'receitaAprendiz' %}" class="cardReceita" id="receita10">
+                <a href="{% url 'receitaAprendiz' %}" class="cardReceita" id="receita10" class="linkAncora">
                     <div class="caixaEtiqueta-receita">
                         <img class="etiquetaReceita" src="{% static 'img/etiquetaReceita.png' %}">
->>>>>>> Stashed changes
                     </div>
                 </a>
                 <a href="{% url 'receitaAprendiz' %}" class="linkAncora">
@@ -412,26 +299,7 @@
                         </div>
                     </div>
                 </a>
-<<<<<<< Updated upstream
-            </div>
-            <img id="banner-anuncio" src="{% static 'img/anuncio1-home.png' %}">
-            <div class="linha-cardReceita">
-                <a href="{% url 'receitaAprendiz' %}" class="linkAncora">
-                    <div class="cardReceita">
-                        <div class="caixaEtiqueta-receita">
-                            <img class="etiquetaReceita" src="{% static 'img/etiquetaReceita.png' %}">
-                        </div>
-                        <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}">
-                        <p>Salpicão de frango simples</p>
-                        <div class="avaliacao-receita">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                        </div>
-=======
-                <a href="{% url 'receitaAprendiz' %}" class="cardReceita" id="receita11">
+                <a href="{% url 'receitaAprendiz' %}" class="cardReceita" id="receita11" class="linkAncora">
                     <div class="caixaEtiqueta-receita">
                         <img class="etiquetaReceita" src="{% static 'img/etiquetaReceita.png' %}">
                     </div>
@@ -465,7 +333,6 @@
                 <a href="{% url 'receitaAprendiz' %}" class="cardReceita" id="receita13">
                     <div class="caixaEtiqueta-receita">
                         <img class="etiquetaReceita" src="{% static 'img/etiquetaReceita.png' %}">
->>>>>>> Stashed changes
                     </div>
                 </a>
                 <a href="{% url 'receitaAprendiz' %}" class="linkAncora">
@@ -484,26 +351,9 @@
                         </div>
                     </div>
                 </a>
-<<<<<<< Updated upstream
-                <a href="{% url 'receitaAprendiz' %}" class="linkAncora">
-                    <div class="cardReceita">
-                        <div class="caixaEtiqueta-receita">
-                            <img class="etiquetaReceita" src="{% static 'img/etiquetaReceita.png' %}">
-                        </div>
-                        <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}">
-                        <p>Salpicão de frango simples</p>
-                        <div class="avaliacao-receita">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                        </div>
-=======
-                <a href="{% url 'receitaAprendiz' %}" class="cardReceita" id="receita14">
+                <a href="{% url 'receitaAprendiz' %}" class="cardReceita" id="receita14" class="linkAncora">
                     <div class="caixaEtiqueta-receita">
                         <img class="etiquetaReceita" src="{% static 'img/etiquetaReceita.png' %}">
->>>>>>> Stashed changes
                     </div>
                 </a>
                 <a href="{% url 'receitaAprendiz' %}" class="linkAncora">
@@ -522,25 +372,7 @@
                         </div>
                     </div>
                 </a>
-<<<<<<< Updated upstream
-            </div>
-            <div class="linha-cardReceita">
-                <a href="{% url 'receitaAprendiz' %}" class="linkAncora">
-                    <div class="cardReceita">
-                        <div class="caixaEtiqueta-receita">
-                            <img class="etiquetaReceita" src="{% static 'img/etiquetaReceita.png' %}">
-                        </div>
-                        <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}">
-                        <p>Salpicão de frango simples</p>
-                        <div class="avaliacao-receita">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                        </div>
-=======
-                <a href="{% url 'receitaAprendiz' %}" class="cardReceita" id="receita15">
+                <a href="{% url 'receitaAprendiz' %}" class="cardReceita" id="receita15" class="linkAncora">
                     <div class="caixaEtiqueta-receita">
                         <img class="etiquetaReceita" src="{% static 'img/etiquetaReceita.png' %}">
                     </div>
@@ -573,7 +405,6 @@
                 <a href="{% url 'receitaAprendiz' %}" class="cardReceita" id="receita17">
                     <div class="caixaEtiqueta-receita">
                         <img class="etiquetaReceita" src="{% static 'img/etiquetaReceita.png' %}">
->>>>>>> Stashed changes
                     </div>
                 </a>
                 <a href="{% url 'receitaAprendiz' %}" class="linkAncora">
@@ -592,26 +423,9 @@
                         </div>
                     </div>
                 </a>
-<<<<<<< Updated upstream
-                <a href="{% url 'receitaAprendiz' %}" class="linkAncora">
-                    <div class="cardReceita">
-                        <div class="caixaEtiqueta-receita">
-                            <img class="etiquetaReceita" src="{% static 'img/etiquetaReceita.png' %}">
-                        </div>
-                        <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}">
-                        <p>Salpicão de frango simples</p>
-                        <div class="avaliacao-receita">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                        </div>
-=======
-                <a href="{% url 'receitaAprendiz' %}" class="cardReceita" id="receita18">
+                <a href="{% url 'receitaAprendiz' %}" class="cardReceita" id="receita18" class="linkAncora">
                     <div class="caixaEtiqueta-receita">
                         <img class="etiquetaReceita" src="{% static 'img/etiquetaReceita.png' %}">
->>>>>>> Stashed changes
                     </div>
                 </a>
                 <a href="{% url 'receitaAprendiz' %}" class="linkAncora">
@@ -630,25 +444,7 @@
                         </div>
                     </div>
                 </a>
-<<<<<<< Updated upstream
-            </div>
-            <div class="linha-cardReceita">
-                <a href="{% url 'receitaAprendiz' %}" class="linkAncora">
-                    <div class="cardReceita">
-                        <div class="caixaEtiqueta-receita">
-                            <img class="etiquetaReceita" src="{% static 'img/etiquetaReceita.png' %}">
-                        </div>
-                        <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}">
-                        <p>Salpicão de frango simples</p>
-                        <div class="avaliacao-receita">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                        </div>
-=======
-                <a href="{% url 'receitaAprendiz' %}" class="cardReceita" id="receita19">
+                <a href="{% url 'receitaAprendiz' %}" class="cardReceita" id="receita19" class="linkAncora">
                     <div class="caixaEtiqueta-receita">
                         <img class="etiquetaReceita" src="{% static 'img/etiquetaReceita.png' %}">
                     </div>
@@ -681,7 +477,6 @@
                 <a href="{% url 'receitaAprendiz' %}" class="cardReceita" id="receita21">
                     <div class="caixaEtiqueta-receita">
                         <img class="etiquetaReceita" src="{% static 'img/etiquetaReceita.png' %}">
->>>>>>> Stashed changes
                     </div>
                 </a>
                 <a href="{% url 'receitaAprendiz' %}" class="linkAncora">
@@ -700,24 +495,7 @@
                         </div>
                     </div>
                 </a>
-<<<<<<< Updated upstream
-                <a href="{% url 'receitaAprendiz' %}" class="linkAncora">
-                    <div class="cardReceita">
-                        <div class="caixaEtiqueta-receita">
-                            <img class="etiquetaReceita" src="{% static 'img/etiquetaReceita.png' %}">
-                        </div>
-                        <img class="foto-receita" src="{% static 'img/fotoReceita2.png' %}">
-                        <p>Salpicão de frango simples</p>
-                        <div class="avaliacao-receita">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                            <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
-                        </div>
-                    </div>
-=======
-                <a href="{% url 'receitaAprendiz' %}" class="cardReceita" id="receita22">
+                <a href="{% url 'receitaAprendiz' %}" class="cardReceita" id="receita22" class="linkAncora">
                     <div class="caixaEtiqueta-receita">
                         <img class="etiquetaReceita" src="{% static 'img/etiquetaReceita.png' %}">
                     </div>
@@ -744,7 +522,6 @@
                         <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
                         <img class="estrela-avaliacao" src="{% static 'img/icon-estrelaAvaliacao.png' %}">
                     </div>
->>>>>>> Stashed changes
                 </a>
                 <img id="anuncio2" src="{% static 'img/anuncio2-home.png' %}">
 
@@ -787,7 +564,6 @@
         </div>
     </footer>
     <script src="{% static 'js/menuPerfil.js' %}"></script>
-<<<<<<< Updated upstream
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
@@ -797,10 +573,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-=======
     <script src="{% static 'js/homeaprendiz.js' %}"></script>
     <div id="recipeUrl" data-url="{% url 'receitaAprendiz' %}"></div>
->>>>>>> Stashed changes
 </body>
 
 </html>
