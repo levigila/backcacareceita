@@ -1,14 +1,14 @@
 # usuarios/utils.py
 import requests
-from google.cloud import translate_v2 as translate
+# from google.cloud import translate_v2 as translate
 
-def translate_text(text, target_language='pt'):
-    translate_client = translate.Client()
-    result = translate_client.translate(text, target_language=target_language)
-    return result['translatedText']
+# def translate_text(text, target_language='pt'):
+#     translate_client = translate.Client()
+#     result = translate_client.translate(text, target_language=target_language)
+#     return result['translatedText']
 
 def get_recipes_meals(meal_types):
-    api_key = 'a50e2cf10f3d4ca1b044d66c63dced85'  # Substitua 'sua_api_key_aqui' pela sua chave de API Spoonacular
+    api_key = 'db4f0300aaae4a9aa8f4f1aa809aaa55'  # Substitua 'sua_api_key_aqui' pela sua chave de API Spoonacular
     url = 'https://api.spoonacular.com/recipes/complexSearch'
 
     params = {

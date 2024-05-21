@@ -13,11 +13,11 @@ from django.http import JsonResponse
 from django.views.decorators.http import require_POST
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
-from .utils import translate_text
+# from .utils import translate_text
 from .utils import get_recipes_meals
-from google.cloud import translate_v2 as translate
+# from google.cloud import translate_v2 as translate
 import requests
-client = API(api_key='a50e2cf10f3d4ca1b044d66c63dced85')
+client = API(api_key='db4f0300aaae4a9aa8f4f1aa809aaa55')
 
 def home_aprendiz(request):
     meal_types = ['appetizer', 'salad', 'side dish', 'beverage']
@@ -130,7 +130,7 @@ def pesquisarReceita(request):
         return render(request, 'search_results.html', context)
     
 def search_recipes(request):
-    api_key = 'a50e2cf10f3d4ca1b044d66c63dced85'  # Substitua pela sua chave de API da Spoonacular
+    api_key = 'db4f0300aaae4a9aa8f4f1aa809aaa55'  # Substitua pela sua chave de API da Spoonacular
     ingredients = request.GET.get('ingredients', '')
     url = f'https://api.spoonacular.com/recipes/findByIngredients?ingredients={ingredients}&number=12&apiKey={api_key}'
     response = requests.get(url)
@@ -149,7 +149,7 @@ def search_recipes(request):
     return JsonResponse(translated_recipes, safe=False)
 
 def detalhes_receita(request, id_receita):
-    api_key = 'a50e2cf10f3d4ca1b044d66c63dced85'
+    api_key = 'db4f0300aaae4a9aa8f4f1aa809aaa55'
     url = f'https://api.spoonacular.com/recipes/{id_receita}/information?apiKey={api_key}'
     response = requests.get(url)
     receita = response.json()

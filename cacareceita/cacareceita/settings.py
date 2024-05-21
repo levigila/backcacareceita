@@ -122,7 +122,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'usuarios.CustomUser'
 
 
-SPOOONACULAR_API_KEY = 'a50e2cf10f3d4ca1b044d66c63dced85'  # Substitua por sua chave API
+SPOOONACULAR_API_KEY = 'db4f0300aaae4a9aa8f4f1aa809aaa55'  # Substitua por sua chave API
 SPOOONACULAR_BASE_URL = 'https://api.spoonacular.com'  # URL da API Spoonacular (opcional)
 client = API(api_key=SPOOONACULAR_API_KEY)
 

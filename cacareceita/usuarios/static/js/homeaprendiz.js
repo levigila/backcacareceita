@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const apiKey = 'a50e2cf10f3d4ca1b044d66c63dced85'; // Substitua pela sua chave de API da Spoonacular
+    const apiKey = 'db4f0300aaae4a9aa8f4f1aa809aaa55'; // Substitua pela sua chave de API da Spoonacular
     const recipesContainer = document.querySelector('.conteudo-receitas');
 
     function searchRecipes() {
