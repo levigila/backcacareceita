@@ -40,7 +40,7 @@ Repita as etapas conforme necessário até finalizar. Termine com um exemplo de 
 Para executar o projeto:
 
 ```
-python manege.py runserver
+python manage.py runserver
 ```
 
 ## 🛠️ Construído com
