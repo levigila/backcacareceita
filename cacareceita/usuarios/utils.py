@@ -8,7 +8,7 @@ import requests
 #     return result['translatedText']
 
 def get_recipes_meals(meal_types):
-    api_key = 'db4f0300aaae4a9aa8f4f1aa809aaa55'  # Substitua 'sua_api_key_aqui' pela sua chave de API Spoonacular
+    api_key = '030af2ba4b0b4a36b82f165e979d4f44'  # Substitua 'sua_api_key_aqui' pela sua chave de API Spoonacular
     url = 'https://api.spoonacular.com/recipes/complexSearch'
 
     params = {

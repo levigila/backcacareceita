@@ -628,15 +628,15 @@ main {
     z-index: -1;
 }
 
-<<<<<<< Updated upstream
+
 #etiqueta {
     width: 100px;
     position: absolute;
     top: -41px;
     left: -4px;
-=======
-css
-Copiar
+
+}
+
 /* Estilos para o fundo do modal */
 .modal {
     position: fixed; /* Fica fixo na tela, sobrepondo outros conteúdos */
@@ -704,5 +704,4 @@ Copiar
 
 .modal-content a:hover {
     background-color: #ddd;
->>>>>>> Stashed changes
 }

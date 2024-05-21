@@ -17,7 +17,8 @@ from django.views.decorators.csrf import csrf_exempt
 from .utils import get_recipes_meals
 # from google.cloud import translate_v2 as translate
 import requests
-client = API(api_key='db4f0300aaae4a9aa8f4f1aa809aaa55')
+
+client = API(api_key='030af2ba4b0b4a36b82f165e979d4f44')
 
 def home_aprendiz(request):
     meal_types = ['appetizer', 'salad', 'side dish', 'beverage']
@@ -130,7 +131,7 @@ def pesquisarReceita(request):
         return render(request, 'search_results.html', context)
     
 def search_recipes(request):
-    api_key = 'db4f0300aaae4a9aa8f4f1aa809aaa55'  # Substitua pela sua chave de API da Spoonacular
+    api_key = '030af2ba4b0b4a36b82f165e979d4f44'  # Substitua pela sua chave de API da Spoonacular
     ingredients = request.GET.get('ingredients', '')
     url = f'https://api.spoonacular.com/recipes/findByIngredients?ingredients={ingredients}&number=12&apiKey={api_key}'
     response = requests.get(url)
@@ -149,7 +150,7 @@ def search_recipes(request):
     return JsonResponse(translated_recipes, safe=False)
 
 def detalhes_receita(request, id_receita):
-    api_key = 'db4f0300aaae4a9aa8f4f1aa809aaa55'
+    api_key = '030af2ba4b0b4a36b82f165e979d4f44'
     url = f'https://api.spoonacular.com/recipes/{id_receita}/information?apiKey={api_key}'
     response = requests.get(url)
     receita = response.json()
@@ -366,8 +367,7 @@ def buscaReceitaVegano(request):
 
 
 def homeAprendiz(request):
-    cd = 5
-    return render(request, 'homeAprendiz.html', {"cd": cd})
+    return render(request, 'homeAprendiz.html')
 
 
 def homeMiniChef(request):

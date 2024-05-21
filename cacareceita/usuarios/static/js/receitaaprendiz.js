@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function fetchRecipeDetails(recipeId) {
-    const apiKey = 'db4f0300aaae4a9aa8f4f1aa809aaa55'; // Substitua pela sua chave de API da Spoonacular
+    const apiKey = '030af2ba4b0b4a36b82f165e979d4f44'; // Substitua pela sua chave de API da Spoonacular
     const url = `https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${apiKey}`;
 
     fetch(url)
